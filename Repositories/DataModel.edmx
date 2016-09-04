@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="AQLM2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="OKDesription">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="poste" Type="nvarchar" MaxLength="100" />
+          <Property Name="description" Type="nvarchar(max)" />
+          <Property Name="module" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Pilote">
+          <Key>
+            <PropertyRef Name="matricule" />
+          </Key>
+          <Property Name="matricule" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="nom" Type="nvarchar" MaxLength="50" />
+          <Property Name="prenom" Type="nvarchar" MaxLength="50" />
+          <Property Name="poste" Type="nvarchar" MaxLength="50" />
+          <Property Name="UF" Type="int" />
+          <Property Name="pwd" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="PiloteFini">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="matricule" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="nom" Type="nvarchar" MaxLength="50" />
+          <Property Name="poste" Type="nvarchar" MaxLength="50" />
+          <Property Name="UF" Type="nvarchar" MaxLength="50" />
+          <Property Name="module" Type="nvarchar" MaxLength="50" />
+          <Property Name="date" Type="datetime" />
+          <Property Name="idLigne" Type="int" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PiloteFiniIntegration">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="matricule" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="nom" Type="nvarchar" MaxLength="50" />
+          <Property Name="prenom" Type="nvarchar" MaxLength="50" />
+          <Property Name="Fonction" Type="nvarchar" MaxLength="50" />
+          <Property Name="UF" Type="nvarchar" MaxLength="50" />
+          <Property Name="Poste" Type="nvarchar" MaxLength="50" />
+          <Property Name="Module" Type="nvarchar" MaxLength="50" />
+          <Property Name="date" Type="datetime" />
+          <Property Name="idLigne" Type="int" />
+        </EntityType>
+        <EntityType Name="PiloteInteg">
+          <Key>
+            <PropertyRef Name="matricule" />
+          </Key>
+          <Property Name="matricule" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="nom" Type="nvarchar" MaxLength="50" />
+          <Property Name="prenom" Type="nvarchar" MaxLength="50" />
+          <Property Name="pwd" Type="nvarchar" MaxLength="50" />
+          <Property Name="poste" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ValOKdIntegrtion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="date" Type="datetime" />
+          <Property Name="ok" Type="bit" />
+          <Property Name="nok" Type="bit" />
+          <Property Name="na" Type="bit" />
+          <Property Name="idDescription" Type="int" />
+          <Property Name="idLigne" Type="int" />
+          <Property Name="commentaire" Type="varchar(max)" />
+        </EntityType>
+        <Association Name="FK_PiloteDispo_Pilote">
+          <End Role="Pilote" Type="Self.Pilote" Multiplicity="1" />
+          <End Role="PiloteFini" Type="Self.PiloteFini" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pilote">
+              <PropertyRef Name="matricule" />
+            </Principal>
+            <Dependent Role="PiloteFini">
+              <PropertyRef Name="matricule" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PiloteDispo_PiloteInteg">
+          <End Role="Pilote" Type="Self.Pilote" Multiplicity="1" />
+          <End Role="PiloteFini" Type="Self.PiloteFini" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pilote">
+              <PropertyRef Name="matricule" />
+            </Principal>
+            <Dependent Role="PiloteFini">
+              <PropertyRef Name="matricule" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ValOKdIntegrt_OKDesription">
+          <End Role="OKDesription" Type="Self.OKDesription" Multiplicity="0..1" />
+          <End Role="ValOKdIntegrtion" Type="Self.ValOKdIntegrtion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OKDesription">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ValOKdIntegrtion">
+              <PropertyRef Name="idDescription" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AQLM2ModelStoreContainer">
+          <EntitySet Name="OKDesription" EntityType="Self.OKDesription" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pilote" EntityType="Self.Pilote" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PiloteFini" EntityType="Self.PiloteFini" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PiloteFiniIntegration" EntityType="Self.PiloteFiniIntegration" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PiloteInteg" EntityType="Self.PiloteInteg" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ValOKdIntegrtion" EntityType="Self.ValOKdIntegrtion" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_PiloteDispo_Pilote" Association="Self.FK_PiloteDispo_Pilote">
+            <End Role="Pilote" EntitySet="Pilote" />
+            <End Role="PiloteFini" EntitySet="PiloteFini" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PiloteDispo_PiloteInteg" Association="Self.FK_PiloteDispo_PiloteInteg">
+            <End Role="Pilote" EntitySet="Pilote" />
+            <End Role="PiloteFini" EntitySet="PiloteFini" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ValOKdIntegrt_OKDesription" Association="Self.FK_ValOKdIntegrt_OKDesription">
+            <End Role="OKDesription" EntitySet="OKDesription" />
+            <End Role="ValOKdIntegrtion" EntitySet="ValOKdIntegrtion" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AQLM2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="OKDesription">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="poste" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="module" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ValOKdIntegrtion" Relationship="Self.FK_ValOKdIntegrt_OKDesription" FromRole="OKDesription" ToRole="ValOKdIntegrtion" />
+        </EntityType>
+        <EntityType Name="Pilote">
+          <Key>
+            <PropertyRef Name="matricule" />
+          </Key>
+          <Property Name="matricule" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="nom" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="prenom" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="poste" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UF" Type="Int32" />
+          <Property Name="pwd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="PiloteFini" Relationship="Self.FK_PiloteDispo_Pilote" FromRole="Pilote" ToRole="PiloteFini" />
+        </EntityType>
+        <EntityType Name="PiloteFini">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="matricule" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="nom" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="poste" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UF" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="module" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="date" Type="DateTime" Precision="3" />
+          <Property Name="idLigne" Type="Int32" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Pilote" Relationship="Self.FK_PiloteDispo_Pilote" FromRole="PiloteFini" ToRole="Pilote" />
+        </EntityType>
+        <EntityType Name="ValOKdIntegrtion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="date" Type="DateTime" Precision="3" />
+          <Property Name="ok" Type="Boolean" />
+          <Property Name="nok" Type="Boolean" />
+          <Property Name="na" Type="Boolean" />
+          <Property Name="idDescription" Type="Int32" />
+          <Property Name="idLigne" Type="Int32" />
+          <Property Name="commentaire" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="OKDesription" Relationship="Self.FK_ValOKdIntegrt_OKDesription" FromRole="ValOKdIntegrtion" ToRole="OKDesription" />
+        </EntityType>
+        <Association Name="FK_ValOKdIntegrt_OKDesription">
+          <End Role="OKDesription" Type="Self.OKDesription" Multiplicity="0..1" />
+          <End Role="ValOKdIntegrtion" Type="Self.ValOKdIntegrtion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OKDesription">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ValOKdIntegrtion">
+              <PropertyRef Name="idDescription" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PiloteDispo_Pilote">
+          <End Role="Pilote" Type="Self.Pilote" Multiplicity="1" />
+          <End Role="PiloteFini" Type="Self.PiloteFini" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pilote">
+              <PropertyRef Name="matricule" />
+            </Principal>
+            <Dependent Role="PiloteFini">
+              <PropertyRef Name="matricule" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AQLM2Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="OKDesription" EntityType="Self.OKDesription" />
+          <EntitySet Name="Pilote" EntityType="Self.Pilote" />
+          <EntitySet Name="PiloteFini" EntityType="Self.PiloteFini" />
+          <EntitySet Name="ValOKdIntegrtion" EntityType="Self.ValOKdIntegrtion" />
+          <AssociationSet Name="FK_ValOKdIntegrt_OKDesription" Association="Self.FK_ValOKdIntegrt_OKDesription">
+            <End Role="OKDesription" EntitySet="OKDesription" />
+            <End Role="ValOKdIntegrtion" EntitySet="ValOKdIntegrtion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PiloteDispo_Pilote" Association="Self.FK_PiloteDispo_Pilote">
+            <End Role="Pilote" EntitySet="Pilote" />
+            <End Role="PiloteFini" EntitySet="PiloteFini" />
+          </AssociationSet>
+          <EntitySet Name="PiloteIntegs" EntityType="AQLM2Model.PiloteInteg" />
+          <EntitySet Name="PiloteFiniIntegrations" EntityType="AQLM2Model.PiloteFiniIntegration" />
+        </EntityContainer>
+        <EntityType Name="PiloteInteg">
+          <Key>
+            <PropertyRef Name="matricule" />
+          </Key>
+          <Property Name="matricule" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="nom" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="prenom" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="pwd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="poste" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="PiloteFiniIntegration">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="matricule" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="nom" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Fonction" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UF" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Poste" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Module" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="date" Type="DateTime" Precision="3" />
+          <Property Name="idLigne" Type="Int32" />
+          <Property Name="prenom" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AQLM2ModelStoreContainer" CdmEntityContainer="AQLM2Entities">
+          <EntitySetMapping Name="OKDesription">
+            <EntityTypeMapping TypeName="AQLM2Model.OKDesription">
+              <MappingFragment StoreEntitySet="OKDesription">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="poste" ColumnName="poste" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="module" ColumnName="module" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pilote">
+            <EntityTypeMapping TypeName="AQLM2Model.Pilote">
+              <MappingFragment StoreEntitySet="Pilote">
+                <ScalarProperty Name="matricule" ColumnName="matricule" />
+                <ScalarProperty Name="nom" ColumnName="nom" />
+                <ScalarProperty Name="prenom" ColumnName="prenom" />
+                <ScalarProperty Name="poste" ColumnName="poste" />
+                <ScalarProperty Name="UF" ColumnName="UF" />
+                <ScalarProperty Name="pwd" ColumnName="pwd" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PiloteFini">
+            <EntityTypeMapping TypeName="AQLM2Model.PiloteFini">
+              <MappingFragment StoreEntitySet="PiloteFini">
+                <ScalarProperty Name="matricule" ColumnName="matricule" />
+                <ScalarProperty Name="nom" ColumnName="nom" />
+                <ScalarProperty Name="poste" ColumnName="poste" />
+                <ScalarProperty Name="UF" ColumnName="UF" />
+                <ScalarProperty Name="module" ColumnName="module" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="idLigne" ColumnName="idLigne" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ValOKdIntegrtion">
+            <EntityTypeMapping TypeName="AQLM2Model.ValOKdIntegrtion">
+              <MappingFragment StoreEntitySet="ValOKdIntegrtion">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="ok" ColumnName="ok" />
+                <ScalarProperty Name="nok" ColumnName="nok" />
+                <ScalarProperty Name="na" ColumnName="na" />
+                <ScalarProperty Name="idDescription" ColumnName="idDescription" />
+                <ScalarProperty Name="idLigne" ColumnName="idLigne" />
+                <ScalarProperty Name="commentaire" ColumnName="commentaire" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PiloteIntegs">
+            <EntityTypeMapping TypeName="AQLM2Model.PiloteInteg">
+              <MappingFragment StoreEntitySet="PiloteInteg">
+                <ScalarProperty Name="poste" ColumnName="poste" />
+                <ScalarProperty Name="pwd" ColumnName="pwd" />
+                <ScalarProperty Name="prenom" ColumnName="prenom" />
+                <ScalarProperty Name="nom" ColumnName="nom" />
+                <ScalarProperty Name="matricule" ColumnName="matricule" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PiloteFiniIntegrations">
+            <EntityTypeMapping TypeName="AQLM2Model.PiloteFiniIntegration">
+              <MappingFragment StoreEntitySet="PiloteFiniIntegration">
+                <ScalarProperty Name="prenom" ColumnName="prenom" />
+                <ScalarProperty Name="idLigne" ColumnName="idLigne" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="Module" ColumnName="Module" />
+                <ScalarProperty Name="Poste" ColumnName="Poste" />
+                <ScalarProperty Name="UF" ColumnName="UF" />
+                <ScalarProperty Name="Fonction" ColumnName="Fonction" />
+                <ScalarProperty Name="nom" ColumnName="nom" />
+                <ScalarProperty Name="matricule" ColumnName="matricule" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
