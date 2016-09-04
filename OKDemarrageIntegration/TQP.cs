@@ -341,5 +341,13 @@ namespace OKDemarrageIntegration
             Environment.Exit(0);
 
         }
+
+        private void TQP_Load(object sender, EventArgs e)
+        { AQLM2Entities context=new AQLM2Entities();
+            DateTime dateStart = new DateTime(2016, 09, 02, 11, 00, 00);
+            DateTime dateFinish = new DateTime(2016, 09, 02, 12, 00, 00);
+            PiloteFiniIntegRepositories pfi=new PiloteFiniIntegRepositories(context);
+            var poste = pfi.Get(p => p.date > dateStart && p.date < dateFinish && p.Fonction.Equals("TQP")).Count();
+        }
     }
 }

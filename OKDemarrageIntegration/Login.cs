@@ -65,38 +65,41 @@ namespace OKDemarrageIntegration
 
         //    return validUser;
         //}
-        private void connecter_Click(object sender, EventArgs e)
+        private void displayList(DateTime dateStart,DateTime dateFinish,int test,String fonction)
         {
-            
+            AQLM2Entities context = new AQLM2Entities();
+            PiloteIntegRepositories pir = new PiloteIntegRepositories(context);
+            PiloteFiniRepositories pf = new PiloteFiniRepositories(context);
+            PiloteFiniIntegRepositories pfi = new PiloteFiniIntegRepositories(context);
+            // Array data;
+            var data = pfi.Get(dt => dt.date >= dateStart && dt.date <= dateFinish).Select(dt => new { dt.matricule, dt.nom, dt.prenom, dt.Fonction }).Distinct().ToList();
+            // Console.Write(data.GetValue(0).ToString());
+            var cont = pfi.Get(c => c.Fonction.Equals(fonction)).Count();
 
+            if (cont == test)
+            {
+                foreach (var d in data)
+                {
+
+
+                    ListViewItem item = new ListViewItem();
+                    item.Text = d.matricule;
+                    item.SubItems.Add(d.nom);
+                    item.SubItems.Add(d.prenom);
+                    item.SubItems.Add(d.Fonction);
+                    listPiloteFini.Items.Add(item);
+                }
+            }
         }
 
         private void Login_Load(object sender, EventArgs e)
         {
-            AQLM2Entities context=new AQLM2Entities();
-            PiloteIntegRepositories pir=new PiloteIntegRepositories(context);
-            PiloteFiniRepositories pf=new PiloteFiniRepositories(context);
-            PiloteFiniIntegRepositories pfi = new PiloteFiniIntegRepositories(context);
+           
             DateTime dateStart=new DateTime(2016,09,02,11,00,00);
             DateTime dateFinish=new DateTime(2016, 09, 02, 12, 00, 00);
-           // Array data;
-            var data = pfi.Get(dt => dt.date >= dateStart && dt.date <= dateFinish).Select(dt=>new { dt.matricule,dt.nom,dt.prenom,dt.Fonction}).Distinct().ToList();
-           // Console.Write(data.GetValue(0).ToString());
-            var cont = pfi.Get(c => c.Fonction.Equals("TQP")).Count();
+            displayList(dateFinish,dateStart,4,"TQP");
+            displayList(dateFinish, dateStart, 16, "CE");
 
-        if (cont == 4) { 
-            foreach (var d in data)
-            {
-                
-
-                ListViewItem item = new ListViewItem();
-                item.Text = d.matricule;
-                item.SubItems.Add(d.nom);
-                item.SubItems.Add(d.prenom);
-                item.SubItems.Add(d.Fonction);
-              listPiloteFini.Items.Add(item);
-            }
-            }
         }
 
         private void connecter_Click_1(object sender, EventArgs e)

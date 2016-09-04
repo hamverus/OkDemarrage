@@ -768,6 +768,7 @@
             this.Name = "TQP";
             this.Text = "Intégration ADT";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.TQP_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.navigationPane1.ResumeLayout(false);
