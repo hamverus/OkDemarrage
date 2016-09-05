@@ -61,6 +61,7 @@ namespace OKDemarrageIntegration
 
             InsertRepositories insert = new InsertRepositories(ComPBTF, listNok, l, ValPBTF, ComPBTF.Text);
             insert.checkNokRb();
+            
             string msg = "";
 
             if (!String.IsNullOrEmpty(ComPpalet.Text))
@@ -73,7 +74,7 @@ namespace OKDemarrageIntegration
             //int dd = desc.Get(bd =>bd.description.Equals(lbPpalet.Text)&& bd.poste.Equals("Intégration ADT") && bd.module.Equals("Poste Paléttisation")).Select(bd => bd.id).First();
             //incrémentaion d'id
             int dd = 64;
-           
+            if (insert.checkRb(err)) { 
             for (int i = 0; i < l.Length - 2; i += 3)
             {
 
@@ -130,6 +131,10 @@ namespace OKDemarrageIntegration
                 ValPBTF.Enabled = false;
                 pilr.Insert(pilInsert);
                 MessageBox.Show("Succés validation !", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            }else
+            {
+                MessageBox.Show("Errreur !", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -347,10 +352,10 @@ namespace OKDemarrageIntegration
             DateTime dateStart = new DateTime(2016, 09, 05, 12, 05, 00);
             DateTime dateFinish = new DateTime(2016, 09, 05, 12, 11, 00);
             PiloteFiniIntegRepositories pfi=new PiloteFiniIntegRepositories(context);
-            String[] poste =
+            List<String> poste =
                 pfi.Get(p => p.date > dateStart && p.date < dateFinish && p.Fonction.Equals("TQP"))
                     .Select(p => p.Poste)
-                    .ToArray();
+                    .ToList();
             foreach (var d in poste)
             {
                 if (d.Equals(navigationPage1.Text))
