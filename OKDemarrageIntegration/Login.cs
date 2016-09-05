@@ -18,11 +18,31 @@ namespace OKDemarrageIntegration
 {
     public partial class Login : Form
     {
-        
+        AQLM2Entities context = new AQLM2Entities();
+        private PiloteIntegRepositories pir; 
+        private PiloteFiniRepositories pf;
+        private PiloteFiniIntegRepositories pfi;
         public Login()
         {
             InitializeComponent();
+             pir = new PiloteIntegRepositories(context);
+             pf = new PiloteFiniRepositories(context);
+             pfi = new PiloteFiniIntegRepositories(context);
         }
+        private void Login_Load(object sender, EventArgs e)
+        {
+            PiloteIntegRepositories pir = new PiloteIntegRepositories(context);
+            PiloteFiniRepositories pf = new PiloteFiniRepositories(context);
+            PiloteFiniIntegRepositories pfi = new PiloteFiniIntegRepositories(context);
+
+            DateTime dateStart = new DateTime(2016, 09, 05, 12, 05, 00);
+            DateTime dateFinish = new DateTime(2016, 09, 05, 12, 50, 00);
+
+            displayList(dateStart, dateFinish, 3, "TQP");
+            displayList(dateFinish, dateStart, 16, "CE");
+
+        }
+
         //public bool UserInCustomRole(string role)
         //{
         //    WindowsIdentity identity = WindowsIdentity.GetCurrent();
@@ -67,10 +87,7 @@ namespace OKDemarrageIntegration
         //}
         private void displayList(DateTime dateStart,DateTime dateFinish,int test,String fonction)
         {
-            AQLM2Entities context = new AQLM2Entities();
-            PiloteIntegRepositories pir = new PiloteIntegRepositories(context);
-            PiloteFiniRepositories pf = new PiloteFiniRepositories(context);
-            PiloteFiniIntegRepositories pfi = new PiloteFiniIntegRepositories(context);
+           
             // Array data;
             var data = pfi.Get(dt => dt.date >= dateStart && dt.date <= dateFinish).Select(dt => new { dt.matricule, dt.nom, dt.prenom, dt.Fonction }).Distinct().ToList();
             // Console.Write(data.GetValue(0).ToString());
@@ -92,16 +109,7 @@ namespace OKDemarrageIntegration
             }
         }
 
-        private void Login_Load(object sender, EventArgs e)
-        {
-           
-            DateTime dateStart=new DateTime(2016,09,02,11,00,00);
-            DateTime dateFinish=new DateTime(2016, 09, 02, 12, 00, 00);
-            displayList(dateFinish,dateStart,4,"TQP");
-            displayList(dateFinish, dateStart, 16, "CE");
-
-        }
-
+        
         private void connecter_Click_1(object sender, EventArgs e)
         {
             AQLM2Entities context = new AQLM2Entities();  

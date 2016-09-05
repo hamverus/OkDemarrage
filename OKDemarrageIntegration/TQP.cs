@@ -344,10 +344,198 @@ namespace OKDemarrageIntegration
 
         private void TQP_Load(object sender, EventArgs e)
         { AQLM2Entities context=new AQLM2Entities();
-            DateTime dateStart = new DateTime(2016, 09, 02, 11, 00, 00);
-            DateTime dateFinish = new DateTime(2016, 09, 02, 12, 00, 00);
+            DateTime dateStart = new DateTime(2016, 09, 05, 12, 05, 00);
+            DateTime dateFinish = new DateTime(2016, 09, 05, 12, 11, 00);
             PiloteFiniIntegRepositories pfi=new PiloteFiniIntegRepositories(context);
-            var poste = pfi.Get(p => p.date > dateStart && p.date < dateFinish && p.Fonction.Equals("TQP")).Count();
+            String[] poste =
+                pfi.Get(p => p.date > dateStart && p.date < dateFinish && p.Fonction.Equals("TQP"))
+                    .Select(p => p.Poste)
+                    .ToArray();
+            foreach (var d in poste)
+            {
+                if (d.Equals(navigationPage1.Text))
+                {
+                    ValPBTF.Enabled = false;
+                }
+            }
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void ValPEmb_Click_1(object sender, EventArgs e)
+        {
+
+            bool err = false;
+            AQLM2Entities context = new AQLM2Entities();
+            ValOKdIntegrepositories repo = new ValOKdIntegrepositories(context);
+            OkDescriptRepositorie desc = new OkDescriptRepositorie(context);
+            RadioButton[] l = { PEmbrb5Ok, PEmbrb5NOk, PEmbrb5Na };
+            RadioButton[] listNok = { PEmbrb5NOk };
+
+
+            PiloteIntegRepositories pil = new PiloteIntegRepositories(context);
+            PiloteFiniIntegRepositories pilr = new PiloteFiniIntegRepositories(context);
+
+            PiloteFiniIntegration pilInsert = new PiloteFiniIntegration();
+            ValOKdIntegrtion v = new ValOKdIntegrtion();
+            var pl = pil.Get(b => b.matricule.Equals(mat)).SingleOrDefault();
+            pilInsert.matricule = pl.matricule;
+            pilInsert.nom = pl.nom;
+            pilInsert.prenom = pl.prenom;
+            pilInsert.Fonction = pl.poste;
+            pilInsert.date = DateTime.Now;
+            pilInsert.Poste = navigationPage2.Text;
+
+            InsertRepositories insert = new InsertRepositories(ComPEmb, listNok, l, ValPEmb, ComPEmb.Text);
+            insert.checkNokRb();
+            string msg = "";
+
+            if (!String.IsNullOrEmpty(ComPpalet.Text))
+            {
+                msg = ComPpalet.Text;
+
+            }
+
+            //int dd = desc.Get(bd =>bd.description.Equals(lbPpalet.Text)&& bd.poste.Equals("Intégration ADT") && bd.module.Equals("Poste Paléttisation")).Select(bd => bd.id).First();
+            //incrémentaion d'id
+            v.idDescription = 93;
+            for (int i = 0; i < l.Length - 2; i += 3)
+            {
+
+
+
+                v.date = DateTime.Now;
+                //v.idLigne = 5;
+
+                bool b = true;
+                bool c = false;
+                v.ok = c;
+                v.nok = c;
+                v.na = c;
+
+                if (l[i].Checked)
+                {
+                    v.ok = b;
+
+
+                }
+                else if (l[i + 1].Checked)
+                {
+
+
+                    v.nok = b;
+
+                    //dd++;
+                    v.commentaire = msg;
+
+
+
+                }
+                else
+                {
+                    v.na = b;
+
+                    //dd++;
+
+                }
+
+                repo.Insert(v);
+            }
+            if (err == false)
+            {
+                ValPEmb.Enabled = false;
+                pilr.Insert(pilInsert);
+                MessageBox.Show("Succés validation !", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void ValPpalet_Click(object sender, EventArgs e)
+        {
+            bool err = false;
+            AQLM2Entities context = new AQLM2Entities();
+            ValOKdIntegrepositories repo = new ValOKdIntegrepositories(context);
+            OkDescriptRepositorie desc = new OkDescriptRepositorie(context);
+            RadioButton[] l = { Ppaletrb1Ok, Ppaletrb1NOk, Ppaletrb1Na };
+            RadioButton[] listNok = { Ppaletrb1NOk };
+
+            PiloteIntegRepositories pil = new PiloteIntegRepositories(context);
+            PiloteFiniIntegRepositories pilr = new PiloteFiniIntegRepositories(context);
+
+            PiloteFiniIntegration pilInsert = new PiloteFiniIntegration();
+            ValOKdIntegrtion v = new ValOKdIntegrtion();
+            var pl = pil.Get(b => b.matricule.Equals(mat)).SingleOrDefault();
+            pilInsert.matricule = pl.matricule;
+            pilInsert.nom = pl.nom;
+            pilInsert.prenom = pl.prenom;
+            pilInsert.Fonction = pl.poste;
+            pilInsert.date = DateTime.Now;
+            pilInsert.Poste = navigationPage3.Text;
+
+            InsertRepositories insert = new InsertRepositories(ComPpalet, listNok, l, ValPpalet, ComPpalet.Text);
+            insert.checkNokRb();
+            string msg = "";
+
+            if (!String.IsNullOrEmpty(ComPpalet.Text))
+            {
+                msg = ComPpalet.Text;
+
+            }
+
+            //int dd = desc.Get(bd =>bd.description.Equals(lbPpalet.Text)&& bd.poste.Equals("Intégration ADT") && bd.module.Equals("Poste Paléttisation")).Select(bd => bd.id).First();
+            //incrémentaion d'id
+            v.idDescription = 102;
+            for (int i = 0; i < l.Length - 2; i += 3)
+            {
+
+
+
+                v.date = DateTime.Now;
+                //v.idLigne = 5;
+
+                bool b = true;
+                bool c = false;
+                v.ok = c;
+                v.nok = c;
+                v.na = c;
+                if (l[i].Checked)
+                {
+                    v.ok = b;
+
+
+                }
+                else if (l[i + 1].Checked)
+                {
+
+
+                    v.nok = b;
+
+                    v.commentaire = msg;
+
+
+
+                }
+                else
+                {
+                    v.na = b;
+
+                }
+
+                repo.Insert(v);
+            }
+            if (err == false)
+            {
+                ValPpalet.Enabled = false;
+                pilr.Insert(pilInsert);
+                MessageBox.Show("Succés validation !", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("S'il vous plait remplir les chaps ci-dessus");
+            }
         }
     }
 }

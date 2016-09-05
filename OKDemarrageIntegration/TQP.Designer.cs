@@ -66,9 +66,6 @@
             this.PEmbrb5NOk = new System.Windows.Forms.RadioButton();
             this.PEmbrb5Ok = new System.Windows.Forms.RadioButton();
             this.panel45 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel37 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel46 = new System.Windows.Forms.Panel();
-            this.ValPEmb = new System.Windows.Forms.Button();
             this.navigationPage3 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -80,10 +77,14 @@
             this.Ppaletrb1NOk = new System.Windows.Forms.RadioButton();
             this.Ppaletrb1Ok = new System.Windows.Forms.RadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.ValPEmb = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.ValPpalet = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).BeginInit();
             this.navigationPane1.SuspendLayout();
             this.navigationPage1.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
@@ -98,13 +99,13 @@
             this.panel44.SuspendLayout();
             this.groupBox119.SuspendLayout();
             this.panel45.SuspendLayout();
-            this.tableLayoutPanel37.SuspendLayout();
-            this.panel46.SuspendLayout();
             this.navigationPage3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -169,7 +170,6 @@
             this.navigationPage3});
             this.navigationPane1.RegularSize = new System.Drawing.Size(843, 401);
             this.navigationPane1.SelectedPage = this.navigationPage2;
-            this.navigationPane1.SelectedPageIndex = 0;
             this.navigationPane1.Size = new System.Drawing.Size(843, 401);
             this.navigationPane1.TabIndex = 4;
             this.navigationPane1.Text = "navigationPane1";
@@ -384,8 +384,8 @@
             // 
             this.tableLayoutPanel24.ColumnCount = 3;
             this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.9372F));
-            this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.1256F));
-            this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.9372F));
+            this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.21839F));
+            this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.11494F));
             this.tableLayoutPanel24.Controls.Add(this.panel20, 1, 1);
             this.tableLayoutPanel24.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanel24.Location = new System.Drawing.Point(0, 169);
@@ -434,7 +434,7 @@
             this.tableLayoutPanel36.Controls.Add(this.lb5PEmb, 0, 0);
             this.tableLayoutPanel36.Controls.Add(this.groupBox119, 1, 0);
             this.tableLayoutPanel36.Controls.Add(this.panel45, 1, 1);
-            this.tableLayoutPanel36.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel36.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel36.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel36.Name = "tableLayoutPanel36";
             this.tableLayoutPanel36.RowCount = 2;
@@ -444,7 +444,7 @@
             this.tableLayoutPanel36.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel36.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel36.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel36.Size = new System.Drawing.Size(720, 643);
+            this.tableLayoutPanel36.Size = new System.Drawing.Size(720, 341);
             this.tableLayoutPanel36.TabIndex = 16;
             // 
             // panel44
@@ -455,7 +455,7 @@
             this.panel44.Location = new System.Drawing.Point(0, 80);
             this.panel44.Margin = new System.Windows.Forms.Padding(0);
             this.panel44.Name = "panel44";
-            this.panel44.Size = new System.Drawing.Size(540, 563);
+            this.panel44.Size = new System.Drawing.Size(540, 261);
             this.panel44.TabIndex = 22;
             // 
             // label123
@@ -463,7 +463,7 @@
             this.label123.AutoSize = true;
             this.label123.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label123.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label123.Location = new System.Drawing.Point(0, 493);
+            this.label123.Location = new System.Drawing.Point(0, 191);
             this.label123.Name = "label123";
             this.label123.Size = new System.Drawing.Size(98, 18);
             this.label123.TabIndex = 4;
@@ -472,7 +472,7 @@
             // ComPEmb
             // 
             this.ComPEmb.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ComPEmb.Location = new System.Drawing.Point(0, 511);
+            this.ComPEmb.Location = new System.Drawing.Point(0, 209);
             this.ComPEmb.Multiline = true;
             this.ComPEmb.Name = "ComPEmb";
             this.ComPEmb.Size = new System.Drawing.Size(540, 52);
@@ -494,10 +494,10 @@
             this.groupBox119.Controls.Add(this.PEmbrb5Na);
             this.groupBox119.Controls.Add(this.PEmbrb5NOk);
             this.groupBox119.Controls.Add(this.PEmbrb5Ok);
-            this.groupBox119.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox119.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox119.Location = new System.Drawing.Point(543, 3);
             this.groupBox119.Name = "groupBox119";
-            this.groupBox119.Size = new System.Drawing.Size(164, 74);
+            this.groupBox119.Size = new System.Drawing.Size(174, 74);
             this.groupBox119.TabIndex = 14;
             this.groupBox119.TabStop = false;
             // 
@@ -542,49 +542,12 @@
             // 
             // panel45
             // 
-            this.panel45.Controls.Add(this.tableLayoutPanel37);
+            this.panel45.Controls.Add(this.tableLayoutPanel3);
+            this.panel45.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel45.Location = new System.Drawing.Point(543, 83);
             this.panel45.Name = "panel45";
-            this.panel45.Size = new System.Drawing.Size(164, 557);
+            this.panel45.Size = new System.Drawing.Size(174, 255);
             this.panel45.TabIndex = 21;
-            // 
-            // tableLayoutPanel37
-            // 
-            this.tableLayoutPanel37.ColumnCount = 3;
-            this.tableLayoutPanel37.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.9372F));
-            this.tableLayoutPanel37.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.1256F));
-            this.tableLayoutPanel37.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.9372F));
-            this.tableLayoutPanel37.Controls.Add(this.panel46, 1, 1);
-            this.tableLayoutPanel37.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel37.Location = new System.Drawing.Point(0, 471);
-            this.tableLayoutPanel37.Name = "tableLayoutPanel37";
-            this.tableLayoutPanel37.RowCount = 3;
-            this.tableLayoutPanel37.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel37.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel37.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel37.Size = new System.Drawing.Size(164, 86);
-            this.tableLayoutPanel37.TabIndex = 22;
-            // 
-            // panel46
-            // 
-            this.panel46.Controls.Add(this.ValPEmb);
-            this.panel46.Location = new System.Drawing.Point(27, 28);
-            this.panel46.Margin = new System.Windows.Forms.Padding(0);
-            this.panel46.Name = "panel46";
-            this.panel46.Size = new System.Drawing.Size(108, 28);
-            this.panel46.TabIndex = 0;
-            // 
-            // ValPEmb
-            // 
-            this.ValPEmb.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ValPEmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ValPEmb.Location = new System.Drawing.Point(0, 0);
-            this.ValPEmb.Name = "ValPEmb";
-            this.ValPEmb.Size = new System.Drawing.Size(108, 28);
-            this.ValPEmb.TabIndex = 1;
-            this.ValPEmb.Text = "Valider";
-            this.ValPEmb.UseVisualStyleBackColor = true;
-            this.ValPEmb.Click += new System.EventHandler(this.ValPEmb_Click);
             // 
             // navigationPage3
             // 
@@ -614,6 +577,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(720, 341);
             this.tableLayoutPanel1.TabIndex = 17;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // panel1
             // 
@@ -664,10 +628,10 @@
             this.groupBox1.Controls.Add(this.Ppaletrb1Na);
             this.groupBox1.Controls.Add(this.Ppaletrb1NOk);
             this.groupBox1.Controls.Add(this.Ppaletrb1Ok);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(543, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(164, 65);
+            this.groupBox1.Size = new System.Drawing.Size(174, 65);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             // 
@@ -719,12 +683,50 @@
             this.panel2.Size = new System.Drawing.Size(174, 264);
             this.panel2.TabIndex = 21;
             // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.9372F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.21839F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.11494F));
+            this.tableLayoutPanel3.Controls.Add(this.panel4, 1, 1);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 169);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 3;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(174, 86);
+            this.tableLayoutPanel3.TabIndex = 23;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.ValPEmb);
+            this.panel4.Location = new System.Drawing.Point(29, 28);
+            this.panel4.Margin = new System.Windows.Forms.Padding(0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(79, 28);
+            this.panel4.TabIndex = 0;
+            // 
+            // ValPEmb
+            // 
+            this.ValPEmb.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ValPEmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ValPEmb.Location = new System.Drawing.Point(0, 0);
+            this.ValPEmb.Name = "ValPEmb";
+            this.ValPEmb.Size = new System.Drawing.Size(79, 28);
+            this.ValPEmb.TabIndex = 1;
+            this.ValPEmb.Text = "Valider";
+            this.ValPEmb.UseVisualStyleBackColor = true;
+            this.ValPEmb.Click += new System.EventHandler(this.ValPEmb_Click_1);
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.9372F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.1256F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.9372F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.21839F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.11494F));
             this.tableLayoutPanel2.Controls.Add(this.panel3, 1, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 178);
@@ -734,7 +736,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(174, 86);
-            this.tableLayoutPanel2.TabIndex = 22;
+            this.tableLayoutPanel2.TabIndex = 24;
             // 
             // panel3
             // 
@@ -742,7 +744,7 @@
             this.panel3.Location = new System.Drawing.Point(29, 28);
             this.panel3.Margin = new System.Windows.Forms.Padding(0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(108, 28);
+            this.panel3.Size = new System.Drawing.Size(79, 28);
             this.panel3.TabIndex = 0;
             // 
             // ValPpalet
@@ -751,11 +753,11 @@
             this.ValPpalet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ValPpalet.Location = new System.Drawing.Point(0, 0);
             this.ValPpalet.Name = "ValPpalet";
-            this.ValPpalet.Size = new System.Drawing.Size(108, 28);
+            this.ValPpalet.Size = new System.Drawing.Size(79, 28);
             this.ValPpalet.TabIndex = 1;
             this.ValPpalet.Text = "Valider";
             this.ValPpalet.UseVisualStyleBackColor = true;
-            this.ValPpalet.Click += new System.EventHandler(this.button1_Click);
+            this.ValPpalet.Click += new System.EventHandler(this.ValPpalet_Click);
             // 
             // TQP
             // 
@@ -771,6 +773,7 @@
             this.Load += new System.EventHandler(this.TQP_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).EndInit();
             this.navigationPane1.ResumeLayout(false);
             this.navigationPage1.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
@@ -792,8 +795,6 @@
             this.groupBox119.ResumeLayout(false);
             this.groupBox119.PerformLayout();
             this.panel45.ResumeLayout(false);
-            this.tableLayoutPanel37.ResumeLayout(false);
-            this.panel46.ResumeLayout(false);
             this.navigationPage3.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -802,6 +803,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -847,9 +850,6 @@
         private System.Windows.Forms.RadioButton PEmbrb5NOk;
         private System.Windows.Forms.RadioButton PEmbrb5Ok;
         private System.Windows.Forms.Panel panel45;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel37;
-        private System.Windows.Forms.Panel panel46;
-        private System.Windows.Forms.Button ValPEmb;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
@@ -860,10 +860,13 @@
         private System.Windows.Forms.RadioButton Ppaletrb1NOk;
         private System.Windows.Forms.RadioButton Ppaletrb1Ok;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button ValPEmb;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button ValPpalet;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }
