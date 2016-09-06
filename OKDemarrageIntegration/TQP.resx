@@ -123,4 +123,7 @@
   <data name="lb5PEmb.Text" xml:space="preserve">
     <value>Vérifier que si on édite deux étiquettes logistiques successives au poste emballage sans flasher la première au poste palettisation, un message "poste bloqué produit n'est pas sous conditionnement" s'affiche sur l'écran en effectuant un test de vigilance.</value>
   </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
 </root>

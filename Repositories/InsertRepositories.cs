@@ -10,28 +10,33 @@ using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Entities;
+
 namespace Repositories
 {
     public class InsertRepositories
     {
-        TextBox commentaire;
-             
+        private TextBox commentaire;
+
         private Button b;
-        RadioButton[] listNok;
-        RadioButton[] listRb;
-        Button valid;
-        
-        
-        String input;
-        bool err;
-        AQLM2Entities context ;
+        private RadioButton[] listNok;
+        private RadioButton[] listRb;
+        private Button valid;
 
 
-        public InsertRepositories(TextBox commentaire,RadioButton[] listNok,RadioButton[] listRb,Button valid, String input )
+        private String input;
+        private bool err;
+        private AQLM2Entities context;
+        private EquipeRepositories equipeRepository;
+        private DateTime dateDebutRecherche;
+        private string dateNow;
+        private DateTime dateFinEquipe;
+
+        public InsertRepositories(TextBox commentaire, RadioButton[] listNok, RadioButton[] listRb, Button valid,
+            String input)
         {
-            
-            
-            
+
+
+
             this.listNok = listNok;
             this.listRb = listRb;
             this.commentaire = commentaire;
@@ -39,13 +44,23 @@ namespace Repositories
             this.err = false;
             this.valid = valid;
 
+            equipeRepository = new EquipeRepositories(context);
+
+            dateNow = DateTime.Now.Date.ToString("d");
+
 
         }
-        
+
+        public InsertRepositories()
+        {
+            equipeRepository = new EquipeRepositories(context);
+
+            dateNow = DateTime.Now.Date.ToString("d");  
+        }
 
         public void checkNokRb()
         {
-            
+
             for (int i = 0; i < listNok.Length; i++)
             {
                 if (listNok[i].Checked)
@@ -74,7 +89,7 @@ namespace Repositories
         {
             bool stat = true;
             bool res;
-            for (int i = 0; i < listRb.Length - 2; i+=3)
+            for (int i = 0; i < listRb.Length - 2; i += 3)
             {
                 if (listRb[i].Checked || listRb[i + 1].Checked || listRb[i + 2].Checked)
                 {
@@ -98,7 +113,7 @@ namespace Repositories
             return res;
         }
 
-        public void InsertData(String module,String poste, OkDescriptRepositorie desc,ValOKdIntegrepositories repo )
+        public void InsertData(String module, String poste, OkDescriptRepositorie desc, ValOKdIntegrepositories repo)
         {
 
             if (checkRb(err))
@@ -109,7 +124,7 @@ namespace Repositories
 
                 if (!String.IsNullOrEmpty(input))
                 {
-                    msg = input; 
+                    msg = input;
 
                 }
 
@@ -160,7 +175,8 @@ namespace Repositories
                 if (err == false)
                 {
                     valid.Enabled = false;
-                    MessageBox.Show("Succés validation !","Validation",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show("Succés validation !", "Validation", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
                 }
                 else
                 {
@@ -173,5 +189,49 @@ namespace Repositories
             }
 
         }
+
+
+        public string getEquipe(DateTime datedebut)
+        {
+            var timeDebut = datedebut.ToString("HH:mm:ss tt");
+            TimeSpan t = TimeSpan.Parse(timeDebut);
+            var x = equipeRepository.Get(b => b.dateDebut == t).Select(b => b.designation).First();
+            return x;
+        }
+
+        public DateTime getDateFINEquipe(DateTime datedebut)
+        {
+            var timeDebut = datedebut.ToString("HH:mm:ss tt");
+            TimeSpan t = TimeSpan.Parse(timeDebut);
+            var x = equipeRepository.Get(b => b.dateDebut == t).Select(b => b.dateFin).First();
+            dateFinEquipe=DateTime.Parse(dateNow + " " + TimeSpan.Parse(x.ToString()))
+            if (datedebut == DateTime.Parse(dateNow + " 16:51:30"))
+            {
+
+                dateFinEquipe = dateFinEquipe.AddDays(1);
+            }
+            return dateFinEquipe ;
+        }
+
+        public DateTime getDateEquipe()
+        {
+            var listDateDabutEquipe = equipeRepository.GetAll().Select(b => b.dateDebut).ToList();
+            for (int i = 0; i < listDateDabutEquipe.Count ; i++)
+            {
+                var dateEquipe = DateTime.Parse(dateNow + " " + listDateDabutEquipe[i]);
+                var dateFinEquipe = getDateFINEquipe(dateEquipe);
+                if (dateEquipe == DateTime.Parse(dateNow + " 16:51:30"))
+                {
+                    dateFinEquipe = dateFinEquipe.AddDays(1); }
+                if (DateTime.Now >= dateEquipe && DateTime.Now < dateFinEquipe)
+
+                {
+                    dateDebutRecherche = dateEquipe;
+                }
+            }
+            return dateDebutRecherche;
+        }
+
+
     }
 }

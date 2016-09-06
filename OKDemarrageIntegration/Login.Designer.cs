@@ -48,6 +48,7 @@
             this.nom = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.prenom = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.poste = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -264,6 +265,10 @@
             this.poste.Text = "Poste";
             this.poste.Width = 189;
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -308,5 +313,6 @@
         private System.Windows.Forms.ColumnHeader nom;
         private System.Windows.Forms.ColumnHeader prenom;
         private System.Windows.Forms.ColumnHeader poste;
+        private System.Windows.Forms.Timer timer1;
     }
 }

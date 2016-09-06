@@ -66,6 +66,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="EquipeRepositories.cs" />
     <Compile Include="InsertRepositories.cs" />
     <Compile Include="OkDescriptRepositorie.cs" />
     <Compile Include="PiloteFiniIntegRepositories.cs" />

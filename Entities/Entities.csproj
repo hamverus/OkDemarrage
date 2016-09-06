@@ -46,6 +46,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Equipe.cs">
+      <DependentUpon>Entities.tt</DependentUpon>
+    </Compile>
     <Compile Include="OKDesription.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>

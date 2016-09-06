@@ -66,6 +66,9 @@
             this.PEmbrb5NOk = new System.Windows.Forms.RadioButton();
             this.PEmbrb5Ok = new System.Windows.Forms.RadioButton();
             this.panel45 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.ValPEmb = new System.Windows.Forms.Button();
             this.navigationPage3 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -77,9 +80,6 @@
             this.Ppaletrb1NOk = new System.Windows.Forms.RadioButton();
             this.Ppaletrb1Ok = new System.Windows.Forms.RadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.ValPEmb = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.ValPpalet = new System.Windows.Forms.Button();
@@ -99,13 +99,13 @@
             this.panel44.SuspendLayout();
             this.groupBox119.SuspendLayout();
             this.panel45.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.navigationPage3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -549,6 +549,44 @@
             this.panel45.Size = new System.Drawing.Size(174, 255);
             this.panel45.TabIndex = 21;
             // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.9372F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.21839F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.11494F));
+            this.tableLayoutPanel3.Controls.Add(this.panel4, 1, 1);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 169);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 3;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(174, 86);
+            this.tableLayoutPanel3.TabIndex = 23;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.ValPEmb);
+            this.panel4.Location = new System.Drawing.Point(29, 28);
+            this.panel4.Margin = new System.Windows.Forms.Padding(0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(79, 28);
+            this.panel4.TabIndex = 0;
+            // 
+            // ValPEmb
+            // 
+            this.ValPEmb.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ValPEmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ValPEmb.Location = new System.Drawing.Point(0, 0);
+            this.ValPEmb.Name = "ValPEmb";
+            this.ValPEmb.Size = new System.Drawing.Size(79, 28);
+            this.ValPEmb.TabIndex = 1;
+            this.ValPEmb.Text = "Valider";
+            this.ValPEmb.UseVisualStyleBackColor = true;
+            this.ValPEmb.Click += new System.EventHandler(this.ValPEmb_Click_1);
+            // 
             // navigationPage3
             // 
             this.navigationPage3.Caption = "Poste Paléttisation";
@@ -683,44 +721,6 @@
             this.panel2.Size = new System.Drawing.Size(174, 264);
             this.panel2.TabIndex = 21;
             // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 3;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.9372F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.21839F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.11494F));
-            this.tableLayoutPanel3.Controls.Add(this.panel4, 1, 1);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 169);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 3;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(174, 86);
-            this.tableLayoutPanel3.TabIndex = 23;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.ValPEmb);
-            this.panel4.Location = new System.Drawing.Point(29, 28);
-            this.panel4.Margin = new System.Windows.Forms.Padding(0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(79, 28);
-            this.panel4.TabIndex = 0;
-            // 
-            // ValPEmb
-            // 
-            this.ValPEmb.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ValPEmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ValPEmb.Location = new System.Drawing.Point(0, 0);
-            this.ValPEmb.Name = "ValPEmb";
-            this.ValPEmb.Size = new System.Drawing.Size(79, 28);
-            this.ValPEmb.TabIndex = 1;
-            this.ValPEmb.Text = "Valider";
-            this.ValPEmb.UseVisualStyleBackColor = true;
-            this.ValPEmb.Click += new System.EventHandler(this.ValPEmb_Click_1);
-            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 3;
@@ -795,6 +795,8 @@
             this.groupBox119.ResumeLayout(false);
             this.groupBox119.PerformLayout();
             this.panel45.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.navigationPage3.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -803,8 +805,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);

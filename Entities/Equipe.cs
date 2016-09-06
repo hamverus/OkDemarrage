@@ -12,18 +12,11 @@ namespace Entities
     using System;
     using System.Collections.Generic;
     
-    public partial class ValOKdIntegrtion
+    public partial class Equipe
     {
         public int id { get; set; }
-        public Nullable<System.DateTime> date { get; set; }
-        public Nullable<bool> ok { get; set; }
-        public Nullable<bool> nok { get; set; }
-        public Nullable<bool> na { get; set; }
-        public Nullable<int> idDescription { get; set; }
-        public Nullable<int> idLigne { get; set; }
-        public string commentaire { get; set; }
-        public string equipe { get; set; }
-    
-        public virtual OKDesription OKDesription { get; set; }
+        public string designation { get; set; }
+        public Nullable<System.TimeSpan> dateDebut { get; set; }
+        public Nullable<System.TimeSpan> dateFin { get; set; }
     }
 }

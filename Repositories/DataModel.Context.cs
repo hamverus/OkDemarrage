@@ -32,5 +32,6 @@ namespace Repositories
         public virtual DbSet<ValOKdIntegrtion> ValOKdIntegrtion { get; set; }
         public virtual DbSet<PiloteInteg> PiloteIntegs { get; set; }
         public virtual DbSet<PiloteFiniIntegration> PiloteFiniIntegrations { get; set; }
+        public virtual DbSet<Equipe> Equipes { get; set; }
     }
 }
