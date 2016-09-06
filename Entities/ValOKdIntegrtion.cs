@@ -23,6 +23,7 @@ namespace Entities
         public Nullable<int> idLigne { get; set; }
         public string commentaire { get; set; }
     
+        public virtual LigneDem LigneDem { get; set; }
         public virtual OKDesription OKDesription { get; set; }
     }
 }

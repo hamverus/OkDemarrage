@@ -11,11 +11,11 @@ namespace Repositories
 { 
     public class ValOKdIntegrepositories : BasicRepository<ValOKdIntegrtion> ,IBasicRepository<ValOKdIntegrtion> 
     {
-        private AQLM2Entities context;
+        private testEntities context;
         private DbSet<ValOKdIntegrtion> dbSet;
-        public ValOKdIntegrepositories(AQLM2Entities context) : base(context)
+        public ValOKdIntegrepositories(testEntities context) : base(context)
         {
-            context = new AQLM2Entities();
+            context = new testEntities();
             this.context = context;  
             dbSet = context.Set<ValOKdIntegrtion>();
         }

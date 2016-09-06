@@ -38,7 +38,7 @@ namespace OKDemarrageIntegration
         {
             RadioButton[] listNok = { Ass1rb1Nok, Ass1rb2NOk, Ass1rb3NOk, Ass1rb4NOk, Ass1rb5NOk, Ass1rb6NOk, Ass1rb7NOk };
             RadioButton[] l = { Ass1rb1Ok, Ass1rb1Nok, Ass1rb1Na, Ass1rb2Ok, Ass1rb2NOk, Ass1rb2Na, Ass1rb3Ok, Ass1rb3NOk, Ass1rb3Na, Ass1rb4Ok, Ass1rb4NOk, Ass1rb4Na, Ass1rb5Ok, Ass1rb5NOk, Ass1rb5Na, Ass1rb6Ok, Ass1rb6NOk, Ass1rb6Na, Ass1rb7Ok, Ass1rb7NOk, Ass1rb7Na };
-            AQLM2Entities context = new AQLM2Entities();
+            testEntities context = new testEntities();
             OkDescriptRepositorie desc = new OkDescriptRepositorie(context);
             ValOKdIntegrepositories repo = new ValOKdIntegrepositories(context);
             //            LigneRepositories lig = new LigneRepositories(context);
@@ -50,7 +50,7 @@ namespace OKDemarrageIntegration
 
         private void ValAss2_Click(object sender, EventArgs e)
         {
-            AQLM2Entities context = new AQLM2Entities();
+            testEntities context = new testEntities();
             ValOKdIntegrepositories repo = new ValOKdIntegrepositories(context);
             OkDescriptRepositorie desc = new OkDescriptRepositorie(context);
             //            LigneRepositories lig = new LigneRepositories(context);
@@ -65,7 +65,7 @@ namespace OKDemarrageIntegration
 
         private void ValAss3_Click_1(object sender, EventArgs e)
         {
-            AQLM2Entities context = new AQLM2Entities();
+            testEntities context = new testEntities();
             ValOKdIntegrepositories repo = new ValOKdIntegrepositories(context);
             OkDescriptRepositorie desc = new OkDescriptRepositorie(context);
             //            LigneRepositories lig = new LigneRepositories(context);
@@ -80,7 +80,7 @@ namespace OKDemarrageIntegration
 
         private void ValAss4_Click_1(object sender, EventArgs e)
         {
-            AQLM2Entities context = new AQLM2Entities();
+            testEntities context = new testEntities();
             ValOKdIntegrepositories repo = new ValOKdIntegrepositories(context);
             OkDescriptRepositorie desc = new OkDescriptRepositorie(context);
             //            LigneRepositories lig = new LigneRepositories(context);
@@ -95,7 +95,7 @@ namespace OKDemarrageIntegration
 
         private void ValAss5_Click_1(object sender, EventArgs e)
         {
-            AQLM2Entities context = new AQLM2Entities();
+            testEntities context = new testEntities();
             ValOKdIntegrepositories repo = new ValOKdIntegrepositories(context);
             OkDescriptRepositorie desc = new OkDescriptRepositorie(context);
             //            LigneRepositories lig = new LigneRepositories(context);
@@ -110,7 +110,7 @@ namespace OKDemarrageIntegration
 
         private void ValAss6_Click_1(object sender, EventArgs e)
         {
-            AQLM2Entities context = new AQLM2Entities();
+            testEntities context = new testEntities();
             ValOKdIntegrepositories repo = new ValOKdIntegrepositories(context);
             OkDescriptRepositorie desc = new OkDescriptRepositorie(context);
             //            LigneRepositories lig = new LigneRepositories(context);
@@ -125,7 +125,7 @@ namespace OKDemarrageIntegration
 
         private void ValPv_Click_1(object sender, EventArgs e)
         {
-            AQLM2Entities context = new AQLM2Entities();
+            testEntities context = new testEntities();
             ValOKdIntegrepositories repo = new ValOKdIntegrepositories(context);
             OkDescriptRepositorie desc = new OkDescriptRepositorie(context);
             //            LigneRepositories lig = new LigneRepositories(context);
@@ -140,7 +140,7 @@ namespace OKDemarrageIntegration
 
         private void ValPD_Click_1(object sender, EventArgs e)
         {
-            AQLM2Entities context = new AQLM2Entities();
+            testEntities context = new testEntities();
             ValOKdIntegrepositories repo = new ValOKdIntegrepositories(context);
             OkDescriptRepositorie desc = new OkDescriptRepositorie(context);
             //            LigneRepositories lig = new LigneRepositories(context);
@@ -155,7 +155,7 @@ namespace OKDemarrageIntegration
 
         private void ValPWifi_Click_1(object sender, EventArgs e)
         {
-            AQLM2Entities context = new AQLM2Entities();
+            testEntities context = new testEntities();
             ValOKdIntegrepositories repo = new ValOKdIntegrepositories(context);
             OkDescriptRepositorie desc = new OkDescriptRepositorie(context);
             //            LigneRepositories lig = new LigneRepositories(context);
@@ -170,7 +170,7 @@ namespace OKDemarrageIntegration
 
         private void ValPBTF_Click_1(object sender, EventArgs e)
         {
-            AQLM2Entities context = new AQLM2Entities();
+            testEntities context = new testEntities();
             ValOKdIntegrepositories repo = new ValOKdIntegrepositories(context);
             OkDescriptRepositorie desc = new OkDescriptRepositorie(context);
             //            LigneRepositories lig = new LigneRepositories(context);
@@ -185,7 +185,7 @@ namespace OKDemarrageIntegration
 
         private void ValFSOS_Click_1(object sender, EventArgs e)
         {
-            AQLM2Entities context = new AQLM2Entities();
+            testEntities context = new testEntities();
             ValOKdIntegrepositories repo = new ValOKdIntegrepositories(context);
             OkDescriptRepositorie desc = new OkDescriptRepositorie(context);
             //            LigneRepositories lig = new LigneRepositories(context);
@@ -200,7 +200,7 @@ namespace OKDemarrageIntegration
 
         private void ValTelch_Click_1(object sender, EventArgs e)
         {
-            AQLM2Entities context = new AQLM2Entities();
+            testEntities context = new testEntities();
             ValOKdIntegrepositories repo = new ValOKdIntegrepositories(context);
             OkDescriptRepositorie desc = new OkDescriptRepositorie(context);
             //            LigneRepositories lig = new LigneRepositories(context);
@@ -215,7 +215,7 @@ namespace OKDemarrageIntegration
 
         private void ValPerMur_Click_1(object sender, EventArgs e)
         {
-            AQLM2Entities context = new AQLM2Entities();
+            testEntities context = new testEntities();
             ValOKdIntegrepositories repo = new ValOKdIntegrepositories(context);
             OkDescriptRepositorie desc = new OkDescriptRepositorie(context);
             //            LigneRepositories lig = new LigneRepositories(context);
@@ -230,7 +230,7 @@ namespace OKDemarrageIntegration
 
         private void ValPEmb_Click_1(object sender, EventArgs e)
         {
-            AQLM2Entities context = new AQLM2Entities();
+            testEntities context = new testEntities();
             ValOKdIntegrepositories repo = new ValOKdIntegrepositories(context);
             OkDescriptRepositorie desc = new OkDescriptRepositorie(context);
             //            LigneRepositories lig = new LigneRepositories(context);
@@ -245,7 +245,7 @@ namespace OKDemarrageIntegration
 
         private void ValPpalet_Click_1(object sender, EventArgs e)
         {
-            AQLM2Entities context = new AQLM2Entities();
+            testEntities context = new testEntities();
             ValOKdIntegrepositories repo = new ValOKdIntegrepositories(context);
             OkDescriptRepositorie desc = new OkDescriptRepositorie(context);
             //            LigneRepositories lig = new LigneRepositories(context);
@@ -260,7 +260,7 @@ namespace OKDemarrageIntegration
 
         private void ValPAQL_Click_1(object sender, EventArgs e)
         {
-            AQLM2Entities context = new AQLM2Entities();
+            testEntities context = new testEntities();
             ValOKdIntegrepositories repo = new ValOKdIntegrepositories(context);
             OkDescriptRepositorie desc = new OkDescriptRepositorie(context);
             //            LigneRepositories lig = new LigneRepositories(context);
@@ -275,7 +275,7 @@ namespace OKDemarrageIntegration
 
         private void ValPrepBt_Click(object sender, EventArgs e)
         {
-            AQLM2Entities context = new AQLM2Entities();
+            testEntities context = new testEntities();
             ValOKdIntegrepositories repo = new ValOKdIntegrepositories(context);
             OkDescriptRepositorie desc = new OkDescriptRepositorie(context);
             //            LigneRepositories lig = new LigneRepositories(context);

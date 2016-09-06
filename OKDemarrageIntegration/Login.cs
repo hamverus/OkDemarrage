@@ -18,7 +18,7 @@ namespace OKDemarrageIntegration
 {
     public partial class Login : Form
     {
-        AQLM2Entities context = new AQLM2Entities();
+        testEntities context = new testEntities();
         private PiloteIntegRepositories pir; 
         private PiloteFiniRepositories pf;
         private PiloteFiniIntegRepositories pfi;
@@ -51,7 +51,7 @@ namespace OKDemarrageIntegration
         //}
         //public bool ValidateApplicationUser()
         //{
-        //    AQLM2Entities context = new AQLM2Entities();
+        //    testEntities context = new testEntities();
         //    PiloteRepositories pilote = new PiloteRepositories(context);
         //    bool validUser = false;
 
@@ -112,7 +112,7 @@ namespace OKDemarrageIntegration
         
         private void connecter_Click_1(object sender, EventArgs e)
         {
-            AQLM2Entities context = new AQLM2Entities();  
+            testEntities context = new testEntities();  
 
 
             PiloteIntegRepositories pilote = new PiloteIntegRepositories(context);

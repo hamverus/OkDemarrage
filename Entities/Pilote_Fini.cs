@@ -12,17 +12,18 @@ namespace Entities
     using System;
     using System.Collections.Generic;
     
-    public partial class PiloteFiniIntegration
+    public partial class Pilote_Fini
     {
         public int id { get; set; }
-        public string matricule { get; set; }
-        public string nom { get; set; }
-        public string Fonction { get; set; }
+        public string Matricule { get; set; }
+        public Nullable<System.DateTime> Date { get; set; }
+        public string Nom { get; set; }
+        public string Prenom { get; set; }
         public string UF { get; set; }
+        public string Fonction { get; set; }
         public string Poste { get; set; }
-        public string Module { get; set; }
-        public Nullable<System.DateTime> date { get; set; }
         public Nullable<int> idLigne { get; set; }
-        public string prenom { get; set; }
+    
+        public virtual LigneDem LigneDem { get; set; }
     }
 }

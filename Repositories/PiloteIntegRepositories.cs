@@ -5,7 +5,7 @@ namespace Repositories
 {
     public class PiloteIntegRepositories:BasicRepository<PiloteInteg>,IBasicRepository<PiloteInteg>
     {
-        public PiloteIntegRepositories(AQLM2Entities context) : base(context)
+        public PiloteIntegRepositories(testEntities context) : base(context)
         {
         }
 

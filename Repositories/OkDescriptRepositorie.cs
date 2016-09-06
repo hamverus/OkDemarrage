@@ -9,7 +9,7 @@ namespace Repositories
 {
     public class OkDescriptRepositorie : BasicRepository<OKDesription>, IBasicRepository<OKDesription>
     {
-        public OkDescriptRepositorie(AQLM2Entities context) : base(context)
+        public OkDescriptRepositorie(testEntities context) : base(context)
         {
         }
     }

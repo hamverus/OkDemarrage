@@ -4,15 +4,16 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="438ac2cd19f749a4a591a9d37dc5daed" Name="Diagram1">
-        <EntityTypeShape EntityType="AQLM2Model.OKDesription" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="AQLM2Model.Pilote" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="AQLM2Model.PiloteFini" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="AQLM2Model.ValOKdIntegrtion" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <AssociationConnector Association="AQLM2Model.FK_ValOKdIntegrt_OKDesription" ManuallyRouted="false" />
-        <AssociationConnector Association="AQLM2Model.FK_PiloteDispo_Pilote" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="AQLM2Model.PiloteInteg" Width="1.5" PointX="5.375" PointY="0.75" />
-        <EntityTypeShape EntityType="AQLM2Model.PiloteFiniIntegration" Width="1.5" PointX="5.375" PointY="3.75" />
+      <Diagram DiagramId="58dd2add9a08483d93cb2d107972dc61" Name="Diagram1">
+        <EntityTypeShape EntityType="testModel.LigneDem" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="testModel.OKDesription" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="testModel.Pilote" Width="1.5" PointX="0.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="testModel.Pilote_Fini" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="testModel.sysdiagram" Width="1.5" PointX="2.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="testModel.ValOKdIntegrtion" Width="1.5" PointX="6" PointY="4.25" IsExpanded="true" />
+        <AssociationConnector Association="testModel.FK_Pilote_Fini_LigneDem" ManuallyRouted="false" />
+        <AssociationConnector Association="testModel.FK_ValOKdIntegrt_LigneDem" ManuallyRouted="false" />
+        <AssociationConnector Association="testModel.FK_ValOKdIntegrt_OKDesription" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

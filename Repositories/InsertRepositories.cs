@@ -24,7 +24,7 @@ namespace Repositories
         
         String input;
         bool err;
-        AQLM2Entities context ;
+        testEntities context ;
 
 
         public InsertRepositories(TextBox commentaire,RadioButton[] listNok,RadioButton[] listRb,Button valid, String input )

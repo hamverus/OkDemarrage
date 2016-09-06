@@ -10,14 +10,13 @@
 namespace Repositories
 {
     using System;
-    using Entities;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class AQLM2Entities : DbContext
+    public partial class testEntities : DbContext
     {
-        public AQLM2Entities()
-            : base("name=AQLM2Entities")
+        public testEntities()
+            : base("name=testEntities")
         {
         }
     
@@ -26,11 +25,11 @@ namespace Repositories
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<OKDesription> OKDesription { get; set; }
-        public virtual DbSet<Pilote> Pilote { get; set; }
-        public virtual DbSet<PiloteFini> PiloteFini { get; set; }
-        public virtual DbSet<ValOKdIntegrtion> ValOKdIntegrtion { get; set; }
-        public virtual DbSet<PiloteInteg> PiloteIntegs { get; set; }
-        public virtual DbSet<PiloteFiniIntegration> PiloteFiniIntegrations { get; set; }
+        public virtual DbSet<LigneDem> LigneDems { get; set; }
+        public virtual DbSet<OKDesription> OKDesriptions { get; set; }
+        public virtual DbSet<Pilote> Pilotes { get; set; }
+        public virtual DbSet<Pilote_Fini> Pilote_Finis { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<ValOKdIntegrtion> ValOKdIntegrtions { get; set; }
     }
 }

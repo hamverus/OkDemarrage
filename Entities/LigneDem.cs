@@ -12,19 +12,20 @@ namespace Entities
     using System;
     using System.Collections.Generic;
     
-    public partial class OKDesription
+    public partial class LigneDem
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public OKDesription()
+        public LigneDem()
         {
+            this.Pilote_Fini = new HashSet<Pilote_Fini>();
             this.ValOKdIntegrtions = new HashSet<ValOKdIntegrtion>();
         }
     
         public int id { get; set; }
-        public string Postes { get; set; }
         public string description { get; set; }
-        public string Module { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Pilote_Fini> Pilote_Fini { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ValOKdIntegrtion> ValOKdIntegrtions { get; set; }
     }

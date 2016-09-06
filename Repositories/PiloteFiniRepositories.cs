@@ -7,9 +7,9 @@ using Entities;
 using Data;
 namespace Repositories
 {
-    public class PiloteFiniRepositories : BasicRepository<PiloteFini>, IBasicRepository<PiloteFini>
+    public class PiloteFiniRepositories : BasicRepository<Pilote_Fini>, IBasicRepository<Pilote_Fini>
     {
-        public PiloteFiniRepositories(AQLM2Entities context) : base(context)
+        public PiloteFiniRepositories(testEntities context) : base(context)
         {
         }
     }

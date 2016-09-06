@@ -14,20 +14,9 @@ namespace Entities
     
     public partial class Pilote
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Pilote()
-        {
-            this.PiloteFini = new HashSet<PiloteFini>();
-        }
-    
-        public string matricule { get; set; }
-        public string nom { get; set; }
-        public string prenom { get; set; }
-        public string poste { get; set; }
-        public Nullable<int> UF { get; set; }
-        public string pwd { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PiloteFini> PiloteFini { get; set; }
+        public string Matricule { get; set; }
+        public string Nom { get; set; }
+        public string Prenom { get; set; }
+        public string Poste { get; set; }
     }
 }

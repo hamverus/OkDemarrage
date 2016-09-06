@@ -11,13 +11,13 @@ namespace Repositories
 {  
     public class BasicRepository<TEntity> : IBasicRepository<TEntity> where TEntity : class
     {
-        private AQLM2Entities context;
+        private testEntities context;
         private DbSet<TEntity> dbSet;
 
 
-        public BasicRepository(AQLM2Entities context)
+        public BasicRepository(testEntities context)
         {
-            context = new AQLM2Entities();
+            context = new testEntities();
             this.context = context;
             this.dbSet = context.Set<TEntity>();
         }

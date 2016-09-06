@@ -8,7 +8,7 @@ namespace OKDemarrageIntegration
 {//this is a local project!!don't touch
     public partial class TQP : Form
     {
-        private  AQLM2Entities context;
+        private  testEntities context;
         private  string mat;
         private  PiloteIntegRepositories pil;
         private  PiloteFiniIntegration pilInsert;
@@ -18,7 +18,7 @@ namespace OKDemarrageIntegration
 
         public TQP()
         {
-            context = new AQLM2Entities();
+            context = new testEntities();
             repo = new ValOKdIntegrepositories(context);
             pil = new PiloteIntegRepositories(context);
             pilr = new PiloteFiniIntegRepositories(context);
@@ -28,7 +28,7 @@ namespace OKDemarrageIntegration
 
         public TQP(string mat)
         {
-            context = new AQLM2Entities();
+            context = new testEntities();
             repo = new ValOKdIntegrepositories(context);
             pil = new PiloteIntegRepositories(context);
             pilr = new PiloteFiniIntegRepositories(context);
@@ -127,7 +127,7 @@ namespace OKDemarrageIntegration
 
         private void TQP_Load(object sender, EventArgs e)
         {
-            var context = new AQLM2Entities();
+            var context = new testEntities();
             var dateStart = new DateTime(2016, 09, 05, 12, 05, 00);
             var dateFinish = new DateTime(2016, 09, 05, 12, 11, 00);
             var pfi = new PiloteFiniIntegRepositories(context);
