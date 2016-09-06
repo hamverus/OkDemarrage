@@ -12,7 +12,7 @@ namespace Repositories
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    
+    using Entities;
     public partial class testEntities : DbContext
     {
         public testEntities()
@@ -29,7 +29,9 @@ namespace Repositories
         public virtual DbSet<OKDesription> OKDesriptions { get; set; }
         public virtual DbSet<Pilote> Pilotes { get; set; }
         public virtual DbSet<Pilote_Fini> Pilote_Finis { get; set; }
+        public virtual DbSet<PiloteInteg> PiloteIntegs { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<ValOKdIntegrtion> ValOKdIntegrtions { get; set; }
+        public virtual DbSet<PiloteFiniInteg> PiloteFiniIntegs { get; set; }
     }
 }

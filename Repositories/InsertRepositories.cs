@@ -113,7 +113,7 @@ namespace Repositories
 
                 }
 
-                int dd = desc.Get(bd => bd.poste.Equals(poste) && bd.module.Equals(module)).Select(bd => bd.id).First();
+                int dd = desc.Get(bd => bd.Postes.Equals(poste) && bd.Module.Equals(module)).Select(bd => bd.id).First();
                 //incrémentaion d'id
                 for (int i = 0; i < listRb.Length - 2; i += 3)
                 {

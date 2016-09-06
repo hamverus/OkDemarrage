@@ -55,6 +55,12 @@
     <Compile Include="Pilote.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
+    <Compile Include="PiloteFiniInteg.cs">
+      <DependentUpon>Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PiloteInteg.cs">
+      <DependentUpon>Entities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Pilote_Fini.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>

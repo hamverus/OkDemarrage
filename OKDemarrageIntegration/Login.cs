@@ -18,22 +18,23 @@ namespace OKDemarrageIntegration
 {
     public partial class Login : Form
     {
-        testEntities context = new testEntities();
+        testEntities context ;
         private PiloteIntegRepositories pir; 
         private PiloteFiniRepositories pf;
         private PiloteFiniIntegRepositories pfi;
         public Login()
         {
             InitializeComponent();
+            context = new testEntities();
              pir = new PiloteIntegRepositories(context);
              pf = new PiloteFiniRepositories(context);
              pfi = new PiloteFiniIntegRepositories(context);
         }
         private void Login_Load(object sender, EventArgs e)
         {
-            PiloteIntegRepositories pir = new PiloteIntegRepositories(context);
-            PiloteFiniRepositories pf = new PiloteFiniRepositories(context);
-            PiloteFiniIntegRepositories pfi = new PiloteFiniIntegRepositories(context);
+             pir = new PiloteIntegRepositories(context);
+             pf = new PiloteFiniRepositories(context);
+             pfi = new PiloteFiniIntegRepositories(context);
 
             DateTime dateStart = new DateTime(2016, 09, 05, 12, 05, 00);
             DateTime dateFinish = new DateTime(2016, 09, 05, 12, 50, 00);
@@ -87,13 +88,18 @@ namespace OKDemarrageIntegration
         //}
         private void displayList(DateTime dateStart,DateTime dateFinish,int test,String fonction)
         {
+            
+            try
+            {
+
            
             // Array data;
-            var data = pfi.Get(dt => dt.date >= dateStart && dt.date <= dateFinish).Select(dt => new { dt.matricule, dt.nom, dt.prenom, dt.Fonction }).Distinct().ToList();
-            // Console.Write(data.GetValue(0).ToString());
+            var data =pfi.Get(dt => dt.date >= dateStart  && dt.date <= dateFinish).Select(dt => new { dt.matricule, dt.nom, dt.prenom, dt.Fonction }).Distinct().ToList();
+                // Console.Write(data.GetValue(0).ToString());
+            
             var cont = pfi.Get(c => c.Fonction.Equals(fonction)).Count();
 
-            if (cont == test)
+            if ((cont == test)&& (data!=null))
             {
                 foreach (var d in data)
                 {
@@ -107,48 +113,66 @@ namespace OKDemarrageIntegration
                     listPiloteFini.Items.Add(item);
                 }
             }
-        }
-
-        
-        private void connecter_Click_1(object sender, EventArgs e)
-        {
-            testEntities context = new testEntities();  
-
-
-            PiloteIntegRepositories pilote = new PiloteIntegRepositories(context);
-            bool validUser = false;
-            var userElement =
-                    pilote.Get(u => u.matricule.Equals(LoginHome.Text) && u.pwd.Equals(motdepasse.Text))
-                        .SingleOrDefault();
-
-
-            validUser = (userElement != null);
-            if (validUser)
+            }
+            catch (Exception e)
             {
 
-                if (userElement.poste.Equals("TQP"))
+                
+            }
+        }
+
+
+        private void connecter_Click_1(object sender, EventArgs e)
+        {
+             
+
+
+           
+            bool validUser = false;
+           
+            if(!(String.IsNullOrEmpty(LoginHome.Text) ||String.IsNullOrEmpty(motdepasse.Text)))
+              {
+
+
+          var  userElement =pir.Get(u => u.matricule.Equals(LoginHome.Text) && u.pwd.Equals(motdepasse.Text)).SingleOrDefault();
+                //userElement = pir.Get().First();
+
+                validUser = (userElement != null);
+                if (validUser)
                 {
 
-                    this.Hide();
-                    TQP dem = new TQP(LoginHome.Text);
-                    dem.Show();
-                }
-                else if (userElement.poste.Equals("CE"))
-                {
-                    this.Hide();
-                    Integration dem = new Integration(LoginHome.Text);
-                    dem.Show();
+                    if (userElement.poste.Equals("TQP"))
+                    {
+
+                        this.Hide();
+                        TQP dem = new TQP(LoginHome.Text);
+                        dem.Show();
+                    }
+                    else if (userElement.poste.Equals("CE"))
+                    {
+                        this.Hide();
+                        Integration dem = new Integration(LoginHome.Text);
+                        dem.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("login ou mot de passe incorrecte !", "Login Failed", MessageBoxButtons.OK,
+                            MessageBoxIcon.Stop);
+                    }
+
                 }
                 else
                 {
-                    MessageBox.Show("login ou mot de passe incorrecte !", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    MessageBox.Show("login ou mot de passe incorrecte !", "Login Failed", MessageBoxButtons.OK,
+                        MessageBoxIcon.Stop);
                 }
+            }
+       else
+        {
 
-            }
-            else
-            {
-                MessageBox.Show("login ou mot de passe incorrecte !", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-            }
+               MessageBox.Show("les champs sont vides!!", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+              }
+           
         }
     }
 }

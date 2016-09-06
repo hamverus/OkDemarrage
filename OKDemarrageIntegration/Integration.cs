@@ -305,5 +305,10 @@ namespace OKDemarrageIntegration
             Environment.Exit(0);
 
         }
+
+        private void ValAss1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

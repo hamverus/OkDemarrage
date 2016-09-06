@@ -11,7 +11,7 @@ namespace OKDemarrageIntegration
         private  testEntities context;
         private  string mat;
         private  PiloteIntegRepositories pil;
-        private  PiloteFiniIntegration pilInsert;
+        private  PiloteFiniInteg pilInsert;
         private  PiloteFiniIntegRepositories pilr;
         private  ValOKdIntegrepositories repo;
         
@@ -22,7 +22,7 @@ namespace OKDemarrageIntegration
             repo = new ValOKdIntegrepositories(context);
             pil = new PiloteIntegRepositories(context);
             pilr = new PiloteFiniIntegRepositories(context);
-            pilInsert = new PiloteFiniIntegration();
+            pilInsert = new PiloteFiniInteg();
             InitializeComponent();
         }
 
@@ -32,7 +32,7 @@ namespace OKDemarrageIntegration
             repo = new ValOKdIntegrepositories(context);
             pil = new PiloteIntegRepositories(context);
             pilr = new PiloteFiniIntegRepositories(context);
-            pilInsert = new PiloteFiniIntegration();
+            pilInsert = new PiloteFiniInteg();
             InitializeComponent();
             this.mat = mat;
         }
@@ -50,7 +50,7 @@ namespace OKDemarrageIntegration
             pilInsert.prenom = pl.prenom;
             pilInsert.Fonction = pl.poste;
             pilInsert.date = DateTime.Now;
-            pilInsert.Poste = navigationPage1.Text;
+            pilInsert.poste = navigationPage1.Text;
 
             var insert = new InsertRepositories(ComPBTF, listNok, l, ValPBTF, ComPBTF.Text);
             insert.checkNokRb();
@@ -133,7 +133,7 @@ namespace OKDemarrageIntegration
             var pfi = new PiloteFiniIntegRepositories(context);
             var poste =
                 pfi.Get(p => p.date > dateStart && p.date < dateFinish && p.Fonction.Equals("TQP"))
-                    .Select(p => p.Poste)
+                    .Select(p => p.poste)
                     .ToList();
             foreach (var d in poste)
             {
@@ -160,7 +160,7 @@ namespace OKDemarrageIntegration
             pilInsert.prenom = pl.prenom;
             pilInsert.Fonction = pl.poste;
             pilInsert.date = DateTime.Now;
-            pilInsert.Poste = navigationPage2.Text;
+            pilInsert.poste = navigationPage2.Text;
 
             var insert = new InsertRepositories(ComPEmb, listNok, l, ValPEmb, ComPEmb.Text);
             insert.checkNokRb();
@@ -232,7 +232,7 @@ namespace OKDemarrageIntegration
             pilInsert.prenom = pl.prenom;
             pilInsert.Fonction = pl.poste;
             pilInsert.date = DateTime.Now;
-            pilInsert.Poste = navigationPage3.Text;
+            pilInsert.poste = navigationPage3.Text;
 
             var insert = new InsertRepositories(ComPpalet, listNok, l, ValPpalet, ComPpalet.Text);
             insert.checkNokRb();

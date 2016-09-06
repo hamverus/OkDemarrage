@@ -7,7 +7,7 @@ namespace Repositories
     {
         public PiloteIntegRepositories(testEntities context) : base(context)
         {
-        }
+        }    
 
            
     }

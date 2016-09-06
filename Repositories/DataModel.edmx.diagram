@@ -4,16 +4,18 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="58dd2add9a08483d93cb2d107972dc61" Name="Diagram1">
-        <EntityTypeShape EntityType="testModel.LigneDem" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="testModel.OKDesription" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="testModel.Pilote" Width="1.5" PointX="0.75" PointY="8" IsExpanded="true" />
-        <EntityTypeShape EntityType="testModel.Pilote_Fini" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="testModel.sysdiagram" Width="1.5" PointX="2.75" PointY="8" IsExpanded="true" />
-        <EntityTypeShape EntityType="testModel.ValOKdIntegrtion" Width="1.5" PointX="6" PointY="4.25" IsExpanded="true" />
-        <AssociationConnector Association="testModel.FK_Pilote_Fini_LigneDem" ManuallyRouted="false" />
-        <AssociationConnector Association="testModel.FK_ValOKdIntegrt_LigneDem" ManuallyRouted="false" />
-        <AssociationConnector Association="testModel.FK_ValOKdIntegrt_OKDesription" ManuallyRouted="false" />
+      <Diagram DiagramId="58dd2add9a08483d93cb2d107972dc61" Name="Diagram1" ZoomLevel="96">
+        <EntityTypeShape EntityType="testModel.LigneDem" Width="1.5" PointX="0.75" PointY="4.875" />
+        <EntityTypeShape EntityType="testModel.OKDesription" Width="1.5" PointX="3.75" PointY="0.75" />
+        <EntityTypeShape EntityType="testModel.Pilote" Width="1.5" PointX="0.75" PointY="8" />
+        <EntityTypeShape EntityType="testModel.Pilote_Fini" Width="1.5" PointX="3" PointY="4.25" />
+        <EntityTypeShape EntityType="testModel.PiloteInteg" Width="1.5" PointX="2.75" PointY="8" />
+        <EntityTypeShape EntityType="testModel.sysdiagram" Width="1.5" PointX="4.75" PointY="8" />
+        <EntityTypeShape EntityType="testModel.ValOKdIntegrtion" Width="1.5" PointX="6" PointY="4.25" />
+        <EntityTypeShape EntityType="testModel.PiloteFiniInteg" Width="1.5" PointX="6.75" PointY="8" />
+        <AssociationConnector Association="testModel.FK_Pilote_Fini_LigneDem" />
+        <AssociationConnector Association="testModel.FK_ValOKdIntegrt_LigneDem" />
+        <AssociationConnector Association="testModel.FK_ValOKdIntegrt_OKDesription" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
