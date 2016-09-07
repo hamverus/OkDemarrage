@@ -53,7 +53,7 @@ namespace OKDemarrageIntegration
 
         private void ValPBTF_Click(object sender, EventArgs e)
         {
-            var err = false;
+            Boolean err = false;
             RadioButton[] l = { PBTFrb9Ok, PBTFrb9NOk, PBTFrb9Na, PBTFrb11Ok, PBTFrb11NOk, PBTFrb11Na };
             RadioButton[] listNok = { PBTFrb9NOk, PBTFrb11NOk };
 
@@ -67,7 +67,7 @@ namespace OKDemarrageIntegration
             pilInsert.Poste = navigationPage1.Text;
 
             var insert = new InsertRepositories(ComPBTF, listNok, l, ValPBTF, ComPBTF.Text);
-            insert.checkNokRb();
+            err = insert.checkNokRb(err);
 
             var msg = "";
 
@@ -82,6 +82,7 @@ namespace OKDemarrageIntegration
             var dd = 64;
             if (insert.checkRb(err))
             {
+
                 for (var i = 0; i < l.Length - 2; i += 3)
                 {
                     v.date = DateTime.Now;
@@ -124,7 +125,17 @@ namespace OKDemarrageIntegration
             }
             else
             {
-                MessageBox.Show("Vérifier votre choix!", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+                if (err)
+                {
+                    MessageBox.Show("S'il vous plait remplir les champs commentaire", "Erreur", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Vérifier votre choix!", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -142,7 +153,7 @@ namespace OKDemarrageIntegration
 
         private void TQP_Load(object sender, EventArgs e)
         {
-            var context = new AQLM2Entities();
+            
              
             var pfi = new PiloteFiniIntegRepositories(context);
             var poste =
@@ -155,6 +166,14 @@ namespace OKDemarrageIntegration
                 {
                     ValPBTF.Enabled = false;
                 }
+                else if (d.Equals(navigationPage2.Text))
+                {
+                    ValPEmb.Enabled = false;
+                }else if (d.Equals(navigationPage3.Text)
+                {
+                    ValPpalet.Enabled = false;
+                }
+                
             }
         }
 
@@ -177,7 +196,7 @@ namespace OKDemarrageIntegration
             pilInsert.Poste = navigationPage2.Text;
 
             var insert = new InsertRepositories(ComPEmb, listNok, l, ValPEmb, ComPEmb.Text);
-            insert.checkNokRb();
+            err = insert.checkNokRb(err);
             var msg = "";
 
             if (!String.IsNullOrEmpty(ComPpalet.Text))
@@ -231,8 +250,15 @@ namespace OKDemarrageIntegration
             }
             else
             {
-                MessageBox.Show("Vérifier votre choix!", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (err)
+                {
+                    MessageBox.Show("S'il vous plait remplir les champs commentaire","Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else {
+                    MessageBox.Show("Vérifier votre choix!", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
+            
         }
 
         private void ValPpalet_Click(object sender, EventArgs e)
@@ -251,7 +277,7 @@ namespace OKDemarrageIntegration
             pilInsert.Poste = navigationPage3.Text;
 
             var insert = new InsertRepositories(ComPpalet, listNok, l, ValPpalet, ComPpalet.Text);
-            insert.checkNokRb();
+            err = insert.checkNokRb(err);
             var msg = "";
 
             if (!String.IsNullOrEmpty(ComPpalet.Text))
@@ -301,7 +327,14 @@ namespace OKDemarrageIntegration
             }
             else
             {
-                MessageBox.Show("Vérifier votre choix!", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (err)
+                {
+                    MessageBox.Show("S'il vous plait remplir les champs commentaire", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Vérifier votre choix!", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

@@ -1,12 +1,5 @@
-﻿using Repositories;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+﻿using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Entities;
@@ -15,165 +8,140 @@ namespace Repositories
 {
     public class InsertRepositories
     {
-        private TextBox commentaire;
-
-        private Button b;
+        private  string dateNow;
+        private EquipeRepositories equipeRepository;
+        private String input;
         private RadioButton[] listNok;
         private RadioButton[] listRb;
         private Button valid;
-
-
-        private String input;
-        private bool err;
+        private Button b;
+        private TextBox commentaire;
         private AQLM2Entities context;
-        private EquipeRepositories equipeRepository;
         private DateTime dateDebutRecherche;
-        private string dateNow;
         private DateTime dateFinEquipe;
+        private bool err;
 
         public InsertRepositories(TextBox commentaire, RadioButton[] listNok, RadioButton[] listRb, Button valid,
             String input)
         {
-
-
-
             this.listNok = listNok;
             this.listRb = listRb;
             this.commentaire = commentaire;
             this.input = input;
-            this.err = false;
+            err = false;
             this.valid = valid;
 
             equipeRepository = new EquipeRepositories(context);
 
             dateNow = DateTime.Now.Date.ToString("d");
-
-
         }
 
         public InsertRepositories()
         {
             equipeRepository = new EquipeRepositories(context);
 
-            dateNow = DateTime.Now.Date.ToString("d");  
+            dateNow = DateTime.Now.Date.ToString("d");
         }
-
-        public void checkNokRb()
+        //Vérifier les radio button non ok si sont cochés
+        //Vérifier le commentaire si c'est à la forme du chaine du caractaire 
+        public bool checkNokRb(bool err)
         {
-
-            for (int i = 0; i < listNok.Length; i++)
+            for (var i = 0; i < listNok.Length; i++)
             {
                 if (listNok[i].Checked)
                 {
-                    string pattern = @"^[A-Za-z]*$";
+                    var pattern = @"\w+\d*\s*";
 
 
-                    Match m = Regex.Match(input, pattern, RegexOptions.IgnoreCase);
+                    var m = Regex.Match(input, pattern, RegexOptions.IgnoreCase);
                     if (input.Equals(""))
                     {
                         err = true;
-
                     }
                     if (!m.Success)
                     {
                         err = true;
-
                     }
-
-
                 }
             }
+            return err;
         }
-
+        //Vérifier si les radio buttion sont cochés
         public bool checkRb(bool err)
         {
-            bool stat = true;
+            var stat = true;
             bool res;
-            for (int i = 0; i < listRb.Length - 2; i += 3)
+            for (var i = 0; i < listRb.Length - 2; i += 3)
             {
                 if (listRb[i].Checked || listRb[i + 1].Checked || listRb[i + 2].Checked)
                 {
                     stat = stat && true;
-
                 }
                 else
                 {
                     stat = stat && false;
                 }
             }
-            if (stat == true && err == false)
+            if (stat && checkNokRb(err) == false)
             {
                 res = true;
             }
             else
             {
                 res = false;
-
             }
             return res;
         }
-
-        public void InsertData(DateTime dateDebut,String module, String poste, OkDescriptRepositorie desc, ValOKdIntegrepositories repo)
-        {
-
-            if (checkRb(err))
+        //methode d'insertion 
+        public void InsertData(DateTime dateDebut, String module, String poste, OkDescriptRepositorie desc,
+            ValOKdIntegrepositories repo)
+        {    
+            if (checkRb(err))//Si les radio button sont cochés
             {
+                var msg = "";
 
-
-                string msg = "";
-
-                if (!String.IsNullOrEmpty(input))
+                if (!String.IsNullOrEmpty(input))//si le champs commentaire n'est pas vide
                 {
                     msg = input;
-
                 }
-
-                int dd = desc.Get(bd => bd.poste.Equals(poste) && bd.module.Equals(module)).Select(bd => bd.id).First();
-                //incrémentaion d'id
-                for (int i = 0; i < listRb.Length - 2; i += 3)
+                //récuperer l'id de la  premiere contrainte  
+                var dd = desc.Get(bd => bd.poste.Equals(poste) && bd.module.Equals(module)).Select(bd => bd.id).First();
+                
+                for (var i = 0; i < listRb.Length - 2; i += 3)
                 {
-
-                    ValOKdIntegrtion v = new ValOKdIntegrtion();
+                    var v = new ValOKdIntegrtion();//Crée nouveau valeur ok description
 
                     v.date = DateTime.Now;
                     v.equipe = getEquipe(dateDebut);
                     //v.idLigne = 5;
 
-                    bool b = true;
-                    bool c = false;
+                    var b = true;
+                    var c = false;
                     v.ok = c;
                     v.nok = c;
                     v.na = c;
-                    if (listRb[i].Checked)
+                    if (listRb[i].Checked) //si le chamops ok est cochés
                     {
                         v.ok = b;
-                        v.idDescription = dd;
-                        dd++;
-                        repo.Insert(v);
+                        
                     }
-                    else if (listRb[i + 1].Checked)
+                    else if (listRb[i + 1].Checked)//si le chamops non ok est cochés
                     {
-
-
                         v.nok = b;
-                        v.idDescription = dd;
-                        dd++;
+                        
                         v.commentaire = msg;
-                        repo.Insert(v);
-
-
+                        
                     }
-                    else
+                    else //si le chamops non appliqué est cochés
                     {
                         v.na = b;
-                        v.idDescription = dd;
-                        dd++;
-                        repo.Insert(v);
+                        
                     }
-
-
+                    v.idDescription = dd;
+                    dd++;//incrémentaion d'id
+                    repo.Insert(v);
                 }
-                if (err == false)
+                if (checkNokRb(err) == false)
                 {
                     valid.Enabled = false;
                     MessageBox.Show("Succés validation !", "Validation", MessageBoxButtons.OK,
@@ -181,21 +149,25 @@ namespace Repositories
                 }
                 else
                 {
-                    MessageBox.Show("S'il vous plait remplir les chaps ci-dessus");
+                    MessageBox.Show("S'il vous plait remplir les champs commentaire", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("S'il vous plait remplir les chaps ci-dessus");
+                if (checkNokRb(err))
+                {
+                    MessageBox.Show("S'il vous plait remplir les champs commentaire", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else { MessageBox.Show("S'il vous plait remplir les champs ci-dessus", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                
+                
             }
-
         }
-
 
         public string getEquipe(DateTime datedebut)
         {
             var timeDebut = datedebut.ToString("HH:mm:ss tt");
-            TimeSpan t = TimeSpan.Parse(timeDebut);
+            var t = TimeSpan.Parse(timeDebut);
             var x = equipeRepository.Get(b => b.dateDebut == t).Select(b => b.designation).First();
             return x;
         }
@@ -203,27 +175,27 @@ namespace Repositories
         public DateTime getDateFINEquipe(DateTime datedebut)
         {
             var timeDebut = datedebut.ToString("HH:mm:ss tt");
-            TimeSpan t = TimeSpan.Parse(timeDebut);
+            var t = TimeSpan.Parse(timeDebut);
             var x = equipeRepository.Get(b => b.dateDebut == t).Select(b => b.dateFin).First();
-            dateFinEquipe=DateTime.Parse(dateNow + " " + TimeSpan.Parse(x.ToString()));
+            dateFinEquipe = DateTime.Parse(dateNow + " " + TimeSpan.Parse(x.ToString()));
             if (datedebut == DateTime.Parse(dateNow + " 16:51:30"))
             {
-
                 dateFinEquipe = dateFinEquipe.AddDays(1);
             }
-            return dateFinEquipe ;
+            return dateFinEquipe;
         }
 
         public DateTime getDateEquipe()
         {
             var listDateDabutEquipe = equipeRepository.GetAll().Select(b => b.dateDebut).ToList();
-            for (int i = 0; i < listDateDabutEquipe.Count ; i++)
+            for (var i = 0; i < listDateDabutEquipe.Count; i++)
             {
                 var dateEquipe = DateTime.Parse(dateNow + " " + listDateDabutEquipe[i]);
                 var dateFinEquipe = getDateFINEquipe(dateEquipe);
                 if (dateEquipe == DateTime.Parse(dateNow + " 16:51:30"))
                 {
-                    dateFinEquipe = dateFinEquipe.AddDays(1); }
+                    dateFinEquipe = dateFinEquipe.AddDays(1);
+                }
                 if (DateTime.Now >= dateEquipe && DateTime.Now < dateFinEquipe)
 
                 {
@@ -232,7 +204,5 @@ namespace Repositories
             }
             return dateDebutRecherche;
         }
-
-
     }
 }
