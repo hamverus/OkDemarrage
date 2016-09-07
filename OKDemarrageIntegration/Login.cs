@@ -63,8 +63,8 @@ namespace OKDemarrageIntegration
             // Array data;
             var data = pfi.Get(dt => dt.date >= dateStart && dt.date <= dateFinish).Select(dt => new { dt.matricule, dt.nom, dt.prenom, dt.Fonction }).Distinct().ToList();
             // Console.Write(data.GetValue(0).ToString());
-            
-            var cont = pfi.Get(c => c.Fonction.Equals(fonction)).Count();
+
+            var cont = pfi.Get(b => b.Fonction.Equals(fonction) && b.date >= dateStart && b.date <= dateFinish).Select(c => c.Poste).Count();
             
             if (cont == test)
             {

@@ -169,7 +169,7 @@ namespace OKDemarrageIntegration
                 else if (d.Equals(navigationPage2.Text))
                 {
                     ValPEmb.Enabled = false;
-                }else if (d.Equals(navigationPage3.Text)
+                }else if (d.Equals(navigationPage3.Text))
                 {
                     ValPpalet.Enabled = false;
                 }

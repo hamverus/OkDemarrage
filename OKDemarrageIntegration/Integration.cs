@@ -21,6 +21,7 @@ namespace OKDemarrageIntegration
         private InsertRepositories insertRepositories;
         private bool err;
         private DateTime dateStart, dateFinish;
+        private String mat;
         public Integration()
         {
             InitializeComponent();
@@ -34,9 +35,10 @@ namespace OKDemarrageIntegration
             err = false;
         }
 
-        public Integration(string text)
+        public Integration(string mat)
         {
             InitializeComponent();
+            this.mat = mat;
             dateDebut = insert.getDateEquipe();
            context = new AQLM2Entities();
            insertRepositories = new InsertRepositories();
@@ -276,16 +278,65 @@ namespace OKDemarrageIntegration
         {
             var pfi = new PiloteFiniIntegRepositories(context);
             var poste =
-                pfi.Get(p => p.date > dateStart && p.date < dateFinish && p.Fonction.Equals("TQP"))
+                pfi.Get(p => p.date > dateStart && p.date < dateFinish && p.Fonction.Equals("CE"))
                     .Select(p => p.Poste)
                     .ToList();
             foreach (var d in poste)
             {
                 switch (d)
                 {
-                    case "Assemblage 1":
+                    case "Assembage  01":
                         ValAss1.Enabled = false;
                         break;
+                    case "Assembage  02":
+                        ValAss2.Enabled = false;
+                        break;
+                    case "Assembage  03":
+                        ValAss3.Enabled = false;
+                        break;
+                    case "Assembage  04":
+                        ValAss4.Enabled = false;
+                        break;
+                    case "Assembage  05":
+                        ValAss5.Enabled = false;
+                        break;
+                    case "Assembage  06":
+                        ValAss6.Enabled = false;
+                        break;
+                    case "Poste Vision":
+                        ValPv.Enabled = false;
+                        break;
+                    case "Poste Dielectrique":
+                        ValPD.Enabled = false;
+                        break;
+                    case "Poste Wifi":
+                        ValPWifi.Enabled = false;
+                        break;
+                    case "Poste BTF":
+                        ValPBTF.Enabled = false;
+                        break;
+                    case "F SOS":
+                        ValFSOS.Enabled = false;
+                        break;
+                    case "Téléchargement":
+                        ValTelch.Enabled = false;
+                        break;
+                    case "Prérecette":
+                        ValPerMur.Enabled = false;
+                        break;
+                    case "Préparation boites":
+                        ValPrepBt.Enabled = false;
+                        break;
+                    case "Poste Emballage ":
+                        ValPEmb.Enabled = false;
+                        break;
+                    case "Poste Paléttisation":
+                        ValAss1.Enabled = false;
+                        break;
+                    case "Poste AQL":
+                        ValPAQL.Enabled = false;
+                        break;
+
                 }
             }
         }

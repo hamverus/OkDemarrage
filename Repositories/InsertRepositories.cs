@@ -19,6 +19,10 @@ namespace Repositories
         private AQLM2Entities context;
         private DateTime dateDebutRecherche;
         private DateTime dateFinEquipe;
+        private PiloteIntegRepositories pil;
+        private PiloteFiniIntegration pilInsert;
+        private PiloteFiniIntegRepositories pilr;
+        
         private bool err;
 
         public InsertRepositories(TextBox commentaire, RadioButton[] listNok, RadioButton[] listRb, Button valid,
@@ -30,16 +34,21 @@ namespace Repositories
             this.input = input;
             err = false;
             this.valid = valid;
-
+            context = new AQLM2Entities();
             equipeRepository = new EquipeRepositories(context);
-
+            pil = new PiloteIntegRepositories(context);
+            pilr = new PiloteFiniIntegRepositories(context);
+            pilInsert = new PiloteFiniIntegration();
             dateNow = DateTime.Now.Date.ToString("d");
         }
 
         public InsertRepositories()
         {
+            context = new AQLM2Entities();
             equipeRepository = new EquipeRepositories(context);
-
+            pil = new PiloteIntegRepositories(context);
+            pilr = new PiloteFiniIntegRepositories(context);
+            pilInsert = new PiloteFiniIntegration();
             dateNow = DateTime.Now.Date.ToString("d");
         }
         //Vérifier les radio button non ok si sont cochés
@@ -92,6 +101,17 @@ namespace Repositories
             }
             return res;
         }
+
+        public void insertPiloteFini(String mat,String navigationpage)
+        {
+            var pl = pil.Get(b => b.matricule.Equals(mat)).SingleOrDefault();
+            pilInsert.matricule = pl.matricule;
+            pilInsert.nom = pl.nom;
+            pilInsert.prenom = pl.prenom;
+            pilInsert.Fonction = pl.poste;
+            pilInsert.date = DateTime.Now;
+            pilInsert.Poste = navigationpage;
+        }
         //methode d'insertion 
         public void InsertData(DateTime dateDebut, String module, String poste, OkDescriptRepositorie desc,
             ValOKdIntegrepositories repo)
@@ -142,7 +162,7 @@ namespace Repositories
                     repo.Insert(v);
                 }
                 if (checkNokRb(err) == false)
-                {
+                {   
                     valid.Enabled = false;
                     MessageBox.Show("Succés validation !", "Validation", MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
@@ -178,7 +198,7 @@ namespace Repositories
             var t = TimeSpan.Parse(timeDebut);
             var x = equipeRepository.Get(b => b.dateDebut == t).Select(b => b.dateFin).First();
             dateFinEquipe = DateTime.Parse(dateNow + " " + TimeSpan.Parse(x.ToString()));
-            if (datedebut == DateTime.Parse(dateNow + " 16:51:30"))
+            if (datedebut == DateTime.Parse(dateNow + " 15:59:00"))
             {
                 dateFinEquipe = dateFinEquipe.AddDays(1);
             }
@@ -192,7 +212,7 @@ namespace Repositories
             {
                 var dateEquipe = DateTime.Parse(dateNow + " " + listDateDabutEquipe[i]);
                 var dateFinEquipe = getDateFINEquipe(dateEquipe);
-                if (dateEquipe == DateTime.Parse(dateNow + " 16:51:30"))
+                if (dateEquipe == DateTime.Parse(dateNow + " 15:59:00"))
                 {
                     dateFinEquipe = dateFinEquipe.AddDays(1);
                 }
