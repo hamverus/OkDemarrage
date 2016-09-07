@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Linq;
+using System.Linq;
+using System;
 using System.Windows.Forms;
+using Entities;
+using Repositories;
 using Entities;
 using Repositories;
 
@@ -81,6 +85,7 @@ namespace OKDemarrageIntegration
                 for (var i = 0; i < l.Length - 2; i += 3)
                 {
                     v.date = DateTime.Now;
+                    v.equipe = insert.getEquipe(dateStart);
                     //v.idLigne = 5;
 
                     var b = true;
@@ -188,6 +193,8 @@ namespace OKDemarrageIntegration
                 for (var i = 0; i < l.Length - 2; i += 3)
                 {
                     v.date = DateTime.Now;
+                    v.equipe = insert.getEquipe(dateStart);
+
                     //v.idLigne = 5;
 
                     var b = true;
@@ -261,6 +268,7 @@ namespace OKDemarrageIntegration
                 {
                     v.date = DateTime.Now;
                     //v.idLigne = 5;
+                    v.equipe = insert.getEquipe(dateStart);
 
                     var b = true;
                     var c = false;

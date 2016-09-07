@@ -300,9 +300,6 @@
             this.Ass6rb7NOk = new System.Windows.Forms.RadioButton();
             this.Ass6rb7Ok = new System.Windows.Forms.RadioButton();
             this.panel37 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel33 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel38 = new System.Windows.Forms.Panel();
-            this.ValAss6 = new System.Windows.Forms.Button();
             this.navigationPage7 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
             this.panel24 = new System.Windows.Forms.Panel();
@@ -363,9 +360,6 @@
             this.label43 = new System.Windows.Forms.Label();
             this.ComPD = new System.Windows.Forms.TextBox();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.ValPD = new System.Windows.Forms.Button();
             this.navigationPage9 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
             this.lb1PWifi = new System.Windows.Forms.Label();
@@ -392,9 +386,6 @@
             this.label46 = new System.Windows.Forms.Label();
             this.ComPWifi = new System.Windows.Forms.TextBox();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel21 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.ValPWifi = new System.Windows.Forms.Button();
             this.navigationPage10 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox57 = new System.Windows.Forms.GroupBox();
@@ -574,9 +565,6 @@
             this.PerMurrb6NOk = new System.Windows.Forms.RadioButton();
             this.PerMurrb6Ok = new System.Windows.Forms.RadioButton();
             this.panel42 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel35 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel43 = new System.Windows.Forms.Panel();
-            this.ValPerMur = new System.Windows.Forms.Button();
             this.navigationPage14 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.tableLayoutPanel36 = new System.Windows.Forms.TableLayoutPanel();
             this.panel44 = new System.Windows.Forms.Panel();
@@ -608,9 +596,6 @@
             this.PEmbrb5NOk = new System.Windows.Forms.RadioButton();
             this.PEmbrb5Ok = new System.Windows.Forms.RadioButton();
             this.panel45 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel37 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel46 = new System.Windows.Forms.Panel();
-            this.ValPEmb = new System.Windows.Forms.Button();
             this.navigationPage15 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.tableLayoutPanel38 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox128 = new System.Windows.Forms.GroupBox();
@@ -744,6 +729,21 @@
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.panel17 = new System.Windows.Forms.Panel();
             this.ValPrepBt = new System.Windows.Forms.Button();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.ValAss6 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.ValPD = new System.Windows.Forms.Button();
+            this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel38 = new System.Windows.Forms.Panel();
+            this.ValPWifi = new System.Windows.Forms.Button();
+            this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel43 = new System.Windows.Forms.Panel();
+            this.ValPerMur = new System.Windows.Forms.Button();
+            this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel46 = new System.Windows.Forms.Panel();
+            this.ValPEmb = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).BeginInit();
             this.navigationPane1.SuspendLayout();
@@ -824,8 +824,6 @@
             this.groupBox100.SuspendLayout();
             this.groupBox106.SuspendLayout();
             this.panel37.SuspendLayout();
-            this.tableLayoutPanel33.SuspendLayout();
-            this.panel38.SuspendLayout();
             this.navigationPage7.SuspendLayout();
             this.tableLayoutPanel16.SuspendLayout();
             this.panel24.SuspendLayout();
@@ -845,8 +843,6 @@
             this.groupBox31.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel11.SuspendLayout();
-            this.tableLayoutPanel17.SuspendLayout();
-            this.panel12.SuspendLayout();
             this.navigationPage9.SuspendLayout();
             this.tableLayoutPanel19.SuspendLayout();
             this.groupBox19.SuspendLayout();
@@ -855,8 +851,6 @@
             this.groupBox51.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel15.SuspendLayout();
-            this.tableLayoutPanel21.SuspendLayout();
-            this.panel16.SuspendLayout();
             this.navigationPage10.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.groupBox57.SuspendLayout();
@@ -909,8 +903,6 @@
             this.groupBox113.SuspendLayout();
             this.groupBox114.SuspendLayout();
             this.panel42.SuspendLayout();
-            this.tableLayoutPanel35.SuspendLayout();
-            this.panel43.SuspendLayout();
             this.navigationPage14.SuspendLayout();
             this.tableLayoutPanel36.SuspendLayout();
             this.panel44.SuspendLayout();
@@ -920,8 +912,6 @@
             this.groupBox118.SuspendLayout();
             this.groupBox119.SuspendLayout();
             this.panel45.SuspendLayout();
-            this.tableLayoutPanel37.SuspendLayout();
-            this.panel46.SuspendLayout();
             this.navigationPage15.SuspendLayout();
             this.tableLayoutPanel38.SuspendLayout();
             this.groupBox128.SuspendLayout();
@@ -962,6 +952,16 @@
             this.panel8.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.panel17.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.tableLayoutPanel10.SuspendLayout();
+            this.panel16.SuspendLayout();
+            this.tableLayoutPanel13.SuspendLayout();
+            this.panel38.SuspendLayout();
+            this.tableLayoutPanel14.SuspendLayout();
+            this.panel43.SuspendLayout();
+            this.tableLayoutPanel15.SuspendLayout();
+            this.panel46.SuspendLayout();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -1631,6 +1631,7 @@
             this.ValAss1.TabIndex = 1;
             this.ValAss1.Text = "Valider";
             this.ValAss1.UseVisualStyleBackColor = true;
+            this.ValAss1.Click += new System.EventHandler(this.ValAss1_Click);
             // 
             // navigationPage2
             // 
@@ -2187,6 +2188,7 @@
             this.ValAss2.TabIndex = 1;
             this.ValAss2.Text = "Valider";
             this.ValAss2.UseVisualStyleBackColor = true;
+            this.ValAss2.Click += new System.EventHandler(this.ValAss2_Click_1);
             // 
             // navigationPage3
             // 
@@ -2743,6 +2745,7 @@
             this.ValAss3.TabIndex = 1;
             this.ValAss3.Text = "Valider";
             this.ValAss3.UseVisualStyleBackColor = true;
+            this.ValAss3.Click += new System.EventHandler(this.ValAss3_Click_1);
             // 
             // navigationPage4
             // 
@@ -3299,6 +3302,7 @@
             this.ValAss4.TabIndex = 1;
             this.ValAss4.Text = "Valider";
             this.ValAss4.UseVisualStyleBackColor = true;
+            this.ValAss4.Click += new System.EventHandler(this.ValAss4_Click);
             // 
             // navigationPage5
             // 
@@ -3855,13 +3859,14 @@
             this.ValAss5.TabIndex = 1;
             this.ValAss5.Text = "Valider";
             this.ValAss5.UseVisualStyleBackColor = true;
+            this.ValAss5.Click += new System.EventHandler(this.ValAss5_Click);
             // 
             // navigationPage6
             // 
             this.navigationPage6.Caption = "Assemblage 6";
             this.navigationPage6.Controls.Add(this.tableLayoutPanel32);
             this.navigationPage6.Name = "navigationPage6";
-            this.navigationPage6.Size = new System.Drawing.Size(0, 0);
+            this.navigationPage6.Size = new System.Drawing.Size(680, 649);
             // 
             // tableLayoutPanel32
             // 
@@ -3898,7 +3903,7 @@
             this.tableLayoutPanel32.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel32.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel32.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel32.Size = new System.Drawing.Size(0, 643);
+            this.tableLayoutPanel32.Size = new System.Drawing.Size(680, 643);
             this.tableLayoutPanel32.TabIndex = 13;
             // 
             // panel36
@@ -3909,7 +3914,7 @@
             this.panel36.Location = new System.Drawing.Point(0, 350);
             this.panel36.Margin = new System.Windows.Forms.Padding(0);
             this.panel36.Name = "panel36";
-            this.panel36.Size = new System.Drawing.Size(1, 293);
+            this.panel36.Size = new System.Drawing.Size(510, 293);
             this.panel36.TabIndex = 22;
             // 
             // label106
@@ -3929,7 +3934,7 @@
             this.ComAss6.Location = new System.Drawing.Point(0, 241);
             this.ComAss6.Multiline = true;
             this.ComAss6.Name = "ComAss6";
-            this.ComAss6.Size = new System.Drawing.Size(1, 52);
+            this.ComAss6.Size = new System.Drawing.Size(510, 52);
             this.ComAss6.TabIndex = 3;
             // 
             // lb1Ass6
@@ -3939,7 +3944,7 @@
             this.lb1Ass6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb1Ass6.Location = new System.Drawing.Point(3, 0);
             this.lb1Ass6.Name = "lb1Ass6";
-            this.lb1Ass6.Size = new System.Drawing.Size(1, 50);
+            this.lb1Ass6.Size = new System.Drawing.Size(504, 50);
             this.lb1Ass6.TabIndex = 0;
             this.lb1Ass6.Text = "Vérifier la présence de la bague de serrage de la visseuse";
             // 
@@ -3950,7 +3955,7 @@
             this.lb2Ass6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb2Ass6.Location = new System.Drawing.Point(3, 50);
             this.lb2Ass6.Name = "lb2Ass6";
-            this.lb2Ass6.Size = new System.Drawing.Size(1, 50);
+            this.lb2Ass6.Size = new System.Drawing.Size(504, 50);
             this.lb2Ass6.TabIndex = 1;
             this.lb2Ass6.Text = "Vérifier la présence,la propreté et la conformité du Gabarit ";
             // 
@@ -3961,7 +3966,7 @@
             this.lb3Ass6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb3Ass6.Location = new System.Drawing.Point(3, 100);
             this.lb3Ass6.Name = "lb3Ass6";
-            this.lb3Ass6.Size = new System.Drawing.Size(1, 50);
+            this.lb3Ass6.Size = new System.Drawing.Size(504, 50);
             this.lb3Ass6.TabIndex = 2;
             this.lb3Ass6.Text = "Vérifier que tout les articles sont identifiés";
             // 
@@ -3972,7 +3977,7 @@
             this.lb4Ass6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb4Ass6.Location = new System.Drawing.Point(3, 150);
             this.lb4Ass6.Name = "lb4Ass6";
-            this.lb4Ass6.Size = new System.Drawing.Size(1, 50);
+            this.lb4Ass6.Size = new System.Drawing.Size(504, 50);
             this.lb4Ass6.TabIndex = 3;
             this.lb4Ass6.Text = "Vérifier la référence des articles par rapport aux FI";
             // 
@@ -3983,7 +3988,7 @@
             this.lb5Ass6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb5Ass6.Location = new System.Drawing.Point(3, 200);
             this.lb5Ass6.Name = "lb5Ass6";
-            this.lb5Ass6.Size = new System.Drawing.Size(1, 50);
+            this.lb5Ass6.Size = new System.Drawing.Size(504, 50);
             this.lb5Ass6.TabIndex = 4;
             this.lb5Ass6.Text = "Vérifier la présence d\'emplacement identifié pour le rebut";
             // 
@@ -3994,7 +3999,7 @@
             this.lb6Ass6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb6Ass6.Location = new System.Drawing.Point(3, 250);
             this.lb6Ass6.Name = "lb6Ass6";
-            this.lb6Ass6.Size = new System.Drawing.Size(1, 50);
+            this.lb6Ass6.Size = new System.Drawing.Size(504, 50);
             this.lb6Ass6.TabIndex = 5;
             this.lb6Ass6.Text = "Vérifier l\'absence des objets et outils inutiles sur le poste de travail";
             // 
@@ -4005,7 +4010,7 @@
             this.lb7Ass6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb7Ass6.Location = new System.Drawing.Point(3, 300);
             this.lb7Ass6.Name = "lb7Ass6";
-            this.lb7Ass6.Size = new System.Drawing.Size(1, 50);
+            this.lb7Ass6.Size = new System.Drawing.Size(504, 50);
             this.lb7Ass6.TabIndex = 6;
             this.lb7Ass6.Text = "Vérifier la présence de la FI en couleur au poste signée et la disponibilité de l" +
     "a fiche de saisie de défauts";
@@ -4015,10 +4020,10 @@
             this.groupBox75.Controls.Add(this.Ass6rb1Na);
             this.groupBox75.Controls.Add(this.Ass6rb1NOk);
             this.groupBox75.Controls.Add(this.Ass6rb1Ok);
-            this.groupBox75.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox75.Location = new System.Drawing.Point(3, 3);
+            this.groupBox75.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox75.Location = new System.Drawing.Point(513, 3);
             this.groupBox75.Name = "groupBox75";
-            this.groupBox75.Size = new System.Drawing.Size(1, 44);
+            this.groupBox75.Size = new System.Drawing.Size(164, 44);
             this.groupBox75.TabIndex = 10;
             this.groupBox75.TabStop = false;
             // 
@@ -4066,10 +4071,10 @@
             this.groupBox76.Controls.Add(this.Ass6rb2Na);
             this.groupBox76.Controls.Add(this.Ass6rb2NOk);
             this.groupBox76.Controls.Add(this.Ass6rb2Ok);
-            this.groupBox76.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox76.Location = new System.Drawing.Point(3, 53);
+            this.groupBox76.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox76.Location = new System.Drawing.Point(513, 53);
             this.groupBox76.Name = "groupBox76";
-            this.groupBox76.Size = new System.Drawing.Size(1, 44);
+            this.groupBox76.Size = new System.Drawing.Size(164, 44);
             this.groupBox76.TabIndex = 11;
             this.groupBox76.TabStop = false;
             // 
@@ -4117,10 +4122,10 @@
             this.groupBox81.Controls.Add(this.Ass6rb3Na);
             this.groupBox81.Controls.Add(this.Ass6rb3NOk);
             this.groupBox81.Controls.Add(this.Ass6rb3Ok);
-            this.groupBox81.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox81.Location = new System.Drawing.Point(3, 103);
+            this.groupBox81.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox81.Location = new System.Drawing.Point(513, 103);
             this.groupBox81.Name = "groupBox81";
-            this.groupBox81.Size = new System.Drawing.Size(1, 44);
+            this.groupBox81.Size = new System.Drawing.Size(164, 44);
             this.groupBox81.TabIndex = 12;
             this.groupBox81.TabStop = false;
             // 
@@ -4168,10 +4173,10 @@
             this.groupBox98.Controls.Add(this.Ass6rb4Na);
             this.groupBox98.Controls.Add(this.Ass6rb4NOk);
             this.groupBox98.Controls.Add(this.Ass6rb4Ok);
-            this.groupBox98.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox98.Location = new System.Drawing.Point(3, 153);
+            this.groupBox98.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox98.Location = new System.Drawing.Point(513, 153);
             this.groupBox98.Name = "groupBox98";
-            this.groupBox98.Size = new System.Drawing.Size(1, 44);
+            this.groupBox98.Size = new System.Drawing.Size(164, 44);
             this.groupBox98.TabIndex = 13;
             this.groupBox98.TabStop = false;
             // 
@@ -4219,10 +4224,10 @@
             this.groupBox99.Controls.Add(this.Ass6rb5Na);
             this.groupBox99.Controls.Add(this.Ass6rb5NOk);
             this.groupBox99.Controls.Add(this.Ass6rb5Ok);
-            this.groupBox99.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox99.Location = new System.Drawing.Point(3, 203);
+            this.groupBox99.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox99.Location = new System.Drawing.Point(513, 203);
             this.groupBox99.Name = "groupBox99";
-            this.groupBox99.Size = new System.Drawing.Size(1, 44);
+            this.groupBox99.Size = new System.Drawing.Size(164, 44);
             this.groupBox99.TabIndex = 14;
             this.groupBox99.TabStop = false;
             // 
@@ -4270,10 +4275,10 @@
             this.groupBox100.Controls.Add(this.Ass6rb6Na);
             this.groupBox100.Controls.Add(this.Ass6rb6NOk);
             this.groupBox100.Controls.Add(this.Ass6rb6Ok);
-            this.groupBox100.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox100.Location = new System.Drawing.Point(3, 253);
+            this.groupBox100.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox100.Location = new System.Drawing.Point(513, 253);
             this.groupBox100.Name = "groupBox100";
-            this.groupBox100.Size = new System.Drawing.Size(1, 44);
+            this.groupBox100.Size = new System.Drawing.Size(164, 44);
             this.groupBox100.TabIndex = 15;
             this.groupBox100.TabStop = false;
             // 
@@ -4321,10 +4326,10 @@
             this.groupBox106.Controls.Add(this.Ass6rb7Na);
             this.groupBox106.Controls.Add(this.Ass6rb7NOk);
             this.groupBox106.Controls.Add(this.Ass6rb7Ok);
-            this.groupBox106.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox106.Location = new System.Drawing.Point(3, 303);
+            this.groupBox106.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox106.Location = new System.Drawing.Point(513, 303);
             this.groupBox106.Name = "groupBox106";
-            this.groupBox106.Size = new System.Drawing.Size(1, 44);
+            this.groupBox106.Size = new System.Drawing.Size(164, 44);
             this.groupBox106.TabIndex = 16;
             this.groupBox106.TabStop = false;
             // 
@@ -4369,48 +4374,12 @@
             // 
             // panel37
             // 
-            this.panel37.Controls.Add(this.tableLayoutPanel33);
-            this.panel37.Location = new System.Drawing.Point(3, 353);
+            this.panel37.Controls.Add(this.tableLayoutPanel5);
+            this.panel37.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel37.Location = new System.Drawing.Point(513, 353);
             this.panel37.Name = "panel37";
-            this.panel37.Size = new System.Drawing.Size(1, 287);
+            this.panel37.Size = new System.Drawing.Size(164, 287);
             this.panel37.TabIndex = 21;
-            // 
-            // tableLayoutPanel33
-            // 
-            this.tableLayoutPanel33.ColumnCount = 3;
-            this.tableLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.9372F));
-            this.tableLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.1256F));
-            this.tableLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.9372F));
-            this.tableLayoutPanel33.Controls.Add(this.panel38, 1, 1);
-            this.tableLayoutPanel33.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel33.Location = new System.Drawing.Point(0, 201);
-            this.tableLayoutPanel33.Name = "tableLayoutPanel33";
-            this.tableLayoutPanel33.RowCount = 3;
-            this.tableLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel33.Size = new System.Drawing.Size(1, 86);
-            this.tableLayoutPanel33.TabIndex = 22;
-            // 
-            // panel38
-            // 
-            this.panel38.Controls.Add(this.ValAss6);
-            this.panel38.Location = new System.Drawing.Point(0, 28);
-            this.panel38.Margin = new System.Windows.Forms.Padding(0);
-            this.panel38.Name = "panel38";
-            this.panel38.Size = new System.Drawing.Size(1, 28);
-            this.panel38.TabIndex = 0;
-            // 
-            // ValAss6
-            // 
-            this.ValAss6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ValAss6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ValAss6.Location = new System.Drawing.Point(0, 0);
-            this.ValAss6.Name = "ValAss6";
-            this.ValAss6.Size = new System.Drawing.Size(1, 28);
-            this.ValAss6.TabIndex = 1;
-            this.ValAss6.Text = "Valider";
-            this.ValAss6.UseVisualStyleBackColor = true;
             // 
             // navigationPage7
             // 
@@ -4839,13 +4808,14 @@
             this.ValPv.TabIndex = 1;
             this.ValPv.Text = "Valider";
             this.ValPv.UseVisualStyleBackColor = true;
+            this.ValPv.Click += new System.EventHandler(this.ValPv_Click);
             // 
             // navigationPage8
             // 
             this.navigationPage8.Caption = "Poste Dielectrique";
             this.navigationPage8.Controls.Add(this.tableLayoutPanel18);
             this.navigationPage8.Name = "navigationPage8";
-            this.navigationPage8.Size = new System.Drawing.Size(0, 0);
+            this.navigationPage8.Size = new System.Drawing.Size(680, 649);
             // 
             // tableLayoutPanel18
             // 
@@ -4862,7 +4832,7 @@
             this.tableLayoutPanel18.Controls.Add(this.groupBox31, 1, 3);
             this.tableLayoutPanel18.Controls.Add(this.panel4, 0, 4);
             this.tableLayoutPanel18.Controls.Add(this.panel11, 1, 4);
-            this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel18.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel18.Name = "tableLayoutPanel18";
             this.tableLayoutPanel18.RowCount = 5;
@@ -4871,7 +4841,7 @@
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel18.Size = new System.Drawing.Size(0, 646);
+            this.tableLayoutPanel18.Size = new System.Drawing.Size(680, 649);
             this.tableLayoutPanel18.TabIndex = 4;
             // 
             // lb1PD
@@ -4881,7 +4851,7 @@
             this.lb1PD.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb1PD.Location = new System.Drawing.Point(3, 0);
             this.lb1PD.Name = "lb1PD";
-            this.lb1PD.Size = new System.Drawing.Size(1, 50);
+            this.lb1PD.Size = new System.Drawing.Size(504, 50);
             this.lb1PD.TabIndex = 0;
             this.lb1PD.Text = "Vérifier la conformité et la présence des cables et outilliage test (USB, HDD, ca" +
     "rte d\'accès…)";
@@ -4893,7 +4863,7 @@
             this.lb2PD.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb2PD.Location = new System.Drawing.Point(3, 50);
             this.lb2PD.Name = "lb2PD";
-            this.lb2PD.Size = new System.Drawing.Size(1, 50);
+            this.lb2PD.Size = new System.Drawing.Size(504, 50);
             this.lb2PD.TabIndex = 1;
             this.lb2PD.Text = "Vérifier l\'absence des objets et outils inutiles sur le poste de travail";
             // 
@@ -4904,7 +4874,7 @@
             this.lb3PD.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb3PD.Location = new System.Drawing.Point(3, 100);
             this.lb3PD.Name = "lb3PD";
-            this.lb3PD.Size = new System.Drawing.Size(1, 50);
+            this.lb3PD.Size = new System.Drawing.Size(504, 50);
             this.lb3PD.TabIndex = 2;
             this.lb3PD.Text = "Vérifier la présence d\'emplacement identifié pour les Produits Non Conformes";
             // 
@@ -4915,7 +4885,7 @@
             this.lb4PD.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb4PD.Location = new System.Drawing.Point(3, 150);
             this.lb4PD.Name = "lb4PD";
-            this.lb4PD.Size = new System.Drawing.Size(1, 50);
+            this.lb4PD.Size = new System.Drawing.Size(504, 50);
             this.lb4PD.TabIndex = 3;
             this.lb4PD.Text = "Vérifier la présence de la FI en couleur au poste signée et la disponibilité de l" +
     "a fiche de saisie de défauts";
@@ -4925,10 +4895,10 @@
             this.groupBox22.Controls.Add(this.PDrb1Na);
             this.groupBox22.Controls.Add(this.PDrb1NOk);
             this.groupBox22.Controls.Add(this.PDrb1Ok);
-            this.groupBox22.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox22.Location = new System.Drawing.Point(3, 3);
+            this.groupBox22.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox22.Location = new System.Drawing.Point(513, 3);
             this.groupBox22.Name = "groupBox22";
-            this.groupBox22.Size = new System.Drawing.Size(1, 44);
+            this.groupBox22.Size = new System.Drawing.Size(164, 44);
             this.groupBox22.TabIndex = 10;
             this.groupBox22.TabStop = false;
             // 
@@ -4976,10 +4946,10 @@
             this.groupBox29.Controls.Add(this.PDrb2Na);
             this.groupBox29.Controls.Add(this.PDrb2NOk);
             this.groupBox29.Controls.Add(this.PDrb2Ok);
-            this.groupBox29.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox29.Location = new System.Drawing.Point(3, 53);
+            this.groupBox29.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox29.Location = new System.Drawing.Point(513, 53);
             this.groupBox29.Name = "groupBox29";
-            this.groupBox29.Size = new System.Drawing.Size(1, 44);
+            this.groupBox29.Size = new System.Drawing.Size(164, 44);
             this.groupBox29.TabIndex = 11;
             this.groupBox29.TabStop = false;
             // 
@@ -5027,10 +4997,10 @@
             this.groupBox30.Controls.Add(this.PDrb3Na);
             this.groupBox30.Controls.Add(this.PDrb3NOk);
             this.groupBox30.Controls.Add(this.PDrb3Ok);
-            this.groupBox30.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox30.Location = new System.Drawing.Point(3, 103);
+            this.groupBox30.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox30.Location = new System.Drawing.Point(513, 103);
             this.groupBox30.Name = "groupBox30";
-            this.groupBox30.Size = new System.Drawing.Size(1, 44);
+            this.groupBox30.Size = new System.Drawing.Size(164, 44);
             this.groupBox30.TabIndex = 12;
             this.groupBox30.TabStop = false;
             // 
@@ -5078,10 +5048,10 @@
             this.groupBox31.Controls.Add(this.PDrb4Na);
             this.groupBox31.Controls.Add(this.PDrb4NOk);
             this.groupBox31.Controls.Add(this.PDrb4Ok);
-            this.groupBox31.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox31.Location = new System.Drawing.Point(3, 153);
+            this.groupBox31.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox31.Location = new System.Drawing.Point(513, 153);
             this.groupBox31.Name = "groupBox31";
-            this.groupBox31.Size = new System.Drawing.Size(1, 44);
+            this.groupBox31.Size = new System.Drawing.Size(164, 44);
             this.groupBox31.TabIndex = 13;
             this.groupBox31.TabStop = false;
             // 
@@ -5132,7 +5102,7 @@
             this.panel4.Location = new System.Drawing.Point(0, 200);
             this.panel4.Margin = new System.Windows.Forms.Padding(0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1, 446);
+            this.panel4.Size = new System.Drawing.Size(510, 449);
             this.panel4.TabIndex = 14;
             // 
             // label43
@@ -5140,7 +5110,7 @@
             this.label43.AutoSize = true;
             this.label43.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(0, 376);
+            this.label43.Location = new System.Drawing.Point(0, 379);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(98, 18);
             this.label43.TabIndex = 4;
@@ -5149,65 +5119,28 @@
             // ComPD
             // 
             this.ComPD.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ComPD.Location = new System.Drawing.Point(0, 394);
+            this.ComPD.Location = new System.Drawing.Point(0, 397);
             this.ComPD.Multiline = true;
             this.ComPD.Name = "ComPD";
-            this.ComPD.Size = new System.Drawing.Size(1, 52);
+            this.ComPD.Size = new System.Drawing.Size(510, 52);
             this.ComPD.TabIndex = 3;
             // 
             // panel11
             // 
-            this.panel11.Controls.Add(this.tableLayoutPanel17);
+            this.panel11.Controls.Add(this.tableLayoutPanel10);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(0, 200);
+            this.panel11.Location = new System.Drawing.Point(510, 200);
             this.panel11.Margin = new System.Windows.Forms.Padding(0);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1, 446);
+            this.panel11.Size = new System.Drawing.Size(170, 449);
             this.panel11.TabIndex = 15;
-            // 
-            // tableLayoutPanel17
-            // 
-            this.tableLayoutPanel17.ColumnCount = 3;
-            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.9372F));
-            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.1256F));
-            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.9372F));
-            this.tableLayoutPanel17.Controls.Add(this.panel12, 1, 1);
-            this.tableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel17.Location = new System.Drawing.Point(0, 360);
-            this.tableLayoutPanel17.Name = "tableLayoutPanel17";
-            this.tableLayoutPanel17.RowCount = 3;
-            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel17.Size = new System.Drawing.Size(1, 86);
-            this.tableLayoutPanel17.TabIndex = 20;
-            // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.ValPD);
-            this.panel12.Location = new System.Drawing.Point(0, 28);
-            this.panel12.Margin = new System.Windows.Forms.Padding(0);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(1, 28);
-            this.panel12.TabIndex = 0;
-            // 
-            // ValPD
-            // 
-            this.ValPD.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ValPD.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ValPD.Location = new System.Drawing.Point(0, 0);
-            this.ValPD.Name = "ValPD";
-            this.ValPD.Size = new System.Drawing.Size(1, 28);
-            this.ValPD.TabIndex = 1;
-            this.ValPD.Text = "Valider";
-            this.ValPD.UseVisualStyleBackColor = true;
             // 
             // navigationPage9
             // 
             this.navigationPage9.Caption = "Poste Wifi";
             this.navigationPage9.Controls.Add(this.tableLayoutPanel19);
             this.navigationPage9.Name = "navigationPage9";
-            this.navigationPage9.Size = new System.Drawing.Size(0, 0);
+            this.navigationPage9.Size = new System.Drawing.Size(680, 649);
             // 
             // tableLayoutPanel19
             // 
@@ -5233,7 +5166,7 @@
             this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel19.Size = new System.Drawing.Size(0, 642);
+            this.tableLayoutPanel19.Size = new System.Drawing.Size(680, 642);
             this.tableLayoutPanel19.TabIndex = 5;
             // 
             // lb1PWifi
@@ -5243,7 +5176,7 @@
             this.lb1PWifi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb1PWifi.Location = new System.Drawing.Point(3, 0);
             this.lb1PWifi.Name = "lb1PWifi";
-            this.lb1PWifi.Size = new System.Drawing.Size(1, 50);
+            this.lb1PWifi.Size = new System.Drawing.Size(504, 50);
             this.lb1PWifi.TabIndex = 0;
             this.lb1PWifi.Text = "Vérifier la conformité et la présence des cables et outilliage test (USB, HDD, ca" +
     "rte d\'accès…)";
@@ -5255,7 +5188,7 @@
             this.lb2PWifi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb2PWifi.Location = new System.Drawing.Point(3, 50);
             this.lb2PWifi.Name = "lb2PWifi";
-            this.lb2PWifi.Size = new System.Drawing.Size(1, 50);
+            this.lb2PWifi.Size = new System.Drawing.Size(504, 50);
             this.lb2PWifi.TabIndex = 1;
             this.lb2PWifi.Text = "Vérifier l\'absence des objets et outils inutiles sur le poste de travail";
             // 
@@ -5266,7 +5199,7 @@
             this.lb3PWifi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb3PWifi.Location = new System.Drawing.Point(3, 100);
             this.lb3PWifi.Name = "lb3PWifi";
-            this.lb3PWifi.Size = new System.Drawing.Size(1, 50);
+            this.lb3PWifi.Size = new System.Drawing.Size(504, 50);
             this.lb3PWifi.TabIndex = 2;
             this.lb3PWifi.Text = "Vérifier la présence d\'emplacement identifié pour les Produits Non Conformes";
             // 
@@ -5277,7 +5210,7 @@
             this.lb4PWifi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb4PWifi.Location = new System.Drawing.Point(3, 150);
             this.lb4PWifi.Name = "lb4PWifi";
-            this.lb4PWifi.Size = new System.Drawing.Size(1, 50);
+            this.lb4PWifi.Size = new System.Drawing.Size(504, 50);
             this.lb4PWifi.TabIndex = 3;
             this.lb4PWifi.Text = "Vérifier la présence de la FI en couleur au poste et signée";
             // 
@@ -5286,10 +5219,10 @@
             this.groupBox19.Controls.Add(this.PWifirb1Na);
             this.groupBox19.Controls.Add(this.PWifirb1NOk);
             this.groupBox19.Controls.Add(this.PWifirb1Ok);
-            this.groupBox19.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox19.Location = new System.Drawing.Point(3, 3);
+            this.groupBox19.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox19.Location = new System.Drawing.Point(513, 3);
             this.groupBox19.Name = "groupBox19";
-            this.groupBox19.Size = new System.Drawing.Size(1, 44);
+            this.groupBox19.Size = new System.Drawing.Size(164, 44);
             this.groupBox19.TabIndex = 10;
             this.groupBox19.TabStop = false;
             // 
@@ -5337,10 +5270,10 @@
             this.groupBox20.Controls.Add(this.PWifirb2Na);
             this.groupBox20.Controls.Add(this.PWifirb2NOk);
             this.groupBox20.Controls.Add(this.PWifirb2Ok);
-            this.groupBox20.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox20.Location = new System.Drawing.Point(3, 53);
+            this.groupBox20.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox20.Location = new System.Drawing.Point(513, 53);
             this.groupBox20.Name = "groupBox20";
-            this.groupBox20.Size = new System.Drawing.Size(1, 44);
+            this.groupBox20.Size = new System.Drawing.Size(164, 44);
             this.groupBox20.TabIndex = 11;
             this.groupBox20.TabStop = false;
             // 
@@ -5388,10 +5321,10 @@
             this.groupBox50.Controls.Add(this.PWifirb3Na);
             this.groupBox50.Controls.Add(this.PWifirb3NOk);
             this.groupBox50.Controls.Add(this.PWifirb3Ok);
-            this.groupBox50.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox50.Location = new System.Drawing.Point(3, 103);
+            this.groupBox50.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox50.Location = new System.Drawing.Point(513, 103);
             this.groupBox50.Name = "groupBox50";
-            this.groupBox50.Size = new System.Drawing.Size(1, 44);
+            this.groupBox50.Size = new System.Drawing.Size(164, 44);
             this.groupBox50.TabIndex = 12;
             this.groupBox50.TabStop = false;
             // 
@@ -5439,10 +5372,10 @@
             this.groupBox51.Controls.Add(this.PWifirb4Na);
             this.groupBox51.Controls.Add(this.PWifirb4NOk);
             this.groupBox51.Controls.Add(this.PWifirb4Ok);
-            this.groupBox51.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox51.Location = new System.Drawing.Point(3, 153);
+            this.groupBox51.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox51.Location = new System.Drawing.Point(513, 153);
             this.groupBox51.Name = "groupBox51";
-            this.groupBox51.Size = new System.Drawing.Size(1, 44);
+            this.groupBox51.Size = new System.Drawing.Size(164, 44);
             this.groupBox51.TabIndex = 13;
             this.groupBox51.TabStop = false;
             // 
@@ -5493,7 +5426,7 @@
             this.panel6.Location = new System.Drawing.Point(0, 200);
             this.panel6.Margin = new System.Windows.Forms.Padding(0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1, 442);
+            this.panel6.Size = new System.Drawing.Size(510, 442);
             this.panel6.TabIndex = 14;
             // 
             // label46
@@ -5513,55 +5446,18 @@
             this.ComPWifi.Location = new System.Drawing.Point(0, 390);
             this.ComPWifi.Multiline = true;
             this.ComPWifi.Name = "ComPWifi";
-            this.ComPWifi.Size = new System.Drawing.Size(1, 52);
+            this.ComPWifi.Size = new System.Drawing.Size(510, 52);
             this.ComPWifi.TabIndex = 3;
             // 
             // panel15
             // 
-            this.panel15.Controls.Add(this.tableLayoutPanel21);
+            this.panel15.Controls.Add(this.tableLayoutPanel13);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel15.Location = new System.Drawing.Point(0, 200);
+            this.panel15.Location = new System.Drawing.Point(510, 200);
             this.panel15.Margin = new System.Windows.Forms.Padding(0);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(1, 442);
+            this.panel15.Size = new System.Drawing.Size(170, 442);
             this.panel15.TabIndex = 15;
-            // 
-            // tableLayoutPanel21
-            // 
-            this.tableLayoutPanel21.ColumnCount = 3;
-            this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.9372F));
-            this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.1256F));
-            this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.9372F));
-            this.tableLayoutPanel21.Controls.Add(this.panel16, 1, 1);
-            this.tableLayoutPanel21.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel21.Location = new System.Drawing.Point(0, 356);
-            this.tableLayoutPanel21.Name = "tableLayoutPanel21";
-            this.tableLayoutPanel21.RowCount = 3;
-            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel21.Size = new System.Drawing.Size(1, 86);
-            this.tableLayoutPanel21.TabIndex = 20;
-            // 
-            // panel16
-            // 
-            this.panel16.Controls.Add(this.ValPWifi);
-            this.panel16.Location = new System.Drawing.Point(0, 28);
-            this.panel16.Margin = new System.Windows.Forms.Padding(0);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(1, 28);
-            this.panel16.TabIndex = 0;
-            // 
-            // ValPWifi
-            // 
-            this.ValPWifi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ValPWifi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ValPWifi.Location = new System.Drawing.Point(0, 0);
-            this.ValPWifi.Name = "ValPWifi";
-            this.ValPWifi.Size = new System.Drawing.Size(1, 28);
-            this.ValPWifi.TabIndex = 1;
-            this.ValPWifi.Text = "Valider";
-            this.ValPWifi.UseVisualStyleBackColor = true;
             // 
             // navigationPage10
             // 
@@ -6388,6 +6284,7 @@
             this.ValPBTF.TabIndex = 1;
             this.ValPBTF.Text = "Valider";
             this.ValPBTF.UseVisualStyleBackColor = true;
+            this.ValPBTF.Click += new System.EventHandler(this.ValPBTF_Click);
             // 
             // navigationPage11
             // 
@@ -6470,6 +6367,7 @@
             this.ValFSOS.TabIndex = 1;
             this.ValFSOS.Text = "Valider";
             this.ValFSOS.UseVisualStyleBackColor = true;
+            this.ValFSOS.Click += new System.EventHandler(this.ValFSOS_Click);
             // 
             // lb1FSOS
             // 
@@ -7366,6 +7264,7 @@
             this.ValTelch.TabIndex = 1;
             this.ValTelch.Text = "Valider";
             this.ValTelch.UseVisualStyleBackColor = true;
+            this.ValTelch.Click += new System.EventHandler(this.ValTelch_Click);
             // 
             // panel40
             // 
@@ -7392,7 +7291,7 @@
             this.navigationPage13.Caption = "Prérecette Mur de Chauffe";
             this.navigationPage13.Controls.Add(this.tableLayoutPanel34);
             this.navigationPage13.Name = "navigationPage13";
-            this.navigationPage13.Size = new System.Drawing.Size(0, 0);
+            this.navigationPage13.Size = new System.Drawing.Size(680, 649);
             // 
             // tableLayoutPanel34
             // 
@@ -7413,7 +7312,7 @@
             this.tableLayoutPanel34.Controls.Add(this.groupBox113, 1, 4);
             this.tableLayoutPanel34.Controls.Add(this.groupBox114, 1, 5);
             this.tableLayoutPanel34.Controls.Add(this.panel42, 1, 6);
-            this.tableLayoutPanel34.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel34.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel34.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel34.Name = "tableLayoutPanel34";
             this.tableLayoutPanel34.RowCount = 7;
@@ -7425,7 +7324,7 @@
             this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel34.Size = new System.Drawing.Size(0, 646);
+            this.tableLayoutPanel34.Size = new System.Drawing.Size(680, 649);
             this.tableLayoutPanel34.TabIndex = 14;
             // 
             // panel41
@@ -7436,7 +7335,7 @@
             this.panel41.Location = new System.Drawing.Point(0, 300);
             this.panel41.Margin = new System.Windows.Forms.Padding(0);
             this.panel41.Name = "panel41";
-            this.panel41.Size = new System.Drawing.Size(1, 346);
+            this.panel41.Size = new System.Drawing.Size(510, 346);
             this.panel41.TabIndex = 22;
             // 
             // label116
@@ -7456,7 +7355,7 @@
             this.ComPerMur.Location = new System.Drawing.Point(0, 294);
             this.ComPerMur.Multiline = true;
             this.ComPerMur.Name = "ComPerMur";
-            this.ComPerMur.Size = new System.Drawing.Size(1, 52);
+            this.ComPerMur.Size = new System.Drawing.Size(510, 52);
             this.ComPerMur.TabIndex = 3;
             // 
             // lb1PerMurChf
@@ -7466,7 +7365,7 @@
             this.lb1PerMurChf.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb1PerMurChf.Location = new System.Drawing.Point(3, 0);
             this.lb1PerMurChf.Name = "lb1PerMurChf";
-            this.lb1PerMurChf.Size = new System.Drawing.Size(1, 50);
+            this.lb1PerMurChf.Size = new System.Drawing.Size(504, 50);
             this.lb1PerMurChf.TabIndex = 0;
             this.lb1PerMurChf.Text = "Vérifier la présence de la FI en couleur au poste et signée";
             // 
@@ -7477,7 +7376,7 @@
             this.lb2PerMurChf.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb2PerMurChf.Location = new System.Drawing.Point(3, 50);
             this.lb2PerMurChf.Name = "lb2PerMurChf";
-            this.lb2PerMurChf.Size = new System.Drawing.Size(1, 50);
+            this.lb2PerMurChf.Size = new System.Drawing.Size(504, 50);
             this.lb2PerMurChf.TabIndex = 1;
             this.lb2PerMurChf.Text = "Vérifier le Fonctionnement de 06 positions du mur de chauffe";
             // 
@@ -7488,7 +7387,7 @@
             this.lb3PerMurChf.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb3PerMurChf.Location = new System.Drawing.Point(3, 100);
             this.lb3PerMurChf.Name = "lb3PerMurChf";
-            this.lb3PerMurChf.Size = new System.Drawing.Size(1, 50);
+            this.lb3PerMurChf.Size = new System.Drawing.Size(504, 50);
             this.lb3PerMurChf.TabIndex = 2;
             this.lb3PerMurChf.Text = "Vérifier l\'absence des objets et outils inutiles sur le poste de travail";
             // 
@@ -7499,7 +7398,7 @@
             this.lb4PerMurChf.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb4PerMurChf.Location = new System.Drawing.Point(3, 150);
             this.lb4PerMurChf.Name = "lb4PerMurChf";
-            this.lb4PerMurChf.Size = new System.Drawing.Size(1, 50);
+            this.lb4PerMurChf.Size = new System.Drawing.Size(504, 50);
             this.lb4PerMurChf.TabIndex = 3;
             this.lb4PerMurChf.Text = resources.GetString("lb4PerMurChf.Text");
             // 
@@ -7510,7 +7409,7 @@
             this.lb5PerMurChf.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb5PerMurChf.Location = new System.Drawing.Point(3, 200);
             this.lb5PerMurChf.Name = "lb5PerMurChf";
-            this.lb5PerMurChf.Size = new System.Drawing.Size(1, 50);
+            this.lb5PerMurChf.Size = new System.Drawing.Size(504, 50);
             this.lb5PerMurChf.TabIndex = 4;
             this.lb5PerMurChf.Text = "Vérifier la présence d\'emplacement identifié pour les Produits Non Conformes";
             // 
@@ -7521,7 +7420,7 @@
             this.lb6PerMurChf.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb6PerMurChf.Location = new System.Drawing.Point(3, 250);
             this.lb6PerMurChf.Name = "lb6PerMurChf";
-            this.lb6PerMurChf.Size = new System.Drawing.Size(1, 50);
+            this.lb6PerMurChf.Size = new System.Drawing.Size(504, 50);
             this.lb6PerMurChf.TabIndex = 5;
             this.lb6PerMurChf.Text = "Vérifier la présence des outillages mur de chauffe (Clavier / souris)";
             // 
@@ -7530,10 +7429,10 @@
             this.groupBox109.Controls.Add(this.PerMurrb1Na);
             this.groupBox109.Controls.Add(this.PerMurrb1NOk);
             this.groupBox109.Controls.Add(this.PerMurrb1Ok);
-            this.groupBox109.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox109.Location = new System.Drawing.Point(3, 3);
+            this.groupBox109.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox109.Location = new System.Drawing.Point(513, 3);
             this.groupBox109.Name = "groupBox109";
-            this.groupBox109.Size = new System.Drawing.Size(1, 44);
+            this.groupBox109.Size = new System.Drawing.Size(164, 44);
             this.groupBox109.TabIndex = 10;
             this.groupBox109.TabStop = false;
             // 
@@ -7581,10 +7480,10 @@
             this.groupBox110.Controls.Add(this.PerMurrb2Na);
             this.groupBox110.Controls.Add(this.PerMurrb2NOk);
             this.groupBox110.Controls.Add(this.PerMurrb2Ok);
-            this.groupBox110.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox110.Location = new System.Drawing.Point(3, 53);
+            this.groupBox110.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox110.Location = new System.Drawing.Point(513, 53);
             this.groupBox110.Name = "groupBox110";
-            this.groupBox110.Size = new System.Drawing.Size(1, 44);
+            this.groupBox110.Size = new System.Drawing.Size(164, 44);
             this.groupBox110.TabIndex = 11;
             this.groupBox110.TabStop = false;
             // 
@@ -7632,10 +7531,10 @@
             this.groupBox111.Controls.Add(this.PerMurrb3Na);
             this.groupBox111.Controls.Add(this.PerMurrb3NOk);
             this.groupBox111.Controls.Add(this.PerMurrb3Ok);
-            this.groupBox111.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox111.Location = new System.Drawing.Point(3, 103);
+            this.groupBox111.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox111.Location = new System.Drawing.Point(513, 103);
             this.groupBox111.Name = "groupBox111";
-            this.groupBox111.Size = new System.Drawing.Size(1, 44);
+            this.groupBox111.Size = new System.Drawing.Size(164, 44);
             this.groupBox111.TabIndex = 12;
             this.groupBox111.TabStop = false;
             // 
@@ -7683,10 +7582,10 @@
             this.groupBox112.Controls.Add(this.PerMurrb4Na);
             this.groupBox112.Controls.Add(this.PerMurrb4NOk);
             this.groupBox112.Controls.Add(this.PerMurrb4Ok);
-            this.groupBox112.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox112.Location = new System.Drawing.Point(3, 153);
+            this.groupBox112.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox112.Location = new System.Drawing.Point(513, 153);
             this.groupBox112.Name = "groupBox112";
-            this.groupBox112.Size = new System.Drawing.Size(1, 44);
+            this.groupBox112.Size = new System.Drawing.Size(164, 44);
             this.groupBox112.TabIndex = 13;
             this.groupBox112.TabStop = false;
             // 
@@ -7734,10 +7633,10 @@
             this.groupBox113.Controls.Add(this.PerMurrb5Na);
             this.groupBox113.Controls.Add(this.PerMurrb5NOk);
             this.groupBox113.Controls.Add(this.PerMurrb5Ok);
-            this.groupBox113.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox113.Location = new System.Drawing.Point(3, 203);
+            this.groupBox113.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox113.Location = new System.Drawing.Point(513, 203);
             this.groupBox113.Name = "groupBox113";
-            this.groupBox113.Size = new System.Drawing.Size(1, 44);
+            this.groupBox113.Size = new System.Drawing.Size(164, 44);
             this.groupBox113.TabIndex = 14;
             this.groupBox113.TabStop = false;
             // 
@@ -7785,10 +7684,10 @@
             this.groupBox114.Controls.Add(this.PerMurrb6Na);
             this.groupBox114.Controls.Add(this.PerMurrb6NOk);
             this.groupBox114.Controls.Add(this.PerMurrb6Ok);
-            this.groupBox114.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox114.Location = new System.Drawing.Point(3, 253);
+            this.groupBox114.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox114.Location = new System.Drawing.Point(513, 253);
             this.groupBox114.Name = "groupBox114";
-            this.groupBox114.Size = new System.Drawing.Size(1, 44);
+            this.groupBox114.Size = new System.Drawing.Size(164, 44);
             this.groupBox114.TabIndex = 15;
             this.groupBox114.TabStop = false;
             // 
@@ -7833,55 +7732,19 @@
             // 
             // panel42
             // 
-            this.panel42.Controls.Add(this.tableLayoutPanel35);
-            this.panel42.Location = new System.Drawing.Point(3, 303);
+            this.panel42.Controls.Add(this.tableLayoutPanel14);
+            this.panel42.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel42.Location = new System.Drawing.Point(513, 303);
             this.panel42.Name = "panel42";
-            this.panel42.Size = new System.Drawing.Size(1, 340);
+            this.panel42.Size = new System.Drawing.Size(164, 343);
             this.panel42.TabIndex = 21;
-            // 
-            // tableLayoutPanel35
-            // 
-            this.tableLayoutPanel35.ColumnCount = 3;
-            this.tableLayoutPanel35.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.9372F));
-            this.tableLayoutPanel35.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.1256F));
-            this.tableLayoutPanel35.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.9372F));
-            this.tableLayoutPanel35.Controls.Add(this.panel43, 1, 1);
-            this.tableLayoutPanel35.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel35.Location = new System.Drawing.Point(0, 254);
-            this.tableLayoutPanel35.Name = "tableLayoutPanel35";
-            this.tableLayoutPanel35.RowCount = 3;
-            this.tableLayoutPanel35.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel35.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel35.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel35.Size = new System.Drawing.Size(1, 86);
-            this.tableLayoutPanel35.TabIndex = 22;
-            // 
-            // panel43
-            // 
-            this.panel43.Controls.Add(this.ValPerMur);
-            this.panel43.Location = new System.Drawing.Point(0, 28);
-            this.panel43.Margin = new System.Windows.Forms.Padding(0);
-            this.panel43.Name = "panel43";
-            this.panel43.Size = new System.Drawing.Size(1, 28);
-            this.panel43.TabIndex = 0;
-            // 
-            // ValPerMur
-            // 
-            this.ValPerMur.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ValPerMur.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ValPerMur.Location = new System.Drawing.Point(0, 0);
-            this.ValPerMur.Name = "ValPerMur";
-            this.ValPerMur.Size = new System.Drawing.Size(1, 28);
-            this.ValPerMur.TabIndex = 1;
-            this.ValPerMur.Text = "Valider";
-            this.ValPerMur.UseVisualStyleBackColor = true;
             // 
             // navigationPage14
             // 
             this.navigationPage14.Caption = "Poste Emballage";
             this.navigationPage14.Controls.Add(this.tableLayoutPanel36);
             this.navigationPage14.Name = "navigationPage14";
-            this.navigationPage14.Size = new System.Drawing.Size(0, 0);
+            this.navigationPage14.Size = new System.Drawing.Size(680, 649);
             // 
             // tableLayoutPanel36
             // 
@@ -7900,7 +7763,7 @@
             this.tableLayoutPanel36.Controls.Add(this.groupBox118, 1, 3);
             this.tableLayoutPanel36.Controls.Add(this.groupBox119, 1, 4);
             this.tableLayoutPanel36.Controls.Add(this.panel45, 1, 5);
-            this.tableLayoutPanel36.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel36.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel36.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel36.Name = "tableLayoutPanel36";
             this.tableLayoutPanel36.RowCount = 6;
@@ -7910,7 +7773,7 @@
             this.tableLayoutPanel36.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel36.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tableLayoutPanel36.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel36.Size = new System.Drawing.Size(0, 643);
+            this.tableLayoutPanel36.Size = new System.Drawing.Size(680, 649);
             this.tableLayoutPanel36.TabIndex = 15;
             // 
             // panel44
@@ -7921,7 +7784,7 @@
             this.panel44.Location = new System.Drawing.Point(0, 280);
             this.panel44.Margin = new System.Windows.Forms.Padding(0);
             this.panel44.Name = "panel44";
-            this.panel44.Size = new System.Drawing.Size(1, 363);
+            this.panel44.Size = new System.Drawing.Size(510, 363);
             this.panel44.TabIndex = 22;
             // 
             // label123
@@ -7941,7 +7804,7 @@
             this.ComPEmb.Location = new System.Drawing.Point(0, 311);
             this.ComPEmb.Multiline = true;
             this.ComPEmb.Name = "ComPEmb";
-            this.ComPEmb.Size = new System.Drawing.Size(1, 52);
+            this.ComPEmb.Size = new System.Drawing.Size(510, 52);
             this.ComPEmb.TabIndex = 3;
             // 
             // lb1PEmb
@@ -7951,7 +7814,7 @@
             this.lb1PEmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb1PEmb.Location = new System.Drawing.Point(3, 0);
             this.lb1PEmb.Name = "lb1PEmb";
-            this.lb1PEmb.Size = new System.Drawing.Size(1, 50);
+            this.lb1PEmb.Size = new System.Drawing.Size(504, 50);
             this.lb1PEmb.TabIndex = 0;
             this.lb1PEmb.Text = "Vérifier la présence de la FI en couleur au poste et signée";
             // 
@@ -7962,7 +7825,7 @@
             this.lb2PEmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb2PEmb.Location = new System.Drawing.Point(3, 50);
             this.lb2PEmb.Name = "lb2PEmb";
-            this.lb2PEmb.Size = new System.Drawing.Size(1, 50);
+            this.lb2PEmb.Size = new System.Drawing.Size(504, 50);
             this.lb2PEmb.TabIndex = 1;
             this.lb2PEmb.Text = "Valider l\'étiquette logistique générée par la Zébra par rapport à la FI";
             // 
@@ -7973,7 +7836,7 @@
             this.lb3PEmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb3PEmb.Location = new System.Drawing.Point(3, 100);
             this.lb3PEmb.Name = "lb3PEmb";
-            this.lb3PEmb.Size = new System.Drawing.Size(1, 50);
+            this.lb3PEmb.Size = new System.Drawing.Size(504, 50);
             this.lb3PEmb.TabIndex = 2;
             this.lb3PEmb.Text = "Vérifier l\'absence des objets et outils inutiles sur le poste de travail";
             // 
@@ -7984,7 +7847,7 @@
             this.lb4PEmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb4PEmb.Location = new System.Drawing.Point(3, 150);
             this.lb4PEmb.Name = "lb4PEmb";
-            this.lb4PEmb.Size = new System.Drawing.Size(1, 50);
+            this.lb4PEmb.Size = new System.Drawing.Size(504, 50);
             this.lb4PEmb.TabIndex = 3;
             this.lb4PEmb.Text = "Vérifier la présence d\'emplacement identifié pour le rebut ";
             // 
@@ -7995,7 +7858,7 @@
             this.lb5PEmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb5PEmb.Location = new System.Drawing.Point(3, 200);
             this.lb5PEmb.Name = "lb5PEmb";
-            this.lb5PEmb.Size = new System.Drawing.Size(1, 80);
+            this.lb5PEmb.Size = new System.Drawing.Size(504, 80);
             this.lb5PEmb.TabIndex = 4;
             this.lb5PEmb.Text = resources.GetString("lb5PEmb.Text");
             // 
@@ -8004,10 +7867,10 @@
             this.groupBox115.Controls.Add(this.PEmbrb1Na);
             this.groupBox115.Controls.Add(this.PEmbrb1NOk);
             this.groupBox115.Controls.Add(this.PEmbrb1Ok);
-            this.groupBox115.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox115.Location = new System.Drawing.Point(3, 3);
+            this.groupBox115.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox115.Location = new System.Drawing.Point(513, 3);
             this.groupBox115.Name = "groupBox115";
-            this.groupBox115.Size = new System.Drawing.Size(1, 44);
+            this.groupBox115.Size = new System.Drawing.Size(164, 44);
             this.groupBox115.TabIndex = 10;
             this.groupBox115.TabStop = false;
             // 
@@ -8055,10 +7918,10 @@
             this.groupBox116.Controls.Add(this.PEmbrb2Na);
             this.groupBox116.Controls.Add(this.PEmbrb2NOk);
             this.groupBox116.Controls.Add(this.PEmbrb2Ok);
-            this.groupBox116.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox116.Location = new System.Drawing.Point(3, 53);
+            this.groupBox116.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox116.Location = new System.Drawing.Point(513, 53);
             this.groupBox116.Name = "groupBox116";
-            this.groupBox116.Size = new System.Drawing.Size(1, 44);
+            this.groupBox116.Size = new System.Drawing.Size(164, 44);
             this.groupBox116.TabIndex = 11;
             this.groupBox116.TabStop = false;
             // 
@@ -8106,10 +7969,10 @@
             this.groupBox117.Controls.Add(this.PEmbrb3Na);
             this.groupBox117.Controls.Add(this.PEmbrb3NOk);
             this.groupBox117.Controls.Add(this.PEmbrb3Ok);
-            this.groupBox117.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox117.Location = new System.Drawing.Point(3, 103);
+            this.groupBox117.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox117.Location = new System.Drawing.Point(513, 103);
             this.groupBox117.Name = "groupBox117";
-            this.groupBox117.Size = new System.Drawing.Size(1, 44);
+            this.groupBox117.Size = new System.Drawing.Size(164, 44);
             this.groupBox117.TabIndex = 12;
             this.groupBox117.TabStop = false;
             // 
@@ -8157,10 +8020,10 @@
             this.groupBox118.Controls.Add(this.PEmbrb4Na);
             this.groupBox118.Controls.Add(this.PEmbrb4NOk);
             this.groupBox118.Controls.Add(this.PEmbrb4Ok);
-            this.groupBox118.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox118.Location = new System.Drawing.Point(3, 153);
+            this.groupBox118.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox118.Location = new System.Drawing.Point(513, 153);
             this.groupBox118.Name = "groupBox118";
-            this.groupBox118.Size = new System.Drawing.Size(1, 44);
+            this.groupBox118.Size = new System.Drawing.Size(164, 44);
             this.groupBox118.TabIndex = 13;
             this.groupBox118.TabStop = false;
             // 
@@ -8208,10 +8071,10 @@
             this.groupBox119.Controls.Add(this.PEmbrb5Na);
             this.groupBox119.Controls.Add(this.PEmbrb5NOk);
             this.groupBox119.Controls.Add(this.PEmbrb5Ok);
-            this.groupBox119.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox119.Location = new System.Drawing.Point(3, 203);
+            this.groupBox119.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox119.Location = new System.Drawing.Point(513, 203);
             this.groupBox119.Name = "groupBox119";
-            this.groupBox119.Size = new System.Drawing.Size(1, 74);
+            this.groupBox119.Size = new System.Drawing.Size(164, 74);
             this.groupBox119.TabIndex = 14;
             this.groupBox119.TabStop = false;
             // 
@@ -8256,48 +8119,12 @@
             // 
             // panel45
             // 
-            this.panel45.Controls.Add(this.tableLayoutPanel37);
-            this.panel45.Location = new System.Drawing.Point(3, 283);
+            this.panel45.Controls.Add(this.tableLayoutPanel15);
+            this.panel45.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel45.Location = new System.Drawing.Point(513, 283);
             this.panel45.Name = "panel45";
-            this.panel45.Size = new System.Drawing.Size(1, 357);
+            this.panel45.Size = new System.Drawing.Size(164, 363);
             this.panel45.TabIndex = 21;
-            // 
-            // tableLayoutPanel37
-            // 
-            this.tableLayoutPanel37.ColumnCount = 3;
-            this.tableLayoutPanel37.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.9372F));
-            this.tableLayoutPanel37.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.1256F));
-            this.tableLayoutPanel37.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.9372F));
-            this.tableLayoutPanel37.Controls.Add(this.panel46, 1, 1);
-            this.tableLayoutPanel37.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel37.Location = new System.Drawing.Point(0, 271);
-            this.tableLayoutPanel37.Name = "tableLayoutPanel37";
-            this.tableLayoutPanel37.RowCount = 3;
-            this.tableLayoutPanel37.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel37.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel37.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel37.Size = new System.Drawing.Size(1, 86);
-            this.tableLayoutPanel37.TabIndex = 22;
-            // 
-            // panel46
-            // 
-            this.panel46.Controls.Add(this.ValPEmb);
-            this.panel46.Location = new System.Drawing.Point(0, 28);
-            this.panel46.Margin = new System.Windows.Forms.Padding(0);
-            this.panel46.Name = "panel46";
-            this.panel46.Size = new System.Drawing.Size(1, 28);
-            this.panel46.TabIndex = 0;
-            // 
-            // ValPEmb
-            // 
-            this.ValPEmb.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ValPEmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ValPEmb.Location = new System.Drawing.Point(0, 0);
-            this.ValPEmb.Name = "ValPEmb";
-            this.ValPEmb.Size = new System.Drawing.Size(1, 28);
-            this.ValPEmb.TabIndex = 1;
-            this.ValPEmb.Text = "Valider";
-            this.ValPEmb.UseVisualStyleBackColor = true;
             // 
             // navigationPage15
             // 
@@ -8963,6 +8790,7 @@
             this.ValPpalet.TabIndex = 1;
             this.ValPpalet.Text = "Valider";
             this.ValPpalet.UseVisualStyleBackColor = true;
+            this.ValPpalet.Click += new System.EventHandler(this.ValPpalet_Click);
             // 
             // panel50
             // 
@@ -9606,6 +9434,7 @@
             this.ValPAQL.TabIndex = 1;
             this.ValPAQL.Text = "Valider";
             this.ValPAQL.UseVisualStyleBackColor = true;
+            this.ValPAQL.Click += new System.EventHandler(this.ValPAQL_Click);
             // 
             // lb8PAqlm
             // 
@@ -9979,6 +9808,197 @@
             this.ValPrepBt.TabIndex = 1;
             this.ValPrepBt.Text = "Valider";
             this.ValPrepBt.UseVisualStyleBackColor = true;
+            this.ValPrepBt.Click += new System.EventHandler(this.ValPrepBt_Click_1);
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 3;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.9372F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.1256F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.9372F));
+            this.tableLayoutPanel5.Controls.Add(this.panel12, 1, 1);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 201);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 3;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(164, 86);
+            this.tableLayoutPanel5.TabIndex = 23;
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.ValAss6);
+            this.panel12.Location = new System.Drawing.Point(27, 28);
+            this.panel12.Margin = new System.Windows.Forms.Padding(0);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(108, 28);
+            this.panel12.TabIndex = 0;
+            // 
+            // ValAss6
+            // 
+            this.ValAss6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ValAss6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ValAss6.Location = new System.Drawing.Point(0, 0);
+            this.ValAss6.Name = "ValAss6";
+            this.ValAss6.Size = new System.Drawing.Size(108, 28);
+            this.ValAss6.TabIndex = 1;
+            this.ValAss6.Text = "Valider";
+            this.ValAss6.UseVisualStyleBackColor = true;
+            this.ValAss6.Click += new System.EventHandler(this.ValAss6_Click);
+            // 
+            // tableLayoutPanel10
+            // 
+            this.tableLayoutPanel10.ColumnCount = 3;
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.9372F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.1256F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.9372F));
+            this.tableLayoutPanel10.Controls.Add(this.panel16, 1, 1);
+            this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(0, 363);
+            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
+            this.tableLayoutPanel10.RowCount = 3;
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(170, 86);
+            this.tableLayoutPanel10.TabIndex = 23;
+            // 
+            // panel16
+            // 
+            this.panel16.Controls.Add(this.ValPD);
+            this.panel16.Location = new System.Drawing.Point(28, 28);
+            this.panel16.Margin = new System.Windows.Forms.Padding(0);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(108, 28);
+            this.panel16.TabIndex = 0;
+            // 
+            // ValPD
+            // 
+            this.ValPD.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ValPD.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ValPD.Location = new System.Drawing.Point(0, 0);
+            this.ValPD.Name = "ValPD";
+            this.ValPD.Size = new System.Drawing.Size(108, 28);
+            this.ValPD.TabIndex = 1;
+            this.ValPD.Text = "Valider";
+            this.ValPD.UseVisualStyleBackColor = true;
+            this.ValPD.Click += new System.EventHandler(this.ValPD_Click);
+            // 
+            // tableLayoutPanel13
+            // 
+            this.tableLayoutPanel13.ColumnCount = 3;
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.9372F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.1256F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.9372F));
+            this.tableLayoutPanel13.Controls.Add(this.panel38, 1, 1);
+            this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel13.Location = new System.Drawing.Point(0, 356);
+            this.tableLayoutPanel13.Name = "tableLayoutPanel13";
+            this.tableLayoutPanel13.RowCount = 3;
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(170, 86);
+            this.tableLayoutPanel13.TabIndex = 23;
+            // 
+            // panel38
+            // 
+            this.panel38.Controls.Add(this.ValPWifi);
+            this.panel38.Location = new System.Drawing.Point(28, 28);
+            this.panel38.Margin = new System.Windows.Forms.Padding(0);
+            this.panel38.Name = "panel38";
+            this.panel38.Size = new System.Drawing.Size(108, 28);
+            this.panel38.TabIndex = 0;
+            // 
+            // ValPWifi
+            // 
+            this.ValPWifi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ValPWifi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ValPWifi.Location = new System.Drawing.Point(0, 0);
+            this.ValPWifi.Name = "ValPWifi";
+            this.ValPWifi.Size = new System.Drawing.Size(108, 28);
+            this.ValPWifi.TabIndex = 1;
+            this.ValPWifi.Text = "Valider";
+            this.ValPWifi.UseVisualStyleBackColor = true;
+            this.ValPWifi.Click += new System.EventHandler(this.ValPWifi_Click);
+            // 
+            // tableLayoutPanel14
+            // 
+            this.tableLayoutPanel14.ColumnCount = 3;
+            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.9372F));
+            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.1256F));
+            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.9372F));
+            this.tableLayoutPanel14.Controls.Add(this.panel43, 1, 1);
+            this.tableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel14.Location = new System.Drawing.Point(0, 257);
+            this.tableLayoutPanel14.Name = "tableLayoutPanel14";
+            this.tableLayoutPanel14.RowCount = 3;
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(164, 86);
+            this.tableLayoutPanel14.TabIndex = 23;
+            // 
+            // panel43
+            // 
+            this.panel43.Controls.Add(this.ValPerMur);
+            this.panel43.Location = new System.Drawing.Point(27, 28);
+            this.panel43.Margin = new System.Windows.Forms.Padding(0);
+            this.panel43.Name = "panel43";
+            this.panel43.Size = new System.Drawing.Size(108, 28);
+            this.panel43.TabIndex = 0;
+            // 
+            // ValPerMur
+            // 
+            this.ValPerMur.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ValPerMur.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ValPerMur.Location = new System.Drawing.Point(0, 0);
+            this.ValPerMur.Name = "ValPerMur";
+            this.ValPerMur.Size = new System.Drawing.Size(108, 28);
+            this.ValPerMur.TabIndex = 1;
+            this.ValPerMur.Text = "Valider";
+            this.ValPerMur.UseVisualStyleBackColor = true;
+            this.ValPerMur.Click += new System.EventHandler(this.ValPerMur_Click);
+            // 
+            // tableLayoutPanel15
+            // 
+            this.tableLayoutPanel15.ColumnCount = 3;
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.9372F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.1256F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.9372F));
+            this.tableLayoutPanel15.Controls.Add(this.panel46, 1, 1);
+            this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel15.Location = new System.Drawing.Point(0, 277);
+            this.tableLayoutPanel15.Name = "tableLayoutPanel15";
+            this.tableLayoutPanel15.RowCount = 3;
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(164, 86);
+            this.tableLayoutPanel15.TabIndex = 23;
+            // 
+            // panel46
+            // 
+            this.panel46.Controls.Add(this.ValPEmb);
+            this.panel46.Location = new System.Drawing.Point(27, 28);
+            this.panel46.Margin = new System.Windows.Forms.Padding(0);
+            this.panel46.Name = "panel46";
+            this.panel46.Size = new System.Drawing.Size(108, 28);
+            this.panel46.TabIndex = 0;
+            // 
+            // ValPEmb
+            // 
+            this.ValPEmb.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ValPEmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ValPEmb.Location = new System.Drawing.Point(0, 0);
+            this.ValPEmb.Name = "ValPEmb";
+            this.ValPEmb.Size = new System.Drawing.Size(108, 28);
+            this.ValPEmb.TabIndex = 1;
+            this.ValPEmb.Text = "Valider";
+            this.ValPEmb.UseVisualStyleBackColor = true;
+            this.ValPEmb.Click += new System.EventHandler(this.ValPEmb_Click);
             // 
             // Integration
             // 
@@ -9991,6 +10011,7 @@
             this.Name = "Integration";
             this.Text = "Intégration ADT";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Integration_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).EndInit();
@@ -10126,8 +10147,6 @@
             this.groupBox106.ResumeLayout(false);
             this.groupBox106.PerformLayout();
             this.panel37.ResumeLayout(false);
-            this.tableLayoutPanel33.ResumeLayout(false);
-            this.panel38.ResumeLayout(false);
             this.navigationPage7.ResumeLayout(false);
             this.tableLayoutPanel16.ResumeLayout(false);
             this.tableLayoutPanel16.PerformLayout();
@@ -10160,8 +10179,6 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel11.ResumeLayout(false);
-            this.tableLayoutPanel17.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
             this.navigationPage9.ResumeLayout(false);
             this.tableLayoutPanel19.ResumeLayout(false);
             this.tableLayoutPanel19.PerformLayout();
@@ -10176,8 +10193,6 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel15.ResumeLayout(false);
-            this.tableLayoutPanel21.ResumeLayout(false);
-            this.panel16.ResumeLayout(false);
             this.navigationPage10.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
@@ -10268,8 +10283,6 @@
             this.groupBox114.ResumeLayout(false);
             this.groupBox114.PerformLayout();
             this.panel42.ResumeLayout(false);
-            this.tableLayoutPanel35.ResumeLayout(false);
-            this.panel43.ResumeLayout(false);
             this.navigationPage14.ResumeLayout(false);
             this.tableLayoutPanel36.ResumeLayout(false);
             this.tableLayoutPanel36.PerformLayout();
@@ -10286,8 +10299,6 @@
             this.groupBox119.ResumeLayout(false);
             this.groupBox119.PerformLayout();
             this.panel45.ResumeLayout(false);
-            this.tableLayoutPanel37.ResumeLayout(false);
-            this.panel46.ResumeLayout(false);
             this.navigationPage15.ResumeLayout(false);
             this.tableLayoutPanel38.ResumeLayout(false);
             this.tableLayoutPanel38.PerformLayout();
@@ -10356,6 +10367,16 @@
             this.panel8.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.panel17.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
+            this.tableLayoutPanel10.ResumeLayout(false);
+            this.panel16.ResumeLayout(false);
+            this.tableLayoutPanel13.ResumeLayout(false);
+            this.panel38.ResumeLayout(false);
+            this.tableLayoutPanel14.ResumeLayout(false);
+            this.panel43.ResumeLayout(false);
+            this.tableLayoutPanel15.ResumeLayout(false);
+            this.panel46.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -10630,9 +10651,6 @@
         private System.Windows.Forms.RadioButton Ass6rb7NOk;
         private System.Windows.Forms.RadioButton Ass6rb7Ok;
         private System.Windows.Forms.Panel panel37;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel33;
-        private System.Windows.Forms.Panel panel38;
-        private System.Windows.Forms.Button ValAss6;
         private DevExpress.XtraBars.Navigation.NavigationPage navigationPage7;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel16;
         private System.Windows.Forms.Panel panel24;
@@ -10693,9 +10711,6 @@
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.TextBox ComPD;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel17;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Button ValPD;
         private DevExpress.XtraBars.Navigation.NavigationPage navigationPage9;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel19;
         private System.Windows.Forms.Label lb1PWifi;
@@ -10722,9 +10737,6 @@
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.TextBox ComPWifi;
         private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel21;
-        private System.Windows.Forms.Panel panel16;
-        private System.Windows.Forms.Button ValPWifi;
         private DevExpress.XtraBars.Navigation.NavigationPage navigationPage10;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private System.Windows.Forms.GroupBox groupBox57;
@@ -10904,9 +10916,6 @@
         private System.Windows.Forms.RadioButton PerMurrb6NOk;
         private System.Windows.Forms.RadioButton PerMurrb6Ok;
         private System.Windows.Forms.Panel panel42;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel35;
-        private System.Windows.Forms.Panel panel43;
-        private System.Windows.Forms.Button ValPerMur;
         private DevExpress.XtraBars.Navigation.NavigationPage navigationPage14;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel36;
         private System.Windows.Forms.Panel panel44;
@@ -10938,9 +10947,6 @@
         private System.Windows.Forms.RadioButton PEmbrb5NOk;
         private System.Windows.Forms.RadioButton PEmbrb5Ok;
         private System.Windows.Forms.Panel panel45;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel37;
-        private System.Windows.Forms.Panel panel46;
-        private System.Windows.Forms.Button ValPEmb;
         private DevExpress.XtraBars.Navigation.NavigationPage navigationPage15;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel38;
         private System.Windows.Forms.GroupBox groupBox128;
@@ -11076,5 +11082,20 @@
         private System.Windows.Forms.Button ValPrepBt;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem Fermer;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Button ValAss6;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Button ValPD;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
+        private System.Windows.Forms.Panel panel38;
+        private System.Windows.Forms.Button ValPWifi;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel14;
+        private System.Windows.Forms.Panel panel43;
+        private System.Windows.Forms.Button ValPerMur;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
+        private System.Windows.Forms.Panel panel46;
+        private System.Windows.Forms.Button ValPEmb;
     }
 }

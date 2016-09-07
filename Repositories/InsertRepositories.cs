@@ -113,7 +113,7 @@ namespace Repositories
             return res;
         }
 
-        public void InsertData(String module, String poste, OkDescriptRepositorie desc, ValOKdIntegrepositories repo)
+        public void InsertData(DateTime dateDebut,String module, String poste, OkDescriptRepositorie desc, ValOKdIntegrepositories repo)
         {
 
             if (checkRb(err))
@@ -136,6 +136,7 @@ namespace Repositories
                     ValOKdIntegrtion v = new ValOKdIntegrtion();
 
                     v.date = DateTime.Now;
+                    v.equipe = getEquipe(dateDebut);
                     //v.idLigne = 5;
 
                     bool b = true;

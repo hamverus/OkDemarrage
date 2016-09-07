@@ -13,28 +13,25 @@ namespace OKDemarrageIntegration
 {
     public partial class Integration : Form
     {
+        private DateTime dateDebut;
+        private InsertRepositories insert = new InsertRepositories();
         public Integration()
         {
             InitializeComponent();
+            dateDebut = insert.getDateEquipe();
         }
 
         public Integration(string text)
         {
             InitializeComponent();
+            dateDebut = insert.getDateEquipe();
+
             Text = text;
         }
 
-        private void panel10_Paint(object sender, PaintEventArgs e)
-        {
+     
 
-        }
-
-        private void panel44_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void ValAss1_Click_1(object sender, EventArgs e)
+        private void ValAss1_Click(object sender, EventArgs e)
         {
             RadioButton[] listNok = { Ass1rb1Nok, Ass1rb2NOk, Ass1rb3NOk, Ass1rb4NOk, Ass1rb5NOk, Ass1rb6NOk, Ass1rb7NOk };
             RadioButton[] l = { Ass1rb1Ok, Ass1rb1Nok, Ass1rb1Na, Ass1rb2Ok, Ass1rb2NOk, Ass1rb2Na, Ass1rb3Ok, Ass1rb3NOk, Ass1rb3Na, Ass1rb4Ok, Ass1rb4NOk, Ass1rb4Na, Ass1rb5Ok, Ass1rb5NOk, Ass1rb5Na, Ass1rb6Ok, Ass1rb6NOk, Ass1rb6Na, Ass1rb7Ok, Ass1rb7NOk, Ass1rb7Na };
@@ -45,10 +42,10 @@ namespace OKDemarrageIntegration
 
             InsertRepositories insert = new InsertRepositories(ComAss1, listNok, l, ValAss1, ComAss1.Text);
             insert.checkNokRb();
-            insert.InsertData("Intégration ADT", "Assembage  01", desc, repo);
+            insert.InsertData(dateDebut,"Intégration ADT", "Assembage  01", desc, repo);
         }
 
-        private void ValAss2_Click(object sender, EventArgs e)
+        private void ValAss2_Click_1(object sender, EventArgs e)
         {
             AQLM2Entities context = new AQLM2Entities();
             ValOKdIntegrepositories repo = new ValOKdIntegrepositories(context);
@@ -60,7 +57,7 @@ namespace OKDemarrageIntegration
 
             InsertRepositories insert = new InsertRepositories(ComAss2, listNok, l, ValAss2, ComAss2.Text);
             insert.checkNokRb();
-            insert.InsertData("Intégration ADT", "Assembage 02", desc, repo);
+            insert.InsertData(dateDebut, "Intégration ADT", "Assembage 02", desc, repo);
         }
 
         private void ValAss3_Click_1(object sender, EventArgs e)
@@ -75,10 +72,10 @@ namespace OKDemarrageIntegration
 
             InsertRepositories insert = new InsertRepositories(ComAss3, listNok, l, ValAss3, ComAss3.Text);
             insert.checkNokRb();
-            insert.InsertData("Intégration ADT", "Assembage 03", desc, repo);
+            insert.InsertData(dateDebut, "Intégration ADT", "Assembage 03", desc, repo);
         }
 
-        private void ValAss4_Click_1(object sender, EventArgs e)
+        private void ValAss4_Click(object sender, EventArgs e)
         {
             AQLM2Entities context = new AQLM2Entities();
             ValOKdIntegrepositories repo = new ValOKdIntegrepositories(context);
@@ -90,10 +87,10 @@ namespace OKDemarrageIntegration
 
             InsertRepositories insert = new InsertRepositories(ComAss3, listNok, l, ValAss4, ComAss3.Text);
             insert.checkNokRb();
-            insert.InsertData("Intégration ADT", "Assembage 04", desc, repo);
+            insert.InsertData(dateDebut, "Intégration ADT", "Assembage 04", desc, repo);
         }
 
-        private void ValAss5_Click_1(object sender, EventArgs e)
+        private void ValAss5_Click(object sender, EventArgs e)
         {
             AQLM2Entities context = new AQLM2Entities();
             ValOKdIntegrepositories repo = new ValOKdIntegrepositories(context);
@@ -105,10 +102,10 @@ namespace OKDemarrageIntegration
 
             InsertRepositories insert = new InsertRepositories(ComAss5, listNok, l, ValAss5, ComAss5.Text);
             insert.checkNokRb();
-            insert.InsertData("Intégration ADT", "Assembage 05", desc, repo);
+            insert.InsertData(dateDebut, "Intégration ADT", "Assembage 05", desc, repo);
         }
 
-        private void ValAss6_Click_1(object sender, EventArgs e)
+        private void ValAss6_Click(object sender, EventArgs e)
         {
             AQLM2Entities context = new AQLM2Entities();
             ValOKdIntegrepositories repo = new ValOKdIntegrepositories(context);
@@ -120,10 +117,10 @@ namespace OKDemarrageIntegration
 
             InsertRepositories insert = new InsertRepositories(ComAss6, listNok, l, ValAss6, ComAss6.Text);
             insert.checkNokRb();
-            insert.InsertData("Intégration ADT", "Assembage 06", desc, repo);
+            insert.InsertData(dateDebut, "Intégration ADT", "Assembage 06", desc, repo);
         }
 
-        private void ValPv_Click_1(object sender, EventArgs e)
+        private void ValPv_Click(object sender, EventArgs e)
         {
             AQLM2Entities context = new AQLM2Entities();
             ValOKdIntegrepositories repo = new ValOKdIntegrepositories(context);
@@ -135,10 +132,10 @@ namespace OKDemarrageIntegration
 
             InsertRepositories insert = new InsertRepositories(ComPV, listNok, l, ValPv, ComPV.Text);
             insert.checkNokRb();
-            insert.InsertData("Intégration ADT", "Poste Vision", desc, repo);
+            insert.InsertData(dateDebut, "Intégration ADT", "Poste Vision", desc, repo);
         }
 
-        private void ValPD_Click_1(object sender, EventArgs e)
+        private void ValPD_Click(object sender, EventArgs e)
         {
             AQLM2Entities context = new AQLM2Entities();
             ValOKdIntegrepositories repo = new ValOKdIntegrepositories(context);
@@ -150,10 +147,10 @@ namespace OKDemarrageIntegration
 
             InsertRepositories insert = new InsertRepositories(ComPD, listNok, l, ValPD, ComPD.Text);
             insert.checkNokRb();
-            insert.InsertData("Intégration ADT", "Poste Dielectrique", desc, repo);
+            insert.InsertData(dateDebut, "Intégration ADT", "Poste Dielectrique", desc, repo);
         }
 
-        private void ValPWifi_Click_1(object sender, EventArgs e)
+        private void ValPWifi_Click(object sender, EventArgs e)
         {
             AQLM2Entities context = new AQLM2Entities();
             ValOKdIntegrepositories repo = new ValOKdIntegrepositories(context);
@@ -165,10 +162,10 @@ namespace OKDemarrageIntegration
 
             InsertRepositories insert = new InsertRepositories(ComPWifi, listNok, l, ValPWifi, ComPWifi.Text);
             insert.checkNokRb();
-            insert.InsertData("Intégration ADT", "Poste Wifi", desc, repo);
+            insert.InsertData(dateDebut, "Intégration ADT", "Poste Wifi", desc, repo);
         }
 
-        private void ValPBTF_Click_1(object sender, EventArgs e)
+        private void ValPBTF_Click(object sender, EventArgs e)
         {
             AQLM2Entities context = new AQLM2Entities();
             ValOKdIntegrepositories repo = new ValOKdIntegrepositories(context);
@@ -180,10 +177,10 @@ namespace OKDemarrageIntegration
 
             InsertRepositories insert = new InsertRepositories(ComPBTF, listNok, l, ValPBTF, ComPBTF.Text);
             insert.checkNokRb();
-            insert.InsertData("Intégration ADT", "Poste BTF", desc, repo);
+            insert.InsertData(dateDebut, "Intégration ADT", "Poste BTF", desc, repo);
         }
 
-        private void ValFSOS_Click_1(object sender, EventArgs e)
+        private void ValFSOS_Click(object sender, EventArgs e)
         {
             AQLM2Entities context = new AQLM2Entities();
             ValOKdIntegrepositories repo = new ValOKdIntegrepositories(context);
@@ -195,10 +192,10 @@ namespace OKDemarrageIntegration
 
             InsertRepositories insert = new InsertRepositories(ComFSOS, listNok, l, ValFSOS, ComFSOS.Text);
             insert.checkNokRb();
-            insert.InsertData("Intégration ADT", "F SOS", desc, repo);
+            insert.InsertData(dateDebut, "Intégration ADT", "F SOS", desc, repo);
         }
 
-        private void ValTelch_Click_1(object sender, EventArgs e)
+        private void ValTelch_Click(object sender, EventArgs e)
         {
             AQLM2Entities context = new AQLM2Entities();
             ValOKdIntegrepositories repo = new ValOKdIntegrepositories(context);
@@ -210,10 +207,10 @@ namespace OKDemarrageIntegration
 
             InsertRepositories insert = new InsertRepositories(ComTelch, listNok, l, ValTelch, ComTelch.Text);
             insert.checkNokRb();
-            insert.InsertData("Intégration ADT", "Téléchargement", desc, repo);
+            insert.InsertData(dateDebut, "Intégration ADT", "Téléchargement", desc, repo);
         }
 
-        private void ValPerMur_Click_1(object sender, EventArgs e)
+        private void ValPerMur_Click(object sender, EventArgs e)
         {
             AQLM2Entities context = new AQLM2Entities();
             ValOKdIntegrepositories repo = new ValOKdIntegrepositories(context);
@@ -225,10 +222,10 @@ namespace OKDemarrageIntegration
 
             InsertRepositories insert = new InsertRepositories(ComPerMur, listNok, l, ValPerMur, ComPerMur.Text);
             insert.checkNokRb();
-            insert.InsertData("Intégration ADT", "Prérecette", desc, repo);
+            insert.InsertData(dateDebut, "Intégration ADT", "Prérecette", desc, repo);
         }
 
-        private void ValPEmb_Click_1(object sender, EventArgs e)
+        private void ValPEmb_Click(object sender, EventArgs e)
         {
             AQLM2Entities context = new AQLM2Entities();
             ValOKdIntegrepositories repo = new ValOKdIntegrepositories(context);
@@ -240,10 +237,10 @@ namespace OKDemarrageIntegration
 
             InsertRepositories insert = new InsertRepositories(ComPEmb, listNok, l, ValPEmb, ComPEmb.Text);
             insert.checkNokRb();
-            insert.InsertData("Intégration ADT", "Poste Emballage ", desc, repo);
+            insert.InsertData(dateDebut, "Intégration ADT", "Poste Emballage ", desc, repo);
         }
 
-        private void ValPpalet_Click_1(object sender, EventArgs e)
+        private void ValPpalet_Click(object sender, EventArgs e)
         {
             AQLM2Entities context = new AQLM2Entities();
             ValOKdIntegrepositories repo = new ValOKdIntegrepositories(context);
@@ -255,10 +252,10 @@ namespace OKDemarrageIntegration
 
             InsertRepositories insert = new InsertRepositories(ComPpalet, listNok, l, ValPpalet, ComPpalet.Text);
             insert.checkNokRb();
-            insert.InsertData("Intégration ADT", "Poste Paléttisation", desc, repo);
+            insert.InsertData(dateDebut, "Intégration ADT", "Poste Paléttisation", desc, repo);
         }
 
-        private void ValPAQL_Click_1(object sender, EventArgs e)
+        private void ValPAQL_Click(object sender, EventArgs e)
         {
             AQLM2Entities context = new AQLM2Entities();
             ValOKdIntegrepositories repo = new ValOKdIntegrepositories(context);
@@ -270,10 +267,10 @@ namespace OKDemarrageIntegration
 
             InsertRepositories insert = new InsertRepositories(ComPAQL, listNok, l, ValPAQL, ComPAQL.Text);
             insert.checkNokRb();
-            insert.InsertData("Intégration ADT", "Poste Paléttisation", desc, repo);
+            insert.InsertData(dateDebut, "Intégration ADT", "Poste Paléttisation", desc, repo);
         }
 
-        private void ValPrepBt_Click(object sender, EventArgs e)
+        private void ValPrepBt_Click_1(object sender, EventArgs e)
         {
             AQLM2Entities context = new AQLM2Entities();
             ValOKdIntegrepositories repo = new ValOKdIntegrepositories(context);
@@ -285,7 +282,7 @@ namespace OKDemarrageIntegration
 
             InsertRepositories insert = new InsertRepositories(ComPrepBt, listNok, l, ValPrepBt, ComPrepBt.Text);
             insert.checkNokRb();
-            insert.InsertData("Intégration ADT", "F SOS", desc, repo);
+            insert.InsertData(dateDebut, "Intégration ADT", "F SOS", desc, repo);
         }
 
         private void fichierToolStripMenuItem_Click(object sender, EventArgs e)
@@ -305,5 +302,15 @@ namespace OKDemarrageIntegration
             Environment.Exit(0);
 
         }
+
+        private void Integration_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
+
+        
     }
 }
