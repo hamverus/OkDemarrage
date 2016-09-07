@@ -113,9 +113,10 @@ namespace Repositories
             pilInsert.Poste = navigationpage;
         }
         //methode d'insertion 
-        public void InsertData(DateTime dateDebut, String module, String poste, OkDescriptRepositorie desc,
+        public int InsertData(DateTime dateDebut, String module, String poste, OkDescriptRepositorie desc,
             ValOKdIntegrepositories repo)
-        {    
+        {
+            var insertNum =0;
             if (checkRb(err))//Si les radio button sont cochés
             {
                 var msg = "";
@@ -159,7 +160,7 @@ namespace Repositories
                     }
                     v.idDescription = dd;
                     dd++;//incrémentaion d'id
-                    repo.Insert(v);
+                    insertNum=repo.Insert(v);
                 }
                 if (checkNokRb(err) == false)
                 {   
@@ -182,6 +183,7 @@ namespace Repositories
                 
                 
             }
+            return insertNum;
         }
 
         public string getEquipe(DateTime datedebut)
