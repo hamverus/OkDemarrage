@@ -204,7 +204,7 @@ namespace Repositories
             var timeDebut = datedebut.ToString("HH:mm:ss tt");
             TimeSpan t = TimeSpan.Parse(timeDebut);
             var x = equipeRepository.Get(b => b.dateDebut == t).Select(b => b.dateFin).First();
-            dateFinEquipe=DateTime.Parse(dateNow + " " + TimeSpan.Parse(x.ToString()))
+            dateFinEquipe=DateTime.Parse(dateNow + " " + TimeSpan.Parse(x.ToString()));
             if (datedebut == DateTime.Parse(dateNow + " 16:51:30"))
             {
 
