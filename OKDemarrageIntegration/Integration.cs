@@ -64,7 +64,13 @@ namespace OKDemarrageIntegration
 
             InsertRepositories insert = new InsertRepositories(ComAss1, listNok, l, ValAss1, ComAss1.Text);
             err=insert.checkNokRb(err);
-            insert.InsertData(dateDebut,"Intégration ADT", "Assembage  01", okDescriptRepositorie, valOKdIntegrepositories);
+            if (
+                insert.InsertData(dateDebut, "Intégration ADT", "Assembage  01", okDescriptRepositorie,
+                    valOKdIntegrepositories) > 0)
+            {
+                insert.insertPiloteFini(mat,navigationPage1.Text);
+            }
+            
         }
         //methode bouton assemblage 2
         private void ValAss2_Click_1(object sender, EventArgs e)
@@ -76,7 +82,13 @@ namespace OKDemarrageIntegration
 
             InsertRepositories insert = new InsertRepositories(ComAss2, listNok, l, ValAss2, ComAss2.Text);
             err = insert.checkNokRb(err);
-            insert.InsertData(dateDebut, "Intégration ADT", "Assembage 02", okDescriptRepositorie, valOKdIntegrepositories);
+
+            if (
+                insert.InsertData(dateDebut, "Intégration ADT", "Assembage 02", okDescriptRepositorie,
+                    valOKdIntegrepositories) > 0)
+            {
+                insert.insertPiloteFini(mat, navigationPage2.Text);
+            }
         }
         //methode bouton assemblage 3
         private void ValAss3_Click_1(object sender, EventArgs e)
@@ -88,7 +100,12 @@ namespace OKDemarrageIntegration
 
             InsertRepositories insert = new InsertRepositories(ComAss3, listNok, l, ValAss3, ComAss3.Text);
             err = insert.checkNokRb(err);
-            insert.InsertData(dateDebut, "Intégration ADT", "Assembage 03", okDescriptRepositorie, valOKdIntegrepositories);
+            if (
+                insert.InsertData(dateDebut, "Intégration ADT", "Assembage 03", okDescriptRepositorie,
+                    valOKdIntegrepositories) > 0)
+            {
+                insert.insertPiloteFini(mat, navigationPage3.Text);
+            }
         }
         //methode bouton assemblage 4
         private void ValAss4_Click(object sender, EventArgs e)
@@ -100,7 +117,12 @@ namespace OKDemarrageIntegration
 
             InsertRepositories insert = new InsertRepositories(ComAss3, listNok, l, ValAss4, ComAss3.Text);
             err = insert.checkNokRb(err);
-            insert.InsertData(dateDebut, "Intégration ADT", "Assembage 04", okDescriptRepositorie, valOKdIntegrepositories);
+            if (
+                insert.InsertData(dateDebut, "Intégration ADT", "Assembage 04", okDescriptRepositorie,
+                    valOKdIntegrepositories) > 0)
+            {
+                insert.insertPiloteFini(mat, navigationPage4.Text);
+            }
         }
         //methode bouton assemblage 5
         private void ValAss5_Click(object sender, EventArgs e)
@@ -112,7 +134,12 @@ namespace OKDemarrageIntegration
 
             InsertRepositories insert = new InsertRepositories(ComAss5, listNok, l, ValAss5, ComAss5.Text);
             err = insert.checkNokRb(err);
-            insert.InsertData(dateDebut, "Intégration ADT", "Assembage 05", okDescriptRepositorie, valOKdIntegrepositories);
+            if (
+                insert.InsertData(dateDebut, "Intégration ADT", "Assembage 05", okDescriptRepositorie,
+                    valOKdIntegrepositories) > 0)
+            {
+                insert.insertPiloteFini(mat, navigationPage5.Text);
+            }
         }
         //methode bouton assemblage 6
         private void ValAss6_Click(object sender, EventArgs e)
@@ -124,7 +151,12 @@ namespace OKDemarrageIntegration
 
             InsertRepositories insert = new InsertRepositories(ComAss6, listNok, l, ValAss6, ComAss6.Text);
             err = insert.checkNokRb(err);
-            insert.InsertData(dateDebut, "Intégration ADT", "Assembage 06", okDescriptRepositorie, valOKdIntegrepositories);
+            if (
+                insert.InsertData(dateDebut, "Intégration ADT", "Assembage 06", okDescriptRepositorie,
+                    valOKdIntegrepositories) > 0)
+            {
+                insert.insertPiloteFini(mat, navigationPage6.Text);
+            }
         }
         //methode bouton poste vision
         private void ValPv_Click(object sender, EventArgs e)
@@ -136,7 +168,12 @@ namespace OKDemarrageIntegration
 
             InsertRepositories insert = new InsertRepositories(ComPV, listNok, l, ValPv, ComPV.Text);
             err = insert.checkNokRb(err);
-            insert.InsertData(dateDebut, "Intégration ADT", "Poste Vision", okDescriptRepositorie, valOKdIntegrepositories);
+            if (
+                insert.InsertData(dateDebut, "Intégration ADT", "Poste Vision", okDescriptRepositorie,
+                    valOKdIntegrepositories) > 0)
+            {
+                insert.insertPiloteFini(mat, navigationPage7.Text);
+            }
         }
         //methode bouton poste dielectrique
         private void ValPD_Click(object sender, EventArgs e)
@@ -148,7 +185,12 @@ namespace OKDemarrageIntegration
 
             InsertRepositories insert = new InsertRepositories(ComPD, listNok, l, ValPD, ComPD.Text);
             err = insert.checkNokRb(err);
-            insert.InsertData(dateDebut, "Intégration ADT", "Poste Dielectrique", okDescriptRepositorie, valOKdIntegrepositories);
+            if (
+                insert.InsertData(dateDebut, "Intégration ADT", "Poste Dielectrique", okDescriptRepositorie,
+                    valOKdIntegrepositories) > 0)
+            {
+                insert.insertPiloteFini(mat, navigationPage8.Text);
+            }
         }
         //methode bouton poste vision
         private void ValPWifi_Click(object sender, EventArgs e)
@@ -160,7 +202,12 @@ namespace OKDemarrageIntegration
 
             InsertRepositories insert = new InsertRepositories(ComPWifi, listNok, l, ValPWifi, ComPWifi.Text);
             err = insert.checkNokRb(err);
-            insert.InsertData(dateDebut, "Intégration ADT", "Poste Wifi", okDescriptRepositorie, valOKdIntegrepositories);
+            if (
+                insert.InsertData(dateDebut, "Intégration ADT", "Poste Wifi", okDescriptRepositorie,
+                    valOKdIntegrepositories) > 0)
+            {
+                insert.insertPiloteFini(mat, navigationPage9.Text);
+            }
         }
         //methode bouton poste BTF
         private void ValPBTF_Click(object sender, EventArgs e)
@@ -172,7 +219,12 @@ namespace OKDemarrageIntegration
 
             InsertRepositories insert = new InsertRepositories(ComPBTF, listNok, l, ValPBTF, ComPBTF.Text);
             err = insert.checkNokRb(err);
-            insert.InsertData(dateDebut, "Intégration ADT", "Poste BTF", okDescriptRepositorie, valOKdIntegrepositories);
+            if (
+                insert.InsertData(dateDebut, "Intégration ADT", "Poste BTF", okDescriptRepositorie,
+                    valOKdIntegrepositories) > 0)
+            {
+                insert.insertPiloteFini(mat, navigationPage10.Text);
+            }
         }
         //methode bouton F sos
         private void ValFSOS_Click(object sender, EventArgs e)
@@ -184,7 +236,12 @@ namespace OKDemarrageIntegration
 
             InsertRepositories insert = new InsertRepositories(ComFSOS, listNok, l, ValFSOS, ComFSOS.Text);
             err = insert.checkNokRb(err);
-            insert.InsertData(dateDebut, "Intégration ADT", "F SOS", okDescriptRepositorie, valOKdIntegrepositories);
+            if (
+                insert.InsertData(dateDebut, "Intégration ADT", "F SOS", okDescriptRepositorie, valOKdIntegrepositories) >
+                0)
+            {
+                insert.insertPiloteFini(mat, navigationPage11.Text);
+            }
         }
         //methode bouton telechargement
         private void ValTelch_Click(object sender, EventArgs e)
@@ -196,7 +253,12 @@ namespace OKDemarrageIntegration
 
             InsertRepositories insert = new InsertRepositories(ComTelch, listNok, l, ValTelch, ComTelch.Text);
             err = insert.checkNokRb(err);
-            insert.InsertData(dateDebut, "Intégration ADT", "Téléchargement", okDescriptRepositorie, valOKdIntegrepositories);
+            if (
+                insert.InsertData(dateDebut, "Intégration ADT", "Téléchargement", okDescriptRepositorie,
+                    valOKdIntegrepositories) > 0)
+            {
+                insert.insertPiloteFini(mat, navigationPage12.Text);
+            }
         }
         //methode bouton percette mur chauffe
         private void ValPerMur_Click(object sender, EventArgs e)
@@ -207,7 +269,12 @@ namespace OKDemarrageIntegration
 
             InsertRepositories insert = new InsertRepositories(ComPerMur, listNok, l, ValPerMur, ComPerMur.Text);
             err = insert.checkNokRb(err);
-            insert.InsertData(dateDebut, "Intégration ADT", "Prérecette", okDescriptRepositorie, valOKdIntegrepositories);
+            if (
+                insert.InsertData(dateDebut, "Intégration ADT", "Prérecette", okDescriptRepositorie,
+                    valOKdIntegrepositories) > 0)
+            {
+                insert.insertPiloteFini(mat, navigationPage13.Text);
+            }
         }
         //methode bouton poste emballage
         private void ValPEmb_Click(object sender, EventArgs e)
@@ -219,7 +286,12 @@ namespace OKDemarrageIntegration
 
             InsertRepositories insert = new InsertRepositories(ComPEmb, listNok, l, ValPEmb, ComPEmb.Text);
             err = insert.checkNokRb(err);
-            insert.InsertData(dateDebut, "Intégration ADT", "Poste Emballage ", okDescriptRepositorie, valOKdIntegrepositories);
+            if (
+                insert.InsertData(dateDebut, "Intégration ADT", "Poste Emballage ", okDescriptRepositorie,
+                    valOKdIntegrepositories) > 0)
+            {
+                insert.insertPiloteFini(mat, navigationPage14.Text);
+            }
         }
         //methode bouton poste palettisation
         private void ValPpalet_Click(object sender, EventArgs e)
@@ -230,7 +302,12 @@ namespace OKDemarrageIntegration
 
             InsertRepositories insert = new InsertRepositories(ComPpalet, listNok, l, ValPpalet, ComPpalet.Text);
             err = insert.checkNokRb(err);
-            insert.InsertData(dateDebut, "Intégration ADT", "Poste Paléttisation", okDescriptRepositorie, valOKdIntegrepositories);
+            if (
+                insert.InsertData(dateDebut, "Intégration ADT", "Poste Paléttisation", okDescriptRepositorie,
+                    valOKdIntegrepositories) > 0)
+            {
+                insert.insertPiloteFini(mat, navigationPage15.Text);
+            }
         }
         //methode bouton poste AQL
         private void ValPAQL_Click(object sender, EventArgs e)
@@ -241,7 +318,12 @@ namespace OKDemarrageIntegration
 
             InsertRepositories insert = new InsertRepositories(ComPAQL, listNok, l, ValPAQL, ComPAQL.Text);
             err = insert.checkNokRb(err);
-            insert.InsertData(dateDebut, "Intégration ADT", "Poste Paléttisation", okDescriptRepositorie, valOKdIntegrepositories);
+            if (
+                insert.InsertData(dateDebut, "Intégration ADT", "Poste Paléttisation", okDescriptRepositorie,
+                    valOKdIntegrepositories) > 0)
+            {
+                insert.insertPiloteFini(mat, navigationPage16.Text);
+            }
         }
         //methode bouton poste preparation boite
         private void ValPrepBt_Click_1(object sender, EventArgs e)
@@ -253,7 +335,12 @@ namespace OKDemarrageIntegration
 
             InsertRepositories insert = new InsertRepositories(ComPrepBt, listNok, l, ValPrepBt, ComPrepBt.Text);
             err = insert.checkNokRb(err);
-            insert.InsertData(dateDebut, "Intégration ADT", "F SOS", okDescriptRepositorie, valOKdIntegrepositories);
+            if (
+                insert.InsertData(dateDebut, "Intégration ADT", "F SOS", okDescriptRepositorie, valOKdIntegrepositories) >
+                0)
+            {
+                insert.insertPiloteFini(mat, navigationPage17.Text);
+            }
         }
 
         private void fichierToolStripMenuItem_Click(object sender, EventArgs e)
@@ -285,22 +372,22 @@ namespace OKDemarrageIntegration
             {
                 switch (d)
                 {
-                    case "Assembage  01":
+                    case "Assemblage 1":
                         ValAss1.Enabled = false;
                         break;
-                    case "Assembage  02":
+                    case "Assemblage 2":
                         ValAss2.Enabled = false;
                         break;
-                    case "Assembage  03":
+                    case "Assemblage 3":
                         ValAss3.Enabled = false;
                         break;
-                    case "Assembage  04":
+                    case "Assemblage 4":
                         ValAss4.Enabled = false;
                         break;
-                    case "Assembage  05":
+                    case "Assemblage 5":
                         ValAss5.Enabled = false;
                         break;
-                    case "Assembage  06":
+                    case "Assemblage 6":
                         ValAss6.Enabled = false;
                         break;
                     case "Poste Vision":
@@ -321,17 +408,17 @@ namespace OKDemarrageIntegration
                     case "Téléchargement":
                         ValTelch.Enabled = false;
                         break;
-                    case "Prérecette":
+                    case "Prérecette Mur de Chauffe":
                         ValPerMur.Enabled = false;
                         break;
                     case "Préparation boites":
                         ValPrepBt.Enabled = false;
                         break;
-                    case "Poste Emballage ":
+                    case "Poste Emballage":
                         ValPEmb.Enabled = false;
                         break;
                     case "Poste Paléttisation":
-                        ValAss1.Enabled = false;
+                        ValPpalet.Enabled = false;
                         break;
                     case "Poste AQL":
                         ValPAQL.Enabled = false;

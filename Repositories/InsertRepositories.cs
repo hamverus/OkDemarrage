@@ -111,6 +111,8 @@ namespace Repositories
             pilInsert.Fonction = pl.poste;
             pilInsert.date = DateTime.Now;
             pilInsert.Poste = navigationpage;
+            pilr.Insert(pilInsert);
+
         }
         //methode d'insertion 
         public int InsertData(DateTime dateDebut, String module, String poste, OkDescriptRepositorie desc,

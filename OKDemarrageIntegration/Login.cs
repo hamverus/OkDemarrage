@@ -49,7 +49,7 @@ namespace OKDemarrageIntegration
          
 
             displayList(dateStart, dateFinish, 3, "TQP");
-            displayList(dateFinish, dateStart, 17, "CE");
+            displayList(dateStart, dateFinish, 17, "CE");
 
         }
 
@@ -58,7 +58,7 @@ namespace OKDemarrageIntegration
         {
             try
             {
-
+                listPiloteFini.Items.Clear();
            
             // Array data;
             var data = pfi.Get(dt => dt.date >= dateStart && dt.date <= dateFinish).Select(dt => new { dt.matricule, dt.nom, dt.prenom, dt.Fonction }).Distinct().ToList();

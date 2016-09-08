@@ -451,7 +451,7 @@
             // 
             this.panel44.Controls.Add(this.label123);
             this.panel44.Controls.Add(this.ComPEmb);
-            this.panel44.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel44.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel44.Location = new System.Drawing.Point(0, 80);
             this.panel44.Margin = new System.Windows.Forms.Padding(0);
             this.panel44.Name = "panel44";

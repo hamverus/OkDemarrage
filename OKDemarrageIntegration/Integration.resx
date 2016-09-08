@@ -123,9 +123,6 @@
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>132, 17</value>
   </metadata>
-  <data name="lb4PerMurChf.Text" xml:space="preserve">
-    <value>Vérifier la disponibilité et la conformité des outillages de travail pour effectuer le test d'insertion mécanique                                                                                                                                                                                                                                                                                     ( USB,carte d'accée avec Rollange,RCA...)</value>
-  </data>
   <data name="lb5PEmb.Text" xml:space="preserve">
     <value>Vérifier que si on édite deux étiquettes logistiques successives au poste emballage sans flasher la première au poste palettisation, un message "poste bloqué produit n'est pas sous conditionnement" s'affiche sur l'écran en effectuant un test de vigilance.</value>
   </data>
