@@ -58,7 +58,7 @@ namespace OKDemarrageIntegration
         {
             try
             {
-                listPiloteFini.Items.Clear();
+                listPiloteFini.Items.Clear(); 
            
             // Array data;
             var data = pfi.Get(dt => dt.date >= dateStart && dt.date <= dateFinish).Select(dt => new { dt.matricule, dt.nom, dt.prenom, dt.Fonction }).Distinct().ToList();
